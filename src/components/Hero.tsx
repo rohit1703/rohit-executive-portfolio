@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
         >
           <div className="relative w-full h-full">
             <img 
-              src="rohit.jpg" 
+              src="rohit.webp" 
               alt="Rohit Mallavarapu" 
               className="w-full h-full object-cover object-top md:object-center 
                          grayscale-0 md:grayscale-[20%] hover:grayscale-0 transition-all duration-1000 
