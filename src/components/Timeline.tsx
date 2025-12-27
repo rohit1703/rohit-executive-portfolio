@@ -57,7 +57,7 @@ const ExperienceBlock: React.FC<{ data: any; index: number }> = ({ data, index }
           
           <div className="flex items-center gap-4 mb-2">
             <div className="w-12 h-12 rounded-full overflow-hidden border border-[#FF6B35]/30">
-              <img src="rohit.jpg" alt="Rohit Mallavarapu" className="w-full h-full object-cover" />
+              <img src="rohit.webp" alt="Rohit Mallavarapu" className="w-full h-full object-cover" />
             </div>
             <p className="text-sm font-black text-[#FF6B35] uppercase tracking-widest">Leadership Note</p>
           </div>
