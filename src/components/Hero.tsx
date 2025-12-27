@@ -27,7 +27,8 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-6 px-4 py-2 rounded-full border border-slate-300 dark:border-white/20 bg-white/50 dark:bg-white/5 backdrop-blur-md text-slate-600 dark:text-slate-300 text-[10px] md:text-xs font-black tracking-[0.2em] uppercase inline-block"
+            // OPTIMIZATION: Removed backdrop-blur on mobile (only md:backdrop-blur-md)
+            className="mb-6 px-4 py-2 rounded-full border border-slate-300 dark:border-white/20 bg-white/90 md:bg-white/50 dark:bg-white/5 md:backdrop-blur-md text-slate-600 dark:text-slate-300 text-[10px] md:text-xs font-black tracking-[0.2em] uppercase inline-block"
           >
             Marketing Leader
           </motion.div>
@@ -51,7 +52,7 @@ const Hero: React.FC = () => {
           </motion.p>
         </motion.div>
 
-        {/* IMAGE SECTION - OPTIMIZED */}
+        {/* IMAGE SECTION */}
         <motion.div 
           style={{ y: imageY, opacity: useTransform(scrollYProgress, [0, 0.4], [1, 0]) }}
           className="absolute md:relative z-10 right-[-10%] md:right-0 bottom-0 w-[100vw] md:w-[45vw] h-[55vh] md:h-[80vh] pointer-events-none md:flex md:items-end"
@@ -72,14 +73,16 @@ const Hero: React.FC = () => {
                 WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)' 
               }}
             />
+            {/* Gradient Overlay */}
             <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#F0F4F8] dark:from-[#0A192F] via-[#F0F4F8]/50 dark:via-[#0A192F]/50 to-transparent z-20" />
           </div>
         </motion.div>
 
+        {/* OPTIMIZATION: Hidden on Mobile (hidden md:block) to save GPU */}
         <motion.div 
           animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/2 right-0 -translate-y-1/2 w-[80vw] h-[80vw] bg-[#FF6B35]/10 blur-[120px] rounded-full pointer-events-none z-0" 
+          className="hidden md:block absolute top-1/2 right-0 -translate-y-1/2 w-[80vw] h-[80vw] bg-[#FF6B35]/10 blur-[120px] rounded-full pointer-events-none z-0" 
         />
       </div>
     </div>

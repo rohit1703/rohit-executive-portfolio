@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* PERFORMANCE: Ensure text is visible immediately while font loads */
+@font-face {
+  font-family: 'Inter'; /* Or your font name */
+  font-display: swap;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -28,14 +34,13 @@
   background-color: #94A3B8;
 }
 
-/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* OPTIMIZED NOISE EFFECT: Only show on desktop to save mobile battery/CPU */
+/* OPTIMIZED NOISE: Hidden on mobile */
 .noise {
-  display: none; /* Hidden by default (Mobile) */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -49,21 +54,42 @@ html {
 
 @media (min-width: 768px) {
   .noise {
-    display: block; /* Enabled only on Tablet/Desktop */
+    display: block;
   }
 }
 
+/* MOBILE PERFORMANCE FIX: Disable Backdrop Blur on Mobile */
 .premium-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(20px);
+  /* Mobile: Solid(ish) background, NO BLUR to save GPU */
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: none; 
   border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Desktop: Restore the Premium Glass Effect */
+@media (min-width: 768px) {
+  .premium-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  }
+}
+
 .dark .premium-card {
-  background: rgba(24, 42, 69, 0.4);
+  /* Mobile Dark Mode: Solid background, NO BLUR */
+  background: rgba(24, 42, 69, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05), 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: none;
+}
+
+@media (min-width: 768px) {
+  .dark .premium-card {
+    /* Desktop Dark Mode: Glass Effect */
+    background: rgba(24, 42, 69, 0.4);
+    backdrop-filter: blur(20px);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05), 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+  }
 }
