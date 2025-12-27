@@ -14,7 +14,6 @@ const Hero: React.FC = () => {
   const imageY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   return (
-    // FIX: Dynamic background color
     <div ref={containerRef} className="relative h-[110vh] md:h-[120vh] bg-[#F0F4F8] dark:bg-[#0A192F] transition-colors duration-500 overflow-hidden">
       
       <div className="sticky top-0 h-screen w-full max-w-7xl mx-auto px-6 md:px-12 pt-32 md:pt-0 flex flex-col md:flex-row items-center justify-between overflow-hidden">
@@ -24,7 +23,6 @@ const Hero: React.FC = () => {
           style={{ scale: heroScale, opacity: heroOpacity, y: yPos }}
           className="relative z-20 w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mb-10 md:mb-0"
         >
-          {/* FIX: Dynamic pill colors */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -34,7 +32,6 @@ const Hero: React.FC = () => {
             Marketing Leader
           </motion.div>
           
-          {/* FIX: Dynamic Text Color (Dark Blue in Light Mode, White in Dark Mode) */}
           <h1 className="font-display text-[13vw] md:text-[6rem] lg:text-[7.5rem] tracking-tighter leading-[0.9] text-[#0A192F] dark:text-white font-black transition-colors duration-300">
             STARTUP <br />
             <span className="text-[#FF6B35]">SPARK</span>
@@ -43,7 +40,6 @@ const Hero: React.FC = () => {
             NASDAQ <span className="text-[#FF6B35]">STAGE</span>
           </h1>
           
-          {/* FIX: Dynamic Subtext Color */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -55,15 +51,19 @@ const Hero: React.FC = () => {
           </motion.p>
         </motion.div>
 
-        {/* IMAGE SECTION */}
+        {/* IMAGE SECTION - OPTIMIZED */}
         <motion.div 
           style={{ y: imageY, opacity: useTransform(scrollYProgress, [0, 0.4], [1, 0]) }}
           className="absolute md:relative z-10 right-[-10%] md:right-0 bottom-0 w-[100vw] md:w-[45vw] h-[55vh] md:h-[80vh] pointer-events-none md:flex md:items-end"
         >
           <div className="relative w-full h-full">
             <img 
-              src="rohit.webp" 
+              src="/rohit.webp" 
               alt="Rohit Mallavarapu" 
+              fetchPriority="high"
+              loading="eager"
+              width="800"
+              height="1000"
               className="w-full h-full object-cover object-top md:object-center 
                          grayscale-0 md:grayscale-[20%] hover:grayscale-0 transition-all duration-1000 
                          opacity-80 dark:opacity-90 mix-blend-normal dark:mix-blend-luminosity"
@@ -72,12 +72,10 @@ const Hero: React.FC = () => {
                 WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)' 
               }}
             />
-            {/* FIX: Dynamic Gradient Overlay (matches background color) */}
             <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#F0F4F8] dark:from-[#0A192F] via-[#F0F4F8]/50 dark:via-[#0A192F]/50 to-transparent z-20" />
           </div>
         </motion.div>
 
-        {/* FIX: Dynamic Background Orbs */}
         <motion.div 
           animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
