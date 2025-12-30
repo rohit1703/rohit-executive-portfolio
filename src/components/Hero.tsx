@@ -50,8 +50,8 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.4, duration: 1 }}
             className="mt-8 max-w-lg text-slate-600 dark:text-slate-300 text-base md:text-lg font-light leading-relaxed"
           >
-            A global marketing leader bridging startup agility with enterprise scale. 
-            Driving <span className="text-[#0A192F] dark:text-white font-bold">AI-led growth strategies, </span> and the narrative behind Grid Dynamics’ NASDAQ journey.
+            A global marketing leader with startup agility and enterprise scale. 
+            Driving <span className="text-[#0A192F] dark:text-white font-bold">AI-led growth strategies, </span> and the narrative behind Startup to NASDAQ journey.
           </motion.p>
         </motion.div>
 
