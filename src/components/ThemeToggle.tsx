@@ -32,7 +32,8 @@ const ThemeToggle: React.FC = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-md flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-[#FF6B35] hover:border-[#FF6B35] dark:hover:text-[#FF6B35] dark:hover:border-[#FF6B35] transition-all shadow-sm"
+      // PERFECTION FIX: Increased from w-10/h-10 to w-11/h-11 (44px) for perfect mobile touch target
+      className="w-11 h-11 md:w-12 md:h-12 rounded-full border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-md flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-[#FF6B35] hover:border-[#FF6B35] dark:hover:text-[#FF6B35] dark:hover:border-[#FF6B35] transition-all shadow-sm"
       aria-label="Toggle Theme"
     >
       <motion.div

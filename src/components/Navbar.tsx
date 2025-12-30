@@ -74,7 +74,8 @@ const Navbar: React.FC = () => {
               <a 
                 href="/Rohit_Mallavarapu_Resume.pdf" 
                 download
-                className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-md flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-[#FF6B35] hover:border-[#FF6B35] dark:hover:text-[#FF6B35] dark:hover:border-[#FF6B35] transition-all shadow-sm group"
+                // PERFECTION FIX: Increased size to w-11 h-11 (44px)
+                className="w-11 h-11 md:w-12 md:h-12 rounded-full border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-md flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-[#FF6B35] hover:border-[#FF6B35] dark:hover:text-[#FF6B35] dark:hover:border-[#FF6B35] transition-all shadow-sm group"
                 title="Download Resume"
               >
                 <svg className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
@@ -123,8 +124,8 @@ const Navbar: React.FC = () => {
             className="fixed inset-0 z-[90] lg:hidden bg-[#F0F4F8]/98 dark:bg-[#0A192F]/98 backdrop-blur-3xl flex flex-col pt-32 px-10 gap-12 transition-colors duration-300 overflow-y-auto"
           >
             <div className="flex justify-end gap-4">
-               {/* Mobile Resume Link */}
-               <a href="/Rohit_Mallavarapu_Resume.pdf" download className="text-sm font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 flex items-center gap-2">
+               {/* PERFECTION FIX: Added 'p-2' to resume link for easier tapping */}
+               <a href="/Rohit_Mallavarapu_Resume.pdf" download className="p-2 text-sm font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 flex items-center gap-2">
                  Resume <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                </a>
                <ThemeToggle />
@@ -136,7 +137,8 @@ const Navbar: React.FC = () => {
                   key={link.id}
                   href={`#${link.id}`}
                   onClick={(e) => scrollToSection(e, link.id)}
-                  className="text-5xl font-display font-black text-[#0A192F] dark:text-white italic hover:text-[#FF6B35] transition-colors"
+                  // PERFECTION FIX: Added 'py-2' to increase vertical hit area
+                  className="py-2 text-5xl font-display font-black text-[#0A192F] dark:text-white italic hover:text-[#FF6B35] transition-colors"
                 >
                   {link.name}
                 </a>

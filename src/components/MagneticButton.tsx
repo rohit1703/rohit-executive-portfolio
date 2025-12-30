@@ -1,5 +1,4 @@
-
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface MagneticButtonProps {
@@ -14,9 +13,22 @@ interface MagneticButtonProps {
 const MagneticButton: React.FC<MagneticButtonProps> = ({ children, className, onClick, href, target, rel }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    // Check if the device has a coarse pointer (touchscreen)
+    const mediaQuery = window.matchMedia('(pointer: coarse)');
+    setIsTouchDevice(mediaQuery.matches);
+
+    const handleResize = () => setIsTouchDevice(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleResize);
+    return () => mediaQuery.removeEventListener('change', handleResize);
+  }, []);
 
   const handleMouse = (e: React.MouseEvent) => {
-    if (!ref.current) return;
+    // PERFECTION FIX: Disable magnetic effect on touch devices to prevent "sticky" glitch
+    if (!ref.current || isTouchDevice) return;
+
     const { clientX, clientY } = e;
     const { height, width, left, top } = ref.current.getBoundingClientRect();
     const middleX = clientX - (left + width / 2);
