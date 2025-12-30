@@ -31,11 +31,12 @@ const ExperienceBlock: React.FC<{ data: any; index: number }> = ({ data, index }
   const ref = useRef(null);
   
   return (
-    <div ref={ref} className="relative flex flex-col lg:flex-row gap-12 md:gap-20 lg:gap-32 py-20 md:py-40 border-b border-slate-300 dark:border-white/5 last:border-0 transition-colors">
+    // FIX 1: Reduced gap from 'lg:gap-32' to 'lg:gap-16' since we are making the columns wider
+    <div ref={ref} className="relative flex flex-col lg:flex-row gap-12 md:gap-20 lg:gap-16 py-20 md:py-40 border-b border-slate-300 dark:border-white/5 last:border-0 transition-colors">
       
       {/* LEFT COLUMN: Role & KPIs */}
-      {/* FIX 3: Added z-10 to manage stacking context just in case */}
-      <div className="lg:sticky lg:top-40 lg:h-fit w-full lg:w-1/3 space-y-10 md:space-y-12 z-10">
+      {/* FIX 2: Increased width from 'w-1/3' (33%) to 'w-5/12' (41%) to give the title more room */}
+      <div className="lg:sticky lg:top-40 lg:h-fit w-full lg:w-5/12 space-y-10 md:space-y-12 z-10">
         <div className="space-y-6 md:space-y-8">
           <div className="flex items-center gap-5">
             <span className="text-sm font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.4em]">0{index + 1}</span>
@@ -47,11 +48,8 @@ const ExperienceBlock: React.FC<{ data: any; index: number }> = ({ data, index }
             <div className="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-[#FF6B35]/10 border border-[#FF6B35]/20 flex items-center justify-center text-[#FF6B35] flex-shrink-0 shadow-[0_0_20px_rgba(255,107,53,0.1)]">
               {data.industryIcon}
             </div>
-            {/* FIX 1 & 2: 
-                - Changed 'md:text-7xl' to 'md:text-5xl xl:text-7xl' to prevent massive text on laptops.
-                - Added 'break-words hyphens-auto' to ensure text wraps instead of overflowing.
-            */}
-            <h4 className="text-3xl md:text-5xl xl:text-7xl font-display text-[#0A192F] dark:text-white leading-tight transition-colors break-words hyphens-auto">
+            {/* FIX 3: Adjusted font scaling. 'lg:text-5xl' is safer for laptops. 'xl:text-6xl' for big screens. */}
+            <h4 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display text-[#0A192F] dark:text-white leading-tight transition-colors break-words hyphens-auto">
               {data.role}
             </h4>
           </div>
@@ -93,7 +91,8 @@ const ExperienceBlock: React.FC<{ data: any; index: number }> = ({ data, index }
       </div>
 
       {/* RIGHT COLUMN: Detailed Operational Rigor */}
-      <div className="w-full lg:w-2/3 mt-14 lg:mt-0">
+      {/* FIX 4: Adjusted width from 'w-2/3' (66%) to 'w-7/12' (58%) to balance the wider left column */}
+      <div className="w-full lg:w-7/12 mt-14 lg:mt-0">
         <div className="mb-14 md:mb-24">
           <span className="text-sm md:text-base font-black uppercase tracking-[0.4em] md:tracking-[0.6em] text-slate-400 block mb-12 md:mb-16 border-b border-slate-300 dark:border-white/5 pb-4">Detailed Operational Rigor</span>
           
