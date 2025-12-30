@@ -64,6 +64,8 @@ const Hero: React.FC = () => {
             <img 
               src="rohit.webp" 
               alt="Rohit Mallavarapu" 
+              fetchPriority="high"   // <--- ADD THIS LINE (Note the capital 'P')
+              loading="eager"
               className="w-full h-full object-cover object-top md:object-center 
                          grayscale-0 md:grayscale-[20%] hover:grayscale-0 transition-all duration-1000 
                          opacity-80 dark:opacity-90 mix-blend-normal dark:mix-blend-luminosity"
