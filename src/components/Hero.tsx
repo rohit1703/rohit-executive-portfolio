@@ -14,16 +14,19 @@ const Hero: React.FC = () => {
   const imageY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   return (
-    // CHANGE 1: Use 'min-h-[100dvh]' for better mobile browser support (address bar handling)
-    <div ref={containerRef} className="relative min-h-[100dvh] md:h-[120vh] bg-[#F0F4F8] dark:bg-[#0A192F] transition-colors duration-500 overflow-hidden">
+    // AUTOMATION FIX 1: 'min-h-[100dvh]' adapts to the exact visible pixels of ANY desktop browser (Arc, Chrome, Safari)
+    // AUTOMATION FIX 2: 'flex flex-col justify-center' automatically centers content in the available safe space
+    <div ref={containerRef} className="relative min-h-[100dvh] md:min-h-[110vh] bg-[#F0F4F8] dark:bg-[#0A192F] transition-colors duration-500 overflow-hidden flex flex-col justify-center">
       
-      {/* CHANGE 2: Reduced top padding from pt-32 to pt-24 on mobile to lift text up */}
-      <div className="sticky top-0 h-screen w-full max-w-7xl mx-auto px-6 md:px-12 pt-24 md:pt-0 flex flex-col md:flex-row items-center justify-between overflow-hidden">
+      {/* DESKTOP FIX: 'md:pt-32' adds a mandatory spacer at the top on desktop, 
+         ensuring the "Marketing Leader" text CLEARLY sits below the Navbar.
+      */}
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 flex flex-col md:flex-row items-center justify-between relative z-20">
         
         {/* TEXT SECTION */}
         <motion.div 
           style={{ scale: heroScale, opacity: heroOpacity, y: yPos }}
-          className="relative z-20 w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mb-10 md:mb-0"
+          className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mb-10 md:mb-0"
         >
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -34,7 +37,6 @@ const Hero: React.FC = () => {
             Marketing Leader
           </motion.div>
           
-          {/* CHANGE 3: Reduced font size slightly from 13vw to 12vw to prevent overcrowding */}
           <h1 className="font-display text-[12vw] md:text-[6rem] lg:text-[7.5rem] tracking-tighter leading-[0.9] text-[#0A192F] dark:text-white font-black transition-colors duration-300">
             STARTUP <br />
             <span className="text-[#FF6B35]">SPARK</span>
@@ -47,19 +49,18 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 1 }}
-            // CHANGE 4: Reduced margin (mt-8 -> mt-6) and padding (p-4 -> p-3) to compact the bio card
             className="mt-6 md:mt-8 max-w-lg text-slate-600 dark:text-slate-300 text-sm md:text-lg font-light leading-relaxed 
                        p-3 md:p-0 rounded-2xl bg-white/80 dark:bg-[#0A192F]/80 backdrop-blur-sm md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none"
           >
             Global marketing leader with deep expertise in scaling high-growth tech organizations. 
-            I design and execute <span className="text-[#0A192F] dark:text-white font-bold">AI-led growth strategies, </span> that fuel revenue acceleration & brand expansion — including strategic leadership for a NASDAQ-listed organisation.
+            I design and execute <span className="text-[#0A192F] dark:text-white font-bold">AI-led growth strategies</span>, that fuel revenue acceleration & brand expansion — including strategic leadership for a NASDAQ-listed organizations.
           </motion.p>
         </motion.div>
 
         {/* IMAGE SECTION */}
         <motion.div 
           style={{ y: imageY, opacity: useTransform(scrollYProgress, [0, 0.4], [1, 0]) }}
-          className="absolute md:relative z-10 right-[-10%] md:right-0 bottom-0 w-[100vw] md:w-[45vw] h-[55vh] md:h-[80vh] pointer-events-none md:flex md:items-end"
+          className="relative md:absolute z-10 w-full md:w-[45vw] h-[50vh] md:h-[80vh] md:right-0 md:bottom-0 pointer-events-none flex items-end justify-center md:justify-end mt-[-10vh] md:mt-0"
         >
           <div className="relative w-full h-full">
             <img 
