@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
           </div>
 
           <p className="text-2xl md:text-3xl text-slate-300 leading-relaxed font-light italic border-l-4 border-[#FF6B35] pl-6 md:pl-10 py-3 md:py-6">
-            "I bridge the gap between startup agility and enterprise scale. I am the strategic engine behind $7M+ in revenue and Grid Dynamics’ NASDAQ journey."
+            "As a strategic marketing executive, I drive revenue, brand value, and operational alignment. My work spans AI-driven demand generation, cross-functional GTM strategy, and measurable growth — including over $7M in revenue influence and support for startups & NASDAQ-listed companies."
           </p>
           
           <div className="flex flex-wrap gap-8 md:gap-10 mt-16 md:mt-20">

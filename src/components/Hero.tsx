@@ -51,8 +51,8 @@ const Hero: React.FC = () => {
             className="mt-6 md:mt-8 max-w-lg text-slate-600 dark:text-slate-300 text-sm md:text-lg font-light leading-relaxed 
                        p-3 md:p-0 rounded-2xl bg-white/80 dark:bg-[#0A192F]/80 backdrop-blur-sm md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none"
           >
-            A global marketing leader bridging startup agility with enterprise scale. 
-            Driving <span className="text-[#0A192F] dark:text-white font-bold">AI-led growth strategies, </span> and the narrative behind Grid Dynamics’ NASDAQ journey.
+            Global marketing leader with deep expertise in scaling high-growth tech organizations. 
+            I design and execute <span className="text-[#0A192F] dark:text-white font-bold">AI-driven growth strategies, </span> that fuel revenue acceleration and brand expansion — including strategic leadership for a NASDAQ-listed organisation.
           </motion.p>
         </motion.div>
 
