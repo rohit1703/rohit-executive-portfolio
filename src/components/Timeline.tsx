@@ -46,7 +46,8 @@ const ExperienceBlock: React.FC<{ data: any; index: number }> = ({ data, index }
             <div className="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-[#FF6B35]/10 border border-[#FF6B35]/20 flex items-center justify-center text-[#FF6B35] flex-shrink-0 shadow-[0_0_20px_rgba(255,107,53,0.1)]">
               {data.industryIcon}
             </div>
-            <h4 className="text-5xl md:text-7xl font-display text-[#0A192F] dark:text-white leading-tight transition-colors">{data.role}</h4>
+            {/* UPDATED: Changed text-5xl to text-3xl for mobile */}
+            <h4 className="text-3xl md:text-7xl font-display text-[#0A192F] dark:text-white leading-tight transition-colors">{data.role}</h4>
           </div>
           
           <p className="text-xl md:text-3xl font-display text-slate-500 dark:text-slate-400 italic lowercase tracking-tight transition-colors">{data.company}</p>
@@ -275,7 +276,8 @@ const Timeline: React.FC = () => {
           <span className="text-[#FF6B35] font-black text-sm md:text-lg uppercase tracking-[0.5em] md:tracking-[0.8em]">Executive Experience Centre</span>
         </motion.div>
         
-        <h3 className="text-6xl md:text-[11rem] font-display text-[#0A192F] dark:text-white uppercase italic font-black leading-[0.9] tracking-tighter mb-12 md:mb-16 transition-colors">
+        {/* UPDATED: Changed text-6xl to text-4xl for mobile */}
+        <h3 className="text-4xl md:text-[11rem] font-display text-[#0A192F] dark:text-white uppercase italic font-black leading-[0.9] tracking-tighter mb-12 md:mb-16 transition-colors">
           OPERATIONAL <br />
           <span className="text-[#FF6B35]">RIGOR.</span>
         </h3>

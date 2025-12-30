@@ -48,10 +48,13 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 1 }}
-            className="mt-8 max-w-lg text-slate-600 dark:text-slate-300 text-base md:text-lg font-light leading-relaxed"
+            // CHANGE: Added padding (p-4), rounded corners, and a semi-transparent background (bg-white/80 dark:bg-[#0A192F]/80) 
+            // and backdrop blur to make text pop against the image.
+            className="mt-8 max-w-lg text-slate-600 dark:text-slate-300 text-base md:text-lg font-light leading-relaxed 
+                      p-4 rounded-2xl bg-white/80 dark:bg-[#0A192F]/80 backdrop-blur-sm md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none md:p-0"
           >
-            A global marketing leader with startup agility and enterprise scale. 
-            Driving <span className="text-[#0A192F] dark:text-white font-bold">AI-led growth strategies, </span> and the narrative behind Startup to NASDAQ journey.
+            A global marketing leader bridging startup agility with enterprise scale. 
+            Driving <span className="text-[#0A192F] dark:text-white font-bold">AI-led growth strategies, </span> and the narrative behind Grid Dynamics’ NASDAQ journey.
           </motion.p>
         </motion.div>
 
