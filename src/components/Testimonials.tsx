@@ -111,7 +111,6 @@ const Testimonials: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 mt-12 flex justify-center md:hidden">
         <div className="flex items-center gap-3 text-slate-500">
            {/* ... svg ... */}
-           <span className="text-[10px] font-black uppercase tracking-[0.3em]">Swipe to explore</span>
         </div>
       </div>
     </div>
