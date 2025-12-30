@@ -34,7 +34,8 @@ const ExperienceBlock: React.FC<{ data: any; index: number }> = ({ data, index }
     <div ref={ref} className="relative flex flex-col lg:flex-row gap-12 md:gap-20 lg:gap-32 py-20 md:py-40 border-b border-slate-300 dark:border-white/5 last:border-0 transition-colors">
       
       {/* LEFT COLUMN: Role & KPIs */}
-      <div className="lg:sticky lg:top-40 lg:h-fit w-full lg:w-1/3 space-y-10 md:space-y-12">
+      {/* FIX 3: Added z-10 to manage stacking context just in case */}
+      <div className="lg:sticky lg:top-40 lg:h-fit w-full lg:w-1/3 space-y-10 md:space-y-12 z-10">
         <div className="space-y-6 md:space-y-8">
           <div className="flex items-center gap-5">
             <span className="text-sm font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.4em]">0{index + 1}</span>
@@ -46,8 +47,13 @@ const ExperienceBlock: React.FC<{ data: any; index: number }> = ({ data, index }
             <div className="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-[#FF6B35]/10 border border-[#FF6B35]/20 flex items-center justify-center text-[#FF6B35] flex-shrink-0 shadow-[0_0_20px_rgba(255,107,53,0.1)]">
               {data.industryIcon}
             </div>
-            {/* UPDATED: Changed text-5xl to text-3xl for mobile */}
-            <h4 className="text-3xl md:text-7xl font-display text-[#0A192F] dark:text-white leading-tight transition-colors">{data.role}</h4>
+            {/* FIX 1 & 2: 
+                - Changed 'md:text-7xl' to 'md:text-5xl xl:text-7xl' to prevent massive text on laptops.
+                - Added 'break-words hyphens-auto' to ensure text wraps instead of overflowing.
+            */}
+            <h4 className="text-3xl md:text-5xl xl:text-7xl font-display text-[#0A192F] dark:text-white leading-tight transition-colors break-words hyphens-auto">
+              {data.role}
+            </h4>
           </div>
           
           <p className="text-xl md:text-3xl font-display text-slate-500 dark:text-slate-400 italic lowercase tracking-tight transition-colors">{data.company}</p>
