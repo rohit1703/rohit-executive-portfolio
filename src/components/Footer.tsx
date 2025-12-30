@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row md:items-center gap-10 mb-12">
             <div className="relative group">
               <div className="w-24 h-24 md:w-32 md:h-32 rounded-3xl overflow-hidden border-2 border-[#FF6B35]/30 group-hover:border-[#FF6B35] transition-colors shadow-2xl">
-                <img src="rohit.jpg" alt="Rohit Mallavarapu" className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700" />
+                <img src="rohit.webp" alt="Rohit Mallavarapu" className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700" />
               </div>
               <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#FF6B35] rounded-full border-4 border-[#0A192F] shadow-lg animate-pulse" title="Available for Strategic Counsel" />
             </div>
