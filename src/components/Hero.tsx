@@ -57,10 +57,11 @@ const Hero: React.FC = () => {
           </motion.p>
         </motion.div>
 
-        {/* IMAGE SECTION */}
+        {/* IMAGE SECTION - FIXED */}
         <motion.div 
           style={{ y: imageY, opacity: useTransform(scrollYProgress, [0, 0.4], [1, 0]) }}
-          className="relative md:absolute z-10 w-full md:w-[45vw] h-[50vh] md:h-[80vh] md:right-0 md:bottom-0 pointer-events-none flex items-end justify-center md:justify-end mt-[-10vh] md:mt-0"
+          // FIX APPLIED HERE: Changed md:w-[45vw] to md:w-1/2
+          className="relative md:absolute z-10 w-full md:w-1/2 h-[50vh] md:h-[80vh] md:right-0 md:bottom-0 pointer-events-none flex items-end justify-center md:justify-end mt-[-10vh] md:mt-0"
         >
           <div className="relative w-full h-full">
             <img 
