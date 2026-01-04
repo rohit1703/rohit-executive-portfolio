@@ -16,13 +16,12 @@ const Hero: React.FC = () => {
   return (
     <div ref={containerRef} className="relative min-h-[100dvh] md:min-h-[110vh] bg-[#F0F4F8] dark:bg-[#0A192F] transition-colors duration-500 overflow-hidden flex flex-col justify-center">
       
-      {/* Spacer for Fixed Navbar */}
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 flex flex-col md:flex-row items-center justify-between relative z-20">
         
         {/* TEXT SECTION */}
         <motion.div 
           style={{ scale: heroScale, opacity: heroOpacity, y: yPos }}
-          className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mb-10 md:mb-0"
+          className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mb-10 md:mb-0 relative z-30"
         >
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -56,8 +55,9 @@ const Hero: React.FC = () => {
         {/* IMAGE SECTION */}
         <motion.div 
           style={{ y: imageY, opacity: useTransform(scrollYProgress, [0, 0.4], [1, 0]) }}
-          // FIX IS HERE: md:w-1/2 (50%) instead of md:w-[45vw]
-          className="relative md:absolute z-10 w-full md:w-1/2 h-[50vh] md:h-[80vh] md:right-0 md:bottom-0 pointer-events-none flex items-end justify-center md:justify-end mt-[-10vh] md:mt-0"
+          // FIX 1: Removed negative margin (mt-[-10vh] -> mt-0) to stop overlap on mobile
+          // FIX 2: Kept md:w-1/2 for your 32-inch monitor
+          className="relative md:absolute z-10 w-full md:w-1/2 h-[50vh] md:h-[80vh] md:right-0 md:bottom-0 pointer-events-none flex items-end justify-center md:justify-end mt-0 md:mt-0"
         >
           <div className="relative w-full h-full">
             <img 
