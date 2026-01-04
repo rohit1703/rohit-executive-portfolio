@@ -21,14 +21,14 @@ const Hero: React.FC = () => {
         {/* TEXT SECTION */}
         <motion.div 
           style={{ scale: heroScale, opacity: heroOpacity, y: yPos }}
-          // FIX 1: Reduced 'mb-10' to 'mb-2' to remove dead space
           className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mb-2 md:mb-0 relative z-30"
         >
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-6 px-4 py-2 rounded-full border border-slate-300 dark:border-white/20 bg-white/90 md:bg-white/50 dark:bg-white/5 md:backdrop-blur-md text-slate-600 dark:text-slate-300 text-[10px] md:text-xs font-black tracking-[0.2em] uppercase inline-block"
+            // GLASS BADGE FIX: Enabled backdrop-blur on mobile, lowered opacity to 60% for "frosty" look
+            className="mb-6 px-4 py-2 rounded-full border border-slate-300 dark:border-white/20 bg-white/60 dark:bg-white/10 backdrop-blur-md text-slate-600 dark:text-slate-300 text-[10px] md:text-xs font-black tracking-[0.2em] uppercase inline-block shadow-sm"
           >
             Marketing Leader
           </motion.div>
@@ -45,8 +45,15 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 1 }}
+            // GLASS TEXT FIX:
+            // 1. bg-white/60 (More transparent than 80%)
+            // 2. backdrop-blur-md (Stronger blur)
+            // 3. border border-white/20 (Subtle glass edge)
+            // 4. shadow-lg (Depth)
             className="mt-6 md:mt-8 max-w-lg text-slate-600 dark:text-slate-300 text-sm md:text-lg font-light leading-relaxed 
-                       p-3 md:p-0 rounded-2xl bg-white/80 dark:bg-[#0A192F]/80 backdrop-blur-sm md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none"
+                       p-4 md:p-0 rounded-2xl 
+                       bg-white/60 dark:bg-[#0A192F]/60 backdrop-blur-md border border-white/20 shadow-lg
+                       md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none md:border-none md:shadow-none"
           >
             Global marketing leader with deep expertise in scaling high-growth tech organizations. 
             I design and execute <span className="text-[#0A192F] dark:text-white font-bold">AI-led growth strategies</span>, that fuel revenue acceleration & brand expansion — including strategic leadership for a NASDAQ-listed organizations.
@@ -56,9 +63,7 @@ const Hero: React.FC = () => {
         {/* IMAGE SECTION */}
         <motion.div 
           style={{ y: imageY, opacity: useTransform(scrollYProgress, [0, 0.4], [1, 0]) }}
-          // FIX 2: Added 'mt-[-5vh]' (negative margin). 
-          // This pulls the image UP by ~5% of screen height, closing the gap without major overlap.
-          // Desktop stays perfect (md:mt-0).
+          // Kept the "Goldilocks" positioning (mt-[-5vh])
           className="relative md:absolute z-10 w-full md:w-1/2 h-[50vh] md:h-[80vh] md:right-0 md:bottom-0 pointer-events-none flex items-end justify-center md:justify-end mt-[-5vh] md:mt-0"
         >
           <div className="relative w-full h-full">
