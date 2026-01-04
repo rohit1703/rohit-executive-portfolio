@@ -21,7 +21,8 @@ const Hero: React.FC = () => {
         {/* TEXT SECTION */}
         <motion.div 
           style={{ scale: heroScale, opacity: heroOpacity, y: yPos }}
-          className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mb-10 md:mb-0 relative z-30"
+          // FIX 1: Reduced 'mb-10' to 'mb-2' to remove dead space
+          className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mb-2 md:mb-0 relative z-30"
         >
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -55,9 +56,10 @@ const Hero: React.FC = () => {
         {/* IMAGE SECTION */}
         <motion.div 
           style={{ y: imageY, opacity: useTransform(scrollYProgress, [0, 0.4], [1, 0]) }}
-          // FIX 1: Removed negative margin (mt-[-10vh] -> mt-0) to stop overlap on mobile
-          // FIX 2: Kept md:w-1/2 for your 32-inch monitor
-          className="relative md:absolute z-10 w-full md:w-1/2 h-[50vh] md:h-[80vh] md:right-0 md:bottom-0 pointer-events-none flex items-end justify-center md:justify-end mt-0 md:mt-0"
+          // FIX 2: Added 'mt-[-5vh]' (negative margin). 
+          // This pulls the image UP by ~5% of screen height, closing the gap without major overlap.
+          // Desktop stays perfect (md:mt-0).
+          className="relative md:absolute z-10 w-full md:w-1/2 h-[50vh] md:h-[80vh] md:right-0 md:bottom-0 pointer-events-none flex items-end justify-center md:justify-end mt-[-5vh] md:mt-0"
         >
           <div className="relative w-full h-full">
             <img 
