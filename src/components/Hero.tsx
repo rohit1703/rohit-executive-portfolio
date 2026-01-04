@@ -14,13 +14,9 @@ const Hero: React.FC = () => {
   const imageY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   return (
-    // AUTOMATION FIX 1: 'min-h-[100dvh]' adapts to the exact visible pixels of ANY desktop browser (Arc, Chrome, Safari)
-    // AUTOMATION FIX 2: 'flex flex-col justify-center' automatically centers content in the available safe space
     <div ref={containerRef} className="relative min-h-[100dvh] md:min-h-[110vh] bg-[#F0F4F8] dark:bg-[#0A192F] transition-colors duration-500 overflow-hidden flex flex-col justify-center">
       
-      {/* DESKTOP FIX: 'md:pt-32' adds a mandatory spacer at the top on desktop, 
-         ensuring the "Marketing Leader" text CLEARLY sits below the Navbar.
-      */}
+      {/* Spacer for Fixed Navbar */}
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 flex flex-col md:flex-row items-center justify-between relative z-20">
         
         {/* TEXT SECTION */}
@@ -57,10 +53,10 @@ const Hero: React.FC = () => {
           </motion.p>
         </motion.div>
 
-        {/* IMAGE SECTION - FIXED */}
+        {/* IMAGE SECTION */}
         <motion.div 
           style={{ y: imageY, opacity: useTransform(scrollYProgress, [0, 0.4], [1, 0]) }}
-          // FIX APPLIED HERE: Changed md:w-[45vw] to md:w-1/2
+          // FIX IS HERE: md:w-1/2 (50%) instead of md:w-[45vw]
           className="relative md:absolute z-10 w-full md:w-1/2 h-[50vh] md:h-[80vh] md:right-0 md:bottom-0 pointer-events-none flex items-end justify-center md:justify-end mt-[-10vh] md:mt-0"
         >
           <div className="relative w-full h-full">
@@ -79,7 +75,6 @@ const Hero: React.FC = () => {
                 WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)' 
               }}
             />
-            {/* Gradient Overlay */}
             <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#F0F4F8] dark:from-[#0A192F] via-[#F0F4F8]/50 dark:via-[#0A192F]/50 to-transparent z-20" />
           </div>
         </motion.div>
