@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { track } from '@vercel/analytics';
 import SEO from '../components/SEO';
 import ThemeToggle from '../components/ThemeToggle';
 
@@ -51,6 +52,10 @@ const Hub: React.FC = () => {
     }
   }, []);
 
+  const handleViewSelect = useCallback((viewLabel: string, viewPath: string) => {
+    track('view_selected', { view: viewLabel, path: viewPath });
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#F0F4F8] dark:bg-[#0A192F] flex flex-col items-center justify-start pt-20 pb-10 md:justify-center md:py-16 px-5 md:px-6 transition-colors duration-500 relative">
       <SEO
@@ -93,6 +98,7 @@ const Hub: React.FC = () => {
             >
               <Link
                 to={view.path}
+                onClick={() => handleViewSelect(view.label, view.path)}
                 className="block premium-card rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white dark:bg-[#182A45]/40 hover:border-[#FF6B35]/40 group transition-all duration-300 h-full"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#FF6B35]/10 border border-[#FF6B35]/20 flex items-center justify-center text-[#FF6B35] group-hover:bg-[#FF6B35] group-hover:text-white transition-all duration-300 mb-4">
@@ -119,6 +125,7 @@ const Hub: React.FC = () => {
         >
           <Link
             to={views[2].path}
+            onClick={() => handleViewSelect(views[2].label, views[2].path)}
             className="block premium-card rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white dark:bg-[#182A45]/40 hover:border-[#FF6B35]/40 group transition-all duration-300 w-1/2"
           >
             <div className="w-10 h-10 rounded-xl bg-[#FF6B35]/10 border border-[#FF6B35]/20 flex items-center justify-center text-[#FF6B35] group-hover:bg-[#FF6B35] group-hover:text-white transition-all duration-300 mb-4">
@@ -147,6 +154,7 @@ const Hub: React.FC = () => {
           >
             <Link
               to={view.path}
+              onClick={() => handleViewSelect(view.label, view.path)}
               className="block premium-card rounded-[48px] p-12 border border-slate-200 dark:border-white/10 bg-white dark:bg-[#182A45]/40 hover:border-[#FF6B35]/40 group transition-all duration-500 h-full"
             >
               <div className="w-14 h-14 rounded-2xl bg-[#FF6B35]/10 border border-[#FF6B35]/20 flex items-center justify-center text-[#FF6B35] group-hover:bg-[#FF6B35] group-hover:text-white transition-all duration-500 mb-8">
