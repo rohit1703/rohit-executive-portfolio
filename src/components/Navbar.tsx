@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import MagneticButton from './MagneticButton';
 import ThemeToggle from './ThemeToggle';
@@ -46,14 +47,13 @@ const Navbar: React.FC = () => {
         className="fixed top-0 left-0 right-0 z-[100] px-4 md:px-8 py-4 md:py-6"
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center bg-white/70 dark:bg-[#182A45]/80 backdrop-blur-2xl border border-slate-200 dark:border-white/5 rounded-full px-6 md:px-10 py-3 md:py-4 shadow-xl dark:shadow-2xl transition-colors duration-300">
-          <a 
-            href="#hero" 
-            onClick={(e) => scrollToSection(e, 'hero')}
+          <Link
+            to="/"
             className="flex items-center gap-3 group"
           >
             <div className="w-10 h-10 bg-[#FF6B35] rounded-xl flex items-center justify-center font-display font-black text-white dark:text-[#0A192F] text-xl group-hover:scale-110 transition-transform">R</div>
             <span className="font-display font-black text-xl tracking-tighter text-[#0A192F] dark:text-white hidden sm:block">ROHIT.</span>
-          </a>
+          </Link>
           
           <div className="hidden lg:flex items-center gap-10 text-[13px] font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-300">
             {navLinks.map((link) => (
