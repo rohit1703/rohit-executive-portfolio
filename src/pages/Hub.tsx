@@ -52,7 +52,7 @@ const Hub: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#F0F4F8] dark:bg-[#0A192F] flex flex-col items-center justify-center px-5 py-12 md:px-6 md:py-16 transition-colors duration-500 relative">
+    <div className="min-h-screen bg-[#F0F4F8] dark:bg-[#0A192F] flex flex-col items-center justify-start pt-20 pb-10 md:justify-center md:py-16 px-5 md:px-6 transition-colors duration-500 relative">
       <SEO
         title="Rohit Mallavarapu | Executive Portfolio"
         description="Global marketing leader and partnerships strategist. Choose the view most relevant to you."
@@ -66,15 +66,15 @@ const Hub: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-6 md:mb-14"
+        className="text-center mb-5 md:mb-14"
       >
-        <div className="flex items-center justify-center gap-4 mb-4 md:mb-8">
-          <div className="w-12 h-12 md:w-14 md:h-14 bg-[#FF6B35] rounded-2xl flex items-center justify-center font-display font-black text-white text-xl md:text-2xl">R</div>
+        <div className="flex items-center justify-center gap-4 mb-3 md:mb-8">
+          <div className="w-11 h-11 md:w-14 md:h-14 bg-[#FF6B35] rounded-xl md:rounded-2xl flex items-center justify-center font-display font-black text-white text-lg md:text-2xl">R</div>
         </div>
-        <h1 className="font-display text-[11vw] md:text-8xl font-black text-[#0A192F] dark:text-white tracking-tighter leading-[0.9] mb-4 md:mb-6 transition-colors">
+        <h1 className="font-display text-[12vw] md:text-8xl font-black text-[#0A192F] dark:text-white tracking-tighter leading-[0.85] mb-3 md:mb-6 transition-colors">
           ROHIT <span className="text-[#FF6B35]">MALLAVARAPU</span>
         </h1>
-        <p className="text-base md:text-2xl text-slate-500 dark:text-slate-300 font-light max-w-2xl mx-auto transition-colors mb-2 md:mb-0">
+        <p className="text-sm md:text-2xl text-slate-500 dark:text-slate-300 font-light max-w-2xl mx-auto transition-colors">
           I'm here as a...
         </p>
       </motion.div>
