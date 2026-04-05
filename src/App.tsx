@@ -1,14 +1,15 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Hub from './pages/Hub';
 import PortfolioView from './pages/PortfolioView';
+import NotFound from './pages/NotFound';
 
 const App: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<Hub />} />
       <Route path="/:view" element={<PortfolioView />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
