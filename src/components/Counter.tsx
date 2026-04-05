@@ -8,7 +8,7 @@ interface CounterProps {
 }
 
 const Counter: React.FC<CounterProps> = ({ value, suffix = "" }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -17,8 +17,10 @@ const Counter: React.FC<CounterProps> = ({ value, suffix = "" }) => {
       const controls = animate(0, value, {
         duration: 2,
         ease: "easeOut",
-        onUpdate(value) {
-          setCount(Math.floor(value));
+        onUpdate(val) {
+          // Preserve decimal places if the target has them (e.g. 3.9)
+          const decimals = String(value).includes('.') ? String(value).split('.')[1].length : 0;
+          setCount(Number(val.toFixed(decimals)));
         }
       });
       return () => controls.stop();
