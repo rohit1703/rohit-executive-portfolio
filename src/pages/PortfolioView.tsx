@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense } from 'react';
+import React, { useEffect, useRef, Suspense } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { VALID_VIEWS, VIEW_META, ViewType } from '../data/views';
 import { SECTION_COPY } from '../data/sectionCopy';
@@ -18,11 +18,14 @@ const Footer = React.lazy(() => import('../components/Footer'));
 
 const PortfolioView: React.FC = () => {
   const { view } = useParams<{ view: string }>();
+  const mainRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     // Reset scroll to top on view load/change
     window.scrollTo(0, 0);
     document.documentElement.style.scrollBehavior = 'smooth';
+    // Focus main content for screen readers after route change
+    mainRef.current?.focus();
   }, [view]);
 
   if (!view || !VALID_VIEWS.includes(view as ViewType)) {
@@ -36,10 +39,14 @@ const PortfolioView: React.FC = () => {
   return (
     <div className="min-h-screen selection:bg-[#FF6B35] selection:text-white relative bg-[#F0F4F8] dark:bg-[#0A192F] transition-colors duration-500">
       <SEO title={meta.title} description={meta.description} />
+      {/* Skip to content link for keyboard/screen reader users */}
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:bg-[#FF6B35] focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-bold">
+        Skip to content
+      </a>
       <CustomCursor />
       <Navbar />
 
-      <main>
+      <main ref={mainRef} id="main-content" tabIndex={-1} className="outline-none">
         <section id="hero">
           <Hero view={currentView} />
         </section>

@@ -41,9 +41,11 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <motion.nav 
+      <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
+        role="banner"
+        aria-label="Main navigation"
         className="fixed top-0 left-0 right-0 z-[100] px-4 md:px-8 py-4 md:py-6"
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center bg-white/70 dark:bg-[#182A45]/80 backdrop-blur-2xl border border-slate-200 dark:border-white/5 rounded-full px-6 md:px-10 py-3 md:py-4 shadow-xl dark:shadow-2xl transition-colors duration-300">
