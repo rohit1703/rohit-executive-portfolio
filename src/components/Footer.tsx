@@ -2,6 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import MagneticButton from './MagneticButton';
 
+// Obfuscate email to prevent bot scraping from raw HTML
+const getEmail = () => {
+  const parts = ['mallavarapurohit', 'gmail.com'];
+  return parts.join('@');
+};
+
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -32,7 +38,7 @@ const Footer: React.FC = () => {
                </div>
                LinkedIn
             </a>
-            <a href="mailto:mallavarapurohit@gmail.com" className="group flex items-center gap-4 text-slate-400 hover:text-[#FF6B35] transition-colors font-bold uppercase tracking-widest text-[12px] md:text-[14px]">
+            <a href="#" onClick={(e) => { e.preventDefault(); window.location.href = `mailto:${getEmail()}`; }} className="group flex items-center gap-4 text-slate-400 hover:text-[#FF6B35] transition-colors font-bold uppercase tracking-widest text-[12px] md:text-[14px]">
                <div className="w-10 h-10 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#FF6B35] transition-colors">
                  <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                </div>
