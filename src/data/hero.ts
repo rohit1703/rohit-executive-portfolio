@@ -12,33 +12,30 @@ export interface HeroData {
 
 export const HERO_DATA: Record<ViewType, HeroData> = {
   about: {
-    badge: 'Builder · Marketer',
-    headlineTop: 'MARKET',
-    headlineAccent1: 'IT',
+    badge: 'Executive Portfolio',
+    headlineTop: 'STARTUP',
+    headlineAccent1: 'SPARK',
     headlineMid: '→',
-    headlineBottom: 'BUILD',
-    headlineAccent2: 'IT',
-    subtitle:
-      'Six years marketing B2B software — a NASDAQ firm, a Tiger Global–backed insurtech, a fintech. Now I build it too. <strong>Currly is an AI workflow platform I shipped solo: 1,400+ tools, 111+ workflows, live in production.</strong>',
+    headlineBottom: 'NASDAQ',
+    headlineAccent2: 'STAGE',
+    subtitle: 'Global marketing leader with deep expertise in scaling high-growth tech organizations. I design and execute <strong>AI-led growth strategies</strong> that fuel revenue acceleration & brand expansion — including strategic leadership for NASDAQ-listed organizations.',
   },
   partnerships: {
-    badge: 'Partnerships · Builder',
+    badge: 'Partnerships Leader',
     headlineTop: 'ZERO',
     headlineAccent1: 'TO',
     headlineMid: '→',
-    headlineBottom: '54',
-    headlineAccent2: 'PARTNERS',
-    subtitle:
-      'I build partner channels from zero. At ClearTax: 54 partnerships, ₹7M revenue, 20x YoY. At Plum: $3M+ in key accounts and two promotions in under two years. <strong>Now I build the product too.</strong>',
+    headlineBottom: '₹7M',
+    headlineAccent2: 'REVENUE',
+    subtitle: 'I build partnership engines from scratch. <strong>54 BFSI partnerships, ₹7M revenue, 20x YoY growth</strong> — every system designed, built, and scaled by me across ClearTax and Plum.',
   },
   marketing: {
-    badge: 'Marketing · Builder',
-    headlineTop: '20%',
-    headlineAccent1: 'TO',
+    badge: 'Marketing Leader',
+    headlineTop: 'STARTUP',
+    headlineAccent1: 'SPARK',
     headlineMid: '→',
-    headlineBottom: '80%',
-    headlineAccent2: 'AWARE',
-    subtitle:
-      'Sole marketing owner for Grid Dynamics India — client, talent, and brand, no team beneath me. 12 events, 4,600+ qualified prospects, brand awareness 20% to 80%. <strong>And I build the product, not just the campaigns.</strong>',
+    headlineBottom: 'NASDAQ',
+    headlineAccent2: 'STAGE',
+    subtitle: 'Global marketing leader designing <strong>AI-led growth strategies</strong> that fuel revenue acceleration and brand expansion. From Glassdoor turnarounds to flagship CXO summits — driving demand generation, content strategy, and measurable growth at scale.',
   },
 };
