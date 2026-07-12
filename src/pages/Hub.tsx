@@ -70,7 +70,7 @@ const Hub: React.FC = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.4 }}
         className="text-center mb-5 md:mb-14"
       >
         <div className="flex items-center justify-center gap-4 mb-3 md:mb-8">
@@ -94,7 +94,7 @@ const Hub: React.FC = () => {
               key={view.path}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 + idx * 0.1, duration: 0.5 }}
+              transition={{ delay: idx * 0.05, duration: 0.35 }}
             >
               <Link
                 to={view.path}
@@ -120,7 +120,7 @@ const Hub: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          transition={{ delay: 0.1, duration: 0.35 }}
           className="flex justify-center"
         >
           <Link
@@ -150,16 +150,25 @@ const Hub: React.FC = () => {
             key={view.path}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 + idx * 0.12, duration: 0.6 }}
+            transition={{ delay: idx * 0.06, duration: 0.4 }}
           >
             <Link
               to={view.path}
               onClick={() => handleViewSelect(view.label, view.path)}
-              className="block premium-card rounded-[48px] p-12 border border-slate-200 dark:border-white/10 bg-white dark:bg-[#182A45]/40 hover:border-[#FF6B35]/40 group transition-all duration-500 h-full"
+              className={`block premium-card rounded-[48px] p-12 bg-white dark:bg-[#182A45]/40 group transition-all duration-500 h-full ${
+                idx === 0
+                  ? 'border border-[#FF6B35]/50 ring-1 ring-[#FF6B35]/20 shadow-[0_24px_70px_-24px_rgba(255,107,53,0.4)] hover:border-[#FF6B35]'
+                  : 'border border-slate-200 dark:border-white/10 hover:border-[#FF6B35]/40'
+              }`}
             >
               <div className="w-14 h-14 rounded-2xl bg-[#FF6B35]/10 border border-[#FF6B35]/20 flex items-center justify-center text-[#FF6B35] group-hover:bg-[#FF6B35] group-hover:text-white transition-all duration-500 mb-8">
                 {view.icon}
               </div>
+              {idx === 0 && (
+                <span className="inline-block mb-3 px-3 py-1 rounded-full bg-[#FF6B35] text-white text-[10px] font-black uppercase tracking-[0.25em]">
+                  Start here
+                </span>
+              )}
               <h2 className="font-display text-3xl font-black text-[#0A192F] dark:text-white italic tracking-tight mb-4 transition-colors">
                 {view.label}
               </h2>

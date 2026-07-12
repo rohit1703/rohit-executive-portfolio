@@ -84,7 +84,7 @@ const Currly: React.FC<CurrlyProps> = ({ view }) => {
                 <div className="flex items-start gap-5">
                   <span className="text-sm font-black text-[#FF6B35] tabular-nums pt-1">0{i + 1}</span>
                   <div>
-                    <h3 className="text-xl md:text-2xl font-display text-[#0A192F] dark:text-white italic leading-tight tracking-tight transition-colors">
+                    <h3 className="text-xl md:text-2xl font-display font-bold text-[#0A192F] dark:text-white italic leading-tight tracking-tight transition-colors">
                       {point.label}
                     </h3>
                     <p className="mt-3 text-base md:text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
