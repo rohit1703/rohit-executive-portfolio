@@ -77,7 +77,7 @@ const LinkedInFeed: React.FC<LinkedInFeedProps> = ({ view }) => {
 
       <div className="max-w-7xl mx-auto mt-24 md:mt-32 text-center">
         <MagneticButton href="https://www.linkedin.com/in/rohitmallavarapu17/" target="_blank" className="text-[#FF6B35] font-black uppercase tracking-[0.3em] md:tracking-[0.5em] text-sm md:text-xl hover:text-white transition-colors decoration-0 group flex flex-col items-center gap-4">
-          <span>Follow the Journey on LinkedIn</span>
+          <span>Read the series on LinkedIn</span>
           <svg className="w-6 h-6 animate-bounce mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
         </MagneticButton>
       </div>

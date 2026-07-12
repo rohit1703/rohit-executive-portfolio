@@ -29,7 +29,7 @@ const Counter: React.FC<CounterProps> = ({ value, suffix = "" }) => {
 
   return (
     <span ref={ref}>
-      {count}{suffix}
+      {count.toLocaleString('en-US')}{suffix}
     </span>
   );
 };

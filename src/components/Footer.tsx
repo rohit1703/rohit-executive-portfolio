@@ -4,7 +4,7 @@ import MagneticButton from './MagneticButton';
 
 // Obfuscate email to prevent bot scraping from raw HTML
 const getEmail = () => {
-  const parts = ['mallavarapurohit', 'gmail.com'];
+  const parts = ['mallavarapu.rohit', 'gmail.com'];
   return parts.join('@');
 };
 
@@ -20,15 +20,15 @@ const Footer: React.FC = () => {
               <div className="w-24 h-24 md:w-32 md:h-32 rounded-3xl overflow-hidden border-2 border-[#FF6B35]/30 group-hover:border-[#FF6B35] transition-colors shadow-2xl">
                 <img src="/rohit.webp" alt="Rohit Mallavarapu" className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700" />
               </div>
-              <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#FF6B35] rounded-full border-4 border-[#0A192F] shadow-lg animate-pulse" title="Available for Strategic Counsel" />
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#FF6B35] rounded-full border-4 border-[#0A192F] shadow-lg animate-pulse" title="Open to roles" />
             </div>
             <div>
-              <h2 className="text-5xl md:text-7xl font-display text-white leading-[0.9]">THE EXECUTIVE <br /><span className="text-[#FF6B35]">SUMMARY</span></h2>
+              <h2 className="text-5xl md:text-7xl font-display text-white leading-[0.9]">GET IN <br /><span className="text-[#FF6B35]">TOUCH</span></h2>
             </div>
           </div>
 
           <p className="text-2xl md:text-3xl text-slate-300 leading-relaxed font-light italic border-l-4 border-[#FF6B35] pl-6 md:pl-10 py-3 md:py-6">
-            "As a strategic marketing executive, I drive revenue, brand value, and operational alignment. My work spans AI-driven demand generation, cross-functional GTM strategy, and measurable growth — including over $7M in revenue influence and support for startups & NASDAQ-listed companies."
+            "Six years marketing B2B software — a NASDAQ firm, a Tiger Global–backed insurtech, a fintech. Now I build it too: Currly, an AI workflow platform I shipped solo. If you're building something AI-native, let's talk."
           </p>
           
           <div className="flex flex-wrap gap-8 md:gap-10 mt-16 md:mt-20">
@@ -56,8 +56,8 @@ const Footer: React.FC = () => {
         
         <div className="order-1 md:order-2 bg-[#FF6B35] rounded-[40px] md:rounded-[64px] p-10 md:p-20 flex flex-col justify-between items-start text-white relative overflow-hidden group shadow-2xl">
           <div className="z-10">
-            <h3 className="text-5xl md:text-7xl font-display mb-6 md:mb-10 leading-tight">Ready to <br />scale your <br />narrative?</h3>
-            <p className="text-white/90 text-lg md:text-2xl font-light max-w-sm">Let's discuss your next $10M in growth. I am available for strategic marketing leadership and ecosystem building.</p>
+            <h3 className="text-5xl md:text-7xl font-display mb-6 md:mb-10 leading-tight">Building <br />something <br />AI-native?</h3>
+            <p className="text-white/90 text-lg md:text-2xl font-light max-w-sm">I'm open to roles where marketing and building the product aren't separate jobs. Grab a slot.</p>
           </div>
           
           <MagneticButton href="https://calendar.app.google/7dcJhghECcU1QPke7" target="_blank" rel="noopener noreferrer" className="z-10 mt-12 md:mt-16 bg-[#0A192F] text-white px-10 md:px-14 py-5 md:py-6 rounded-2xl md:rounded-[32px] font-display font-bold text-xl md:text-3xl hover:scale-105 active:scale-95 transition-transform flex items-center gap-4 md:gap-6 group/btn shadow-2xl inline-flex decoration-0">
@@ -72,8 +72,8 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto mt-32 md:mt-48 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-slate-500 text-[11px] md:text-[13px] uppercase font-bold tracking-[0.4em] gap-8 text-center md:text-left">
         <p>© {currentYear} ROHIT MALLAVARAPU. ALL RIGHTS RESERVED.</p>
         <div className="flex gap-12 md:gap-16">
-          <p>BUILT FOR SCALE</p>
-          <p>PORTFOLIO V4.0</p>
+          <p>BENGALURU · OPEN TO REMOTE</p>
+          <p>PORTFOLIO V5.0</p>
         </div>
       </div>
     </footer>

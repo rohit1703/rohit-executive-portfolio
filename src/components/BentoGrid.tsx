@@ -109,7 +109,6 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
         </div>
         <div className="z-10 mt-10">
           <div className="text-6xl md:text-7xl font-display text-white leading-none flex items-baseline">
-            <span className="text-2xl md:text-3xl font-sans mr-2 opacity-40">$</span>
             <Counter value={dark.kpiValue} suffix={dark.kpiSuffix} />
           </div>
           <p className="text-[11px] md:text-[13px] font-black uppercase tracking-[0.3em] text-[#FF6B35] mt-4">{dark.kpiLabel}</p>

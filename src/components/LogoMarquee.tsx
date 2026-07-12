@@ -3,18 +3,18 @@ import { motion } from 'framer-motion';
 
 const logos = [
   { name: 'Grid Dynamics', type: 'NASDAQ' },
-  { name: 'Cleartax', type: 'Fintech' },
   { name: 'Plum', type: 'Insurtech' },
+  { name: 'Cleartax', type: 'Fintech' },
+  { name: 'Currly', type: 'Built Solo' },
+  { name: 'ISB', type: 'CXO Summit' },
   { name: 'Fortune 1000', type: 'Enterprises' },
-  { name: 'VC Partners', type: 'Ecosystem' },
-  { name: 'GDYN India', type: 'Consultancy' },
 ];
 
 const LogoMarquee: React.FC = () => {
   return (
     <div className="py-16 md:py-24 border-y border-slate-300 dark:border-white/5 bg-slate-200/50 dark:bg-[#0A192F]/30 overflow-hidden group transition-colors">
       <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
-        <span className="text-[11px] md:text-[13px] font-black uppercase tracking-[0.4em] text-slate-400 dark:text-slate-500">Institutional Trust & Partnership Network</span>
+        <span className="text-[11px] md:text-[13px] font-black uppercase tracking-[0.4em] text-slate-400 dark:text-slate-500">Six years · Three companies · One product, built solo</span>
       </div>
       
       <div className="relative flex overflow-hidden">

@@ -4,6 +4,7 @@ import { VALID_VIEWS, VIEW_META, ViewType } from '../data/views';
 import { SECTION_COPY } from '../data/sectionCopy';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import Currly from '../components/Currly';
 import CustomCursor from '../components/CustomCursor';
 import LogoMarquee from '../components/LogoMarquee';
 import SEO from '../components/SEO';
@@ -49,6 +50,10 @@ const PortfolioView: React.FC = () => {
       <main ref={mainRef} id="main-content" tabIndex={-1} className="outline-none">
         <section id="hero">
           <Hero view={currentView} />
+        </section>
+
+        <section id="currly">
+          <Currly view={currentView} />
         </section>
 
         <LogoMarquee />

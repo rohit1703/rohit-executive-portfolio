@@ -8,15 +8,18 @@ export interface ViewMeta {
 
 export const VIEW_META: Record<ViewType, ViewMeta> = {
   about: {
-    title: 'Rohit Mallavarapu | Executive Portfolio',
-    description: 'Global marketing leader and partnerships strategist. From startup spark to NASDAQ stage — $7M+ revenue, 20x YoY growth, 100+ Fortune 1000 relationships.',
+    title: 'Rohit Mallavarapu | Builder-Marketer',
+    description:
+      'B2B marketing and partnerships, six years. Now I build the product too — Currly, an AI workflow platform shipped solo: 1,400+ tools, 111+ workflows in production.',
   },
   partnerships: {
-    title: 'Rohit Mallavarapu | Partnerships Leader',
-    description: 'Building partner ecosystems from zero to $7M+ revenue. 54+ BFSI partnerships, 50+ strategic alliances, 20x YoY growth — all systems designed, built, and scaled.',
+    title: 'Rohit Mallavarapu | Partnerships, Built From Zero',
+    description:
+      'I build partner channels from zero. ClearTax: 54 partnerships, ₹7M, 20x YoY. Plum: $3M+ in key accounts, promoted twice. And I build the product too.',
   },
   marketing: {
-    title: 'Rohit Mallavarapu | Marketing Leader',
-    description: 'Driving brand strategy, demand generation, and AI-led growth. Glassdoor turnaround, 4000+ qualified prospects, 300% budget efficiency — from startup to NASDAQ.',
+    title: 'Rohit Mallavarapu | Marketing Lead & Builder',
+    description:
+      'Sole marketing owner for Grid Dynamics India. 12 events, 4,600+ qualified prospects, brand awareness 20% → 80%. And I build the product — Currly, shipped solo.',
   },
 };

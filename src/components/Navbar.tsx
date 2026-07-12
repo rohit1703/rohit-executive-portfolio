@@ -32,10 +32,10 @@ const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { name: 'Vision', id: 'hero' },
-    { name: 'Impact', id: 'impact' },
-    { name: 'Experience', id: 'experience-centre' },
-    { name: 'Insights', id: 'feed' },
+    { name: 'Currly', id: 'currly' },
+    { name: 'Proof', id: 'impact' },
+    { name: 'Work', id: 'experience-centre' },
+    { name: 'Writing', id: 'feed' },
     { name: 'Voices', id: 'testimonials' },
   ];
 
@@ -91,7 +91,7 @@ const Navbar: React.FC = () => {
               onClick={(e) => scrollToSection(e, 'footer')}
               className="bg-[#0A192F] dark:bg-white text-white dark:text-[#0A192F] px-6 md:px-8 py-2.5 rounded-full font-display font-bold text-xs md:text-sm hover:bg-[#FF6B35] dark:hover:bg-[#FF6B35] hover:text-white dark:hover:text-white transition-all shadow-lg inline-flex items-center justify-center decoration-0 whitespace-nowrap"
             >
-              LET'S SCALE
+              GET IN TOUCH
             </MagneticButton>
             
             <button 

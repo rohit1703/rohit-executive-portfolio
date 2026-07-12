@@ -8,8 +8,8 @@ import ThemeToggle from '../components/ThemeToggle';
 const views = [
   {
     label: 'About Me',
-    hook: 'The full picture',
-    description: 'The full story — career milestones, metrics, and the journey from startup to NASDAQ. Start here if you want the complete picture.',
+    hook: 'Builder-marketer',
+    description: 'Six years in B2B marketing and partnerships — and the AI workflow platform I now build solo. Start here for the full picture.',
     path: '/about',
     icon: (
       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -19,8 +19,8 @@ const views = [
   },
   {
     label: 'Partnerships Manager',
-    hook: '$7M+ partner revenue',
-    description: 'How I build and scale partner ecosystems — 54+ BFSI partnerships, $7M+ partner-sourced revenue, systems designed from zero.',
+    hook: '54 partnerships, from zero',
+    description: 'How I build partner channels from zero. ClearTax: ₹7M, 20x YoY. Plum: $3M+ in key accounts, promoted twice.',
     path: '/partnerships',
     icon: (
       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,8 +30,8 @@ const views = [
   },
   {
     label: 'Marketing Lead',
-    hook: 'Brand & demand gen',
-    description: 'How I drive brand strategy, demand generation, and AI-led growth — Glassdoor turnarounds, flagship events, 300% efficiency.',
+    hook: 'Sole owner, India',
+    description: 'Demand, brand, and employer brand — owned end to end. 4,600+ qualified prospects; brand awareness 20% → 80%.',
     path: '/marketing',
     icon: (
       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,7 +80,7 @@ const Hub: React.FC = () => {
           ROHIT <span className="text-[#FF6B35]">MALLAVARAPU</span>
         </h1>
         <p className="text-sm md:text-2xl text-slate-500 dark:text-slate-300 font-light max-w-2xl mx-auto transition-colors">
-          I'm here as a...
+          I market B2B software — and now I build it too. Pick a lens.
         </p>
       </motion.div>
 

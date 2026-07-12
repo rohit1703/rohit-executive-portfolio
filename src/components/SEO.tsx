@@ -9,10 +9,9 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({ 
-  title = "Rohit Mallavarapu | Marketing Leader (Startup to NASDAQ)", 
-  description = "Executive portfolio of Rohit Mallavarapu. The strategic engine behind $7M+ revenue and Grid Dynamics’ NASDAQ journey.", 
-  // CRITICAL: Replace this with your working Imgur link OR keep this if 'social-card.png' is in public/
-  image = "https://rohit-executive-portfolio.vercel.app/social-card.png",
+  title = "Rohit Mallavarapu | Builder-Marketer",
+  description = "B2B marketing and partnerships, six years. Now building Currly — an AI workflow platform, shipped solo: 1,400+ tools, 111+ workflows in production.",
+  image = "https://rohit-executive-portfolio.vercel.app/wa.jpg",
   url = "https://rohit-executive-portfolio.vercel.app/"
 }) => {
   
@@ -23,7 +22,7 @@ const SEO: React.FC<SEOProps> = ({
     "name": "Rohit Mallavarapu",
     "url": url,
     "image": image,
-    "jobTitle": "Marketing Leader",
+    "jobTitle": "Marketing Lead & Founder",
     "worksFor": {
       "@type": "Organization",
       "name": "Grid Dynamics"
