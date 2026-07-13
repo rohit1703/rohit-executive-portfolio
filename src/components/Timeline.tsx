@@ -149,7 +149,7 @@ const Timeline: React.FC<TimelineProps> = ({ view }) => {
           <span className="text-[#FF6B35] font-mono font-medium text-xs md:text-sm uppercase tracking-[0.3em]">{copy.timelineLabel}</span>
         </motion.div>
 
-        <h3 className="text-4xl md:text-[11rem] font-display text-[#0A192F] dark:text-white uppercase italic font-black leading-[0.9] tracking-tighter mb-12 md:mb-16 transition-colors">
+        <h3 className="text-4xl md:text-8xl xl:text-[11rem] font-display text-[#0A192F] dark:text-white uppercase italic font-black leading-[0.9] tracking-tighter mb-12 md:mb-16 transition-colors">
           {copy.timelineHeadline} <br />
           <span className="text-[#FF6B35]">{copy.timelineAccent}</span>
         </h3>

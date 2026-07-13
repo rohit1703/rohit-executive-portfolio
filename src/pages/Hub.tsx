@@ -87,7 +87,7 @@ const Hub: React.FC = () => {
       {/* Mobile: 2+1 compact layout, Desktop: 3-col full cards */}
 
       {/* Mobile layout */}
-      <div className="md:hidden w-full max-w-sm">
+      <div className="lg:hidden w-full max-w-sm md:max-w-xl">
         <div className="grid grid-cols-2 gap-3 mb-3">
           {views.slice(0, 2).map((view, idx) => (
             <motion.div
@@ -144,14 +144,14 @@ const Hub: React.FC = () => {
       </div>
 
       {/* Desktop layout — unchanged full cards */}
-      <div className="hidden md:grid md:grid-cols-4 gap-8 max-w-6xl w-full">
+      <div className="hidden lg:grid lg:grid-cols-4 gap-8 max-w-6xl w-full">
         {views.map((view, idx) => (
           <motion.div
             key={view.path}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.06, duration: 0.4 }}
-            className={idx === 0 ? 'md:col-span-2' : ''}
+            className={idx === 0 ? 'lg:col-span-2' : ''}
           >
             <Link
               to={view.path}

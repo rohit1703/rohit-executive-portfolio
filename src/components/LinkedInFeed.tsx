@@ -21,7 +21,7 @@ const LinkedInFeed: React.FC<LinkedInFeedProps> = ({ view }) => {
           <div className="w-10 md:w-20 h-px bg-[#FF6B35]" />
           <span className="text-[#FF6B35] font-mono font-medium text-xs md:text-sm uppercase tracking-[0.3em]">{copy.feedLabel}</span>
         </div>
-        <h3 className="text-5xl md:text-[11rem] font-display text-white uppercase italic font-black leading-[0.9] tracking-tighter">
+        <h3 className="text-5xl md:text-8xl xl:text-[11rem] font-display text-white uppercase italic font-black leading-[0.9] tracking-tighter">
           {copy.feedHeadline} <br />
           <span className="text-[#FF6B35]">{copy.feedAccent}</span>
         </h3>
