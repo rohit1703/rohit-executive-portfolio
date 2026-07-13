@@ -20,7 +20,7 @@ export const METRIC_CARDS: MetricCard[] = [
     label: 'Sole Owner, India',
     descriptions: {
       about:
-        'Sole marketing owner for Grid Dynamics India — client, talent, and brand. No team beneath me.',
+        'Sole marketing owner for Grid Dynamics India, client, talent, and brand. No team beneath me.',
       partnerships:
         'I own the India CXO relationships. Two flagship client events; the latest, with ISB, engaged 200+ Fortune 1000 CXOs.',
       marketing:
@@ -43,11 +43,11 @@ export const METRIC_CARDS: MetricCard[] = [
     label: 'BFSI Channel, From Zero',
     descriptions: {
       about:
-        'Built the BFSI & Payroll channel from zero — 54 partnerships, ₹7M revenue, 150,000 consumers reached.',
+        'Built the BFSI & Payroll channel from zero, 54 partnerships, ₹7M revenue, 150,000 consumers reached.',
       partnerships:
         '54 partnerships across banks, NBFCs, and fintechs. ₹7M revenue. API, CG, and PWA integrations end to end.',
       marketing:
-        'Integrated BFSI campaigns end to end — 50+ partner microsites and mailers; 150,000 consumers reached.',
+        'Integrated BFSI campaigns end to end, 50+ partner microsites and mailers; 150,000 consumers reached.',
     },
     kpiValue: 20,
     kpiSuffix: 'x',
@@ -66,7 +66,7 @@ export const METRIC_CARDS: MetricCard[] = [
     label: 'Ecosystem, Built',
     descriptions: {
       about:
-        'Promoted twice in under two years. Built the partner ecosystem from zero — 50+ partners onboarded in 6 months.',
+        'Promoted twice in under two years. Built the partner ecosystem from zero, 50+ partners onboarded in 6 months.',
       partnerships:
         '$3M+ in key accounts; 100+ enterprise accounts; 45% YoY partner growth, with P&L accountability.',
       marketing:
@@ -91,7 +91,7 @@ export const METRIC_CARDS: MetricCard[] = [
       about:
         'An AI workflow platform I shipped solo. 111+ workflows live; fixed a search_path bug that had silently killed semantic search in prod.',
       partnerships:
-        'I build the product too — Currly, solo, in production. 1,400+ tools, 111+ workflows, p95 search under 400ms.',
+        'I build the product too, Currly, solo, in production. 1,400+ tools, 111+ workflows, p95 search under 400ms.',
       marketing:
         'I build the product I market. Currly: 1,400+ tools, 111+ workflows, 84 ISR use-case pages of programmatic SEO.',
     },

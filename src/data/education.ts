@@ -7,7 +7,7 @@ export interface Education {
 
 export const EDUCATION: Education[] = [
   {
-    title: 'B.Tech — Information & Communication Technology',
+    title: 'B.Tech, Information & Communication Technology',
     institution: 'DA-IICT (Dhirubhai Ambani Institute), Gujarat',
     year: '2020',
     type: 'degree',

@@ -26,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({ view }) => {
     <Helmet>
       <link rel="preload" as="image" href="/rohit.webp" fetchPriority="high" />
     </Helmet>
-    <div ref={containerRef} className="relative min-h-[100dvh] md:min-h-[110vh] bg-[#F0F4F8] dark:bg-[#0A192F] transition-colors duration-500 overflow-hidden flex flex-col justify-center">
+    <div ref={containerRef} className="relative min-h-[92dvh] md:min-h-[90vh] bg-[#F0F4F8] dark:bg-[#0A192F] transition-colors duration-500 overflow-hidden flex flex-col justify-center">
 
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 flex flex-col md:flex-row items-center justify-between relative z-20">
 

@@ -31,21 +31,21 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
       marketing: 'Marketing Lead, India',
     },
     company: 'Grid Dynamics (NASDAQ: GDYN)',
-    period: 'Jul 2024 — Present',
+    period: 'Jul 2024 – Present',
     tagline: {
       about:
-        'Sole marketing owner for Grid Dynamics India — client, talent, and brand. No team beneath me, no daily supervision.',
+        'Sole marketing owner for Grid Dynamics India, client, talent, and brand. No team beneath me, no daily supervision.',
       partnerships:
         'I own the India CXO relationships end to end. Two flagship client events; the latest, with ISB, put me in a room with 200+ Fortune 1000 CXOs.',
       marketing:
-        'Sole marketing owner for India — client, talent, and brand. I run the full campaign cycle: research, content, decks, video, events.',
+        'Sole marketing owner for India, client, talent, and brand. I run the full campaign cycle: research, content, decks, video, events.',
     },
     categories: {
       about: [
         {
           title: 'The mandate',
           points: [
-            'Sole marketing owner for India — client, talent, and brand. No team beneath me.',
+            'Sole marketing owner for India, client, talent, and brand. No team beneath me.',
             '12 Dynamic Talks across 3 cities → 4,600+ qualified talent prospects. Peak event: 664 registrations; 400+ average.',
           ],
         },
@@ -68,7 +68,7 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
         {
           title: 'Trust, rebuilt',
           points: [
-            'Glassdoor 3.2 → 3.9; AmbitionBox 2.0 → 3.1 — the credibility that makes CXO conversations easier.',
+            'Glassdoor 3.2 → 3.9; AmbitionBox 2.0 → 3.1, the credibility that makes CXO conversations easier.',
             "India grew to 48% of the company's global LinkedIn following; 1,200+ talent leads.",
           ],
         },
@@ -110,14 +110,14 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
       marketing: 'AGM, Partnerships',
     },
     company: 'Plum Benefits (Tiger Global/Sequoia)',
-    period: 'Jul 2022 — Jul 2024',
+    period: 'Jul 2022 – Jul 2024',
     tagline: {
       about:
-        'Promoted twice in under two years — Community Builder → Senior Associate → AGM, Partnerships. Built Plum’s partner ecosystem from zero.',
+        'Promoted twice in under two years, Community Builder → Senior Associate → AGM, Partnerships. Built Plum’s partner ecosystem from zero.',
       partnerships:
         'I built Plum’s partner ecosystem from zero and ran it with P&L accountability. $3M+ in key accounts; 45% YoY partner growth.',
       marketing:
-        'Ran experiential marketing and partnerships — 8+ events across 7 cities. Two promotions in under two years.',
+        'Ran experiential marketing and partnerships, 8+ events across 7 cities. Two promotions in under two years.',
     },
     categories: {
       about: [
@@ -132,7 +132,7 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
           title: 'Built from zero',
           points: [
             '50+ partners onboarded in 6 months; 100+ enterprise accounts.',
-            '8+ experiential events across 7 cities → 150 enterprise SALs. Top 25 Emerging Leaders 2024 — Indian Startup Times.',
+            '8+ experiential events across 7 cities → 150 enterprise SALs. Top 25 Emerging Leaders 2024, Indian Startup Times.',
           ],
         },
       ],
@@ -140,7 +140,7 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
         {
           title: 'The ecosystem',
           points: [
-            'Built Plum’s partner base from zero — 50+ partners onboarded in 6 months; 100+ enterprise accounts.',
+            'Built Plum’s partner base from zero, 50+ partners onboarded in 6 months; 100+ enterprise accounts.',
             '$3M+ in key accounts; 45% YoY partner growth; 35% engagement improvement.',
           ],
         },
@@ -148,7 +148,7 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
           title: 'The proof',
           points: [
             '8+ experiential events across 7 cities → 150 enterprise SALs.',
-            'Promoted twice in under two years. Top 25 Emerging Leaders 2024 — Indian Startup Times.',
+            'Promoted twice in under two years. Top 25 Emerging Leaders 2024, Indian Startup Times.',
           ],
         },
       ],
@@ -164,7 +164,7 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
           title: 'Growth',
           points: [
             '$3M+ in key accounts; 45% YoY partner growth; 100+ enterprise accounts.',
-            'Promoted twice in under two years. Top 25 Emerging Leaders 2024 — Indian Startup Times.',
+            'Promoted twice in under two years. Top 25 Emerging Leaders 2024, Indian Startup Times.',
           ],
         },
       ],
@@ -184,26 +184,26 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
   },
   {
     role: {
-      about: 'Partnerships Manager — BFSI & Payroll',
-      partnerships: 'Partnerships Manager — BFSI & Payroll',
-      marketing: 'Partnerships Manager — BFSI & Payroll',
+      about: 'Partnerships Manager, BFSI & Payroll',
+      partnerships: 'Partnerships Manager, BFSI & Payroll',
+      marketing: 'Partnerships Manager, BFSI & Payroll',
     },
     company: 'Clear (formerly ClearTax)',
-    period: 'Feb 2021 — Jul 2022',
+    period: 'Feb 2021 – Jul 2022',
     tagline: {
       about:
-        'Built ClearTax’s BFSI & Payroll partnership channel from zero — 54 partnerships, ₹7M revenue, 20x YoY.',
+        'Built ClearTax’s BFSI & Payroll partnership channel from zero, 54 partnerships, ₹7M revenue, 20x YoY.',
       partnerships:
         'I built the BFSI channel from zero. 54 partnerships across banks, NBFCs, and fintechs → ₹7M revenue, 20x YoY.',
       marketing:
-        'Ran integrated BFSI campaigns end to end — 50+ partner microsites and mailers, webinars with fintech leaders. Reached 150,000 consumers.',
+        'Ran integrated BFSI campaigns end to end, 50+ partner microsites and mailers, webinars with fintech leaders. Reached 150,000 consumers.',
     },
     categories: {
       about: [
         {
           title: '0 → 1 channel',
           points: [
-            'Built the BFSI & Payroll partnership channel from zero — 54 partnerships across banks, NBFCs, and fintechs.',
+            'Built the BFSI & Payroll partnership channel from zero, 54 partnerships across banks, NBFCs, and fintechs.',
             '₹7M revenue; 20x YoY growth; 150,000 consumers reached.',
           ],
         },
@@ -219,7 +219,7 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
         {
           title: 'Channel from zero',
           points: [
-            '54 partnerships across banks, NBFCs, and fintech platforms — ₹7M revenue, 20x YoY.',
+            '54 partnerships across banks, NBFCs, and fintech platforms, ₹7M revenue, 20x YoY.',
             'Owned API, CG, and PWA integrations end to end, cutting onboarding friction.',
           ],
         },

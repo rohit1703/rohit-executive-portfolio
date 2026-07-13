@@ -52,7 +52,6 @@ const Testimonials: React.FC<TestimonialsProps> = ({ view }) => {
   return (
     <div className="relative py-24 md:py-40 border-t border-slate-300 dark:border-white/5 bg-slate-100/50 dark:bg-[#0A192F]/50 transition-colors">
       <div className="max-w-7xl mx-auto text-center mb-12 md:mb-24 px-6">
-        <h2 className="text-[#FF6B35] uppercase tracking-[0.3em] text-[11px] md:text-[13px] font-mono font-medium mb-6">Leadership Feedback</h2>
         <h3 className="text-4xl md:text-7xl font-display text-[#0A192F] dark:text-white italic font-black tracking-tighter uppercase leading-none transition-colors">Market <span className="text-[#FF6B35]">Sentiment</span></h3>
       </div>
 

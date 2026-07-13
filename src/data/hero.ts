@@ -18,7 +18,7 @@ export const HERO_DATA: Record<ViewType, HeroData> = {
     headlineMid: '→',
     headlineBottom: 'NASDAQ',
     headlineAccent2: 'STAGE',
-    subtitle: 'Global marketing leader with deep expertise in scaling high-growth tech organizations. I design and execute <strong>AI-led growth strategies</strong> that fuel revenue acceleration & brand expansion — including strategic leadership for NASDAQ-listed organizations.',
+    subtitle: 'Global marketing leader with deep expertise in scaling high-growth tech organizations. I design and execute <strong>AI-led growth strategies</strong> that fuel revenue acceleration & brand expansion, including strategic leadership for NASDAQ-listed organizations.',
   },
   partnerships: {
     badge: 'Partnerships Leader',
@@ -27,7 +27,7 @@ export const HERO_DATA: Record<ViewType, HeroData> = {
     headlineMid: '→',
     headlineBottom: '₹7M',
     headlineAccent2: 'REVENUE',
-    subtitle: 'I build partnership engines from scratch. <strong>54 BFSI partnerships, ₹7M revenue, 20x YoY growth</strong> — every system designed, built, and scaled by me across ClearTax and Plum.',
+    subtitle: 'I build partnership engines from scratch. <strong>54 BFSI partnerships, ₹7M revenue, 20x YoY growth.</strong> Every system designed, built, and scaled by me across ClearTax and Plum.',
   },
   marketing: {
     badge: 'Marketing Leader',
@@ -36,6 +36,6 @@ export const HERO_DATA: Record<ViewType, HeroData> = {
     headlineMid: '→',
     headlineBottom: 'NASDAQ',
     headlineAccent2: 'STAGE',
-    subtitle: 'Global marketing leader designing <strong>AI-led growth strategies</strong> that fuel revenue acceleration and brand expansion. From Glassdoor turnarounds to flagship CXO summits — driving demand generation, content strategy, and measurable growth at scale.',
+    subtitle: 'Global marketing leader designing <strong>AI-led growth strategies</strong> that fuel revenue acceleration and brand expansion. From Glassdoor turnarounds to flagship CXO summits, driving demand generation, content strategy, and measurable growth at scale.',
   },
 };

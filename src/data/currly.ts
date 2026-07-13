@@ -9,11 +9,11 @@ export interface CurrlyPoint {
 // lands the same in every view; the framing shifts to match the lens.
 export const CURRLY_INTRO: Record<ViewType, string> = {
   about:
-    'This is the part that separates me from every other B2B marketer with the same numbers. I build the product now — not just the go-to-market around it.',
+    'This is the part that separates me from every other B2B marketer with the same numbers. I build the product now, not just the go-to-market around it.',
   partnerships:
-    "I don't only build partner pipelines anymore. I build the product too — solo, in production.",
+    "I don't only build partner pipelines anymore. I build the product too, solo, in production.",
   marketing:
-    "I don't only run the marketing. I build the product it sells — solo, in production.",
+    "I don't only run the marketing. I build the product it sells, solo, in production.",
 };
 
 export const CURRLY = {
@@ -35,7 +35,7 @@ export const CURRLY = {
     {
       label: 'Built an eval harness, then moved the number',
       detail:
-        'Raised paraphrase stability from 29% to 62% with a canonical-intent layer — measured against an eval harness I built for the purpose.',
+        'Raised paraphrase stability from 29% to 62% with a canonical-intent layer, measured against an eval harness I built for the purpose.',
     },
     {
       label: '5-signal ranking, p95 under 400ms',
@@ -45,12 +45,12 @@ export const CURRLY = {
     {
       label: 'A defensible data asset',
       detail:
-        'Proprietary D7/D30 outcome data on which AI tool combinations actually work — gated at n=5 reports before any success rate shows.',
+        'Proprietary D7/D30 outcome data on which AI tool combinations actually work, gated at n=5 reports before any success rate shows.',
     },
     {
       label: 'Programmatic SEO/AEO, plus a community',
       detail:
-        '84 ISR use-case pages, HowTo/FAQ JSON-LD, and AI-crawler rules — feeding a 450+ builder community that feeds content back into the product.',
+        '84 ISR use-case pages, HowTo/FAQ JSON-LD, and AI-crawler rules that feed a 450+ builder community, which feeds content back into the product.',
     },
   ] as CurrlyPoint[],
 };

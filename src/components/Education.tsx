@@ -9,15 +9,6 @@ const Education: React.FC = () => {
   return (
     <div className="py-24 md:py-32 px-6 bg-slate-200/50 dark:bg-[#081526]/50 border-y border-slate-300 dark:border-white/5 transition-colors">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-8 mb-10 md:mb-14"
-        >
-          <div className="w-12 md:w-20 h-px bg-[#FF6B35]" />
-          <span className="text-[#FF6B35] font-mono font-medium text-xs md:text-sm uppercase tracking-[0.3em]">Credentials</span>
-        </motion.div>
-
         <h3 className="text-4xl md:text-7xl font-display text-[#0A192F] dark:text-white uppercase italic font-black leading-[0.9] tracking-tighter mb-16 md:mb-24 transition-colors">
           EDUCATION & <br /><span className="text-[#FF6B35]">CERTIFICATIONS.</span>
         </h3>

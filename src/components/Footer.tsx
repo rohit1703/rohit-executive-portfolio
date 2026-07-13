@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
           </div>
 
           <p className="text-2xl md:text-3xl text-slate-300 leading-relaxed font-light italic border-l-4 border-[#FF6B35] pl-6 md:pl-10 py-3 md:py-6">
-            "Six years marketing B2B software — a NASDAQ firm, a Tiger Global–backed insurtech, a fintech. Now I build it too: Currly, an AI workflow platform I shipped solo. If you're building something AI-native, let's talk."
+            "Six years marketing B2B software: a NASDAQ firm, a Tiger Global–backed insurtech, a fintech. Now I build it too. Currly is an AI workflow platform I shipped solo. If you're building something AI-native, let's talk."
           </p>
           
           <div className="flex flex-wrap gap-8 md:gap-10 mt-16 md:mt-20">
