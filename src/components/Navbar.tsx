@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
             <span className="font-display font-black text-xl tracking-tighter text-[#0A192F] dark:text-white hidden sm:block">ROHIT.</span>
           </Link>
           
-          <div className="hidden lg:flex items-center gap-10 text-[13px] font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-300">
+          <div className="hidden lg:flex items-center gap-8 text-[12px] font-mono font-medium uppercase tracking-[0.15em] text-slate-500 dark:text-slate-300">
             {navLinks.map((link) => (
               <a 
                 key={link.id}

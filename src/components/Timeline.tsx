@@ -48,7 +48,7 @@ const Pillar: React.FC<PillarProps> = ({ title, points, icon }) => (
       <div className="w-10 h-10 md:w-14 md:h-14 rounded-2xl bg-white border border-slate-200 dark:bg-white/5 dark:border-white/10 flex items-center justify-center text-[#FF6B35] group-hover:bg-[#FF6B35] group-hover:text-white transition-all duration-500 shadow-xl flex-shrink-0">
         {icon}
       </div>
-      <h5 className="text-base md:text-xl font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-[#FF6B35]">{title}</h5>
+      <h5 className="text-sm md:text-base font-mono font-medium uppercase tracking-[0.2em] text-[#FF6B35]">{title}</h5>
     </div>
     <ul className="space-y-6 md:space-y-8 pl-6 md:pl-20 border-l-2 border-slate-200 dark:border-white/10 md:border-0 ml-5 md:ml-0">
       {points.map((point, i) => (
@@ -70,9 +70,9 @@ const ExperienceBlock: React.FC<{ data: ExperienceEntry; index: number; view: Vi
       <div className="lg:sticky lg:top-40 lg:h-fit w-full lg:w-5/12 space-y-10 md:space-y-12 z-10">
         <div className="space-y-6 md:space-y-8">
           <div className="flex items-center gap-5">
-            <span className="text-sm font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.4em]">0{index + 1}</span>
+            <span className="text-sm font-mono text-slate-400 dark:text-slate-500 tracking-[0.2em]">0{index + 1}</span>
             <div className="h-px w-12 bg-slate-300 dark:bg-white/20" />
-            <span className="text-sm font-black text-[#FF6B35] uppercase tracking-[0.4em]">{data.period}</span>
+            <span className="text-xs md:text-sm font-mono font-medium text-[#FF6B35] uppercase tracking-[0.15em]">{data.period}</span>
           </div>
           <div className="flex items-start gap-6">
             <div className="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-[#FF6B35]/10 border border-[#FF6B35]/20 flex items-center justify-center text-[#FF6B35] flex-shrink-0 shadow-[0_0_20px_rgba(255,107,53,0.1)]">
@@ -85,13 +85,12 @@ const ExperienceBlock: React.FC<{ data: ExperienceEntry; index: number; view: Vi
           <p className="text-xl md:text-3xl font-display text-slate-500 dark:text-slate-400 italic lowercase tracking-tight transition-colors">{data.company}</p>
         </div>
 
-        <div className="p-10 md:p-14 rounded-[32px] md:rounded-[56px] bg-white dark:bg-gradient-to-br dark:from-[#182A45] dark:to-[#0A192F] border border-slate-200 dark:border-white/10 shadow-2xl space-y-10 md:space-y-14 overflow-hidden relative group transition-colors">
-          <div className="absolute top-0 right-0 w-40 h-40 bg-[#FF6B35]/10 blur-3xl rounded-full -mr-20 -mt-20" />
+        <div className="p-10 md:p-14 rounded-2xl md:rounded-[28px] bg-white dark:bg-gradient-to-br dark:from-[#182A45] dark:to-[#0A192F] border border-slate-200 dark:border-white/10 shadow-2xl space-y-10 md:space-y-14 overflow-hidden relative group transition-colors">
           <div className="flex items-center gap-4 mb-2">
             <div className="w-12 h-12 rounded-full overflow-hidden border border-[#FF6B35]/30">
               <img src="/rohit.webp" alt="Rohit Mallavarapu" className="w-full h-full object-cover" />
             </div>
-            <p className="text-sm font-black text-[#FF6B35] uppercase tracking-widest">Leadership Note</p>
+            <p className="text-xs font-mono font-medium text-[#FF6B35] uppercase tracking-[0.2em]">Leadership Note</p>
           </div>
           <p className="text-lg md:text-2xl text-slate-600 dark:text-slate-200 font-light leading-relaxed italic border-l-4 border-[#FF6B35] pl-6 transition-colors">
             {data.tagline[view]}
@@ -101,14 +100,14 @@ const ExperienceBlock: React.FC<{ data: ExperienceEntry; index: number; view: Vi
               <div className="text-5xl md:text-7xl font-display text-[#0A192F] dark:text-white italic drop-shadow-sm dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-colors">
                 <Counter value={kpi.value} suffix={kpi.suffix} />
               </div>
-              <p className="text-[10px] md:text-xs font-black uppercase tracking-widest text-slate-400">{kpi.label}</p>
+              <p className="text-[10px] md:text-xs font-mono font-medium uppercase tracking-[0.15em] text-slate-400">{kpi.label}</p>
             </div>
             {secondaryKpi && (
               <div className="space-y-3">
                 <div className="text-4xl md:text-5xl font-display text-[#FF6B35] italic tracking-tighter drop-shadow-sm dark:drop-shadow-[0_0_15px_rgba(255,107,53,0.3)]">
                   <Counter value={secondaryKpi.value} suffix={secondaryKpi.suffix} />
                 </div>
-                <p className="text-[10px] md:text-xs font-black uppercase tracking-widest text-slate-400">{secondaryKpi.label}</p>
+                <p className="text-[10px] md:text-xs font-mono font-medium uppercase tracking-[0.15em] text-slate-400">{secondaryKpi.label}</p>
               </div>
             )}
           </div>
@@ -117,7 +116,7 @@ const ExperienceBlock: React.FC<{ data: ExperienceEntry; index: number; view: Vi
 
       <div className="w-full lg:w-7/12 mt-14 lg:mt-0">
         <div className="mb-14 md:mb-24">
-          <span className="text-sm md:text-base font-black uppercase tracking-[0.4em] md:tracking-[0.6em] text-slate-400 block mb-12 md:mb-16 border-b border-slate-300 dark:border-white/5 pb-4">Detailed Operational Rigor</span>
+          <span className="text-xs md:text-sm font-mono font-medium uppercase tracking-[0.3em] text-slate-400 block mb-12 md:mb-16 border-b border-slate-300 dark:border-white/5 pb-4">Detailed Operational Rigor</span>
           <div className="space-y-12 md:space-y-16">
             {data.categories[view].map((cat, i) => (
               <Pillar
@@ -147,7 +146,7 @@ const Timeline: React.FC<TimelineProps> = ({ view }) => {
           className="flex items-center gap-8 mb-10 md:mb-14"
         >
           <div className="w-12 md:w-20 h-px bg-[#FF6B35]" />
-          <span className="text-[#FF6B35] font-black text-sm md:text-lg uppercase tracking-[0.5em] md:tracking-[0.8em]">{copy.timelineLabel}</span>
+          <span className="text-[#FF6B35] font-mono font-medium text-xs md:text-sm uppercase tracking-[0.3em]">{copy.timelineLabel}</span>
         </motion.div>
 
         <h3 className="text-4xl md:text-[11rem] font-display text-[#0A192F] dark:text-white uppercase italic font-black leading-[0.9] tracking-tighter mb-12 md:mb-16 transition-colors">

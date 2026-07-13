@@ -10,10 +10,13 @@ export default {
       colors: {
         deepBlue: '#0A192F',
         electricOrange: '#FF6B35',
+        surface: '#142138',
+        surface2: '#1B2C49',
       },
       fontFamily: {
         display: ['Outfit', 'sans-serif'],
-        sans: ['Inter', 'sans-serif'],
+        sans: ['"Geist Sans"', 'system-ui', 'sans-serif'],
+        mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],
       }
     },
   },

@@ -32,20 +32,20 @@ const Footer: React.FC = () => {
           </p>
           
           <div className="flex flex-wrap gap-8 md:gap-10 mt-16 md:mt-20">
-            <a href="https://www.linkedin.com/in/rohitmallavarapu17/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 text-slate-400 hover:text-[#FF6B35] transition-colors font-bold uppercase tracking-widest text-[12px] md:text-[14px]">
+            <a href="https://www.linkedin.com/in/rohitmallavarapu17/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 text-slate-400 hover:text-[#FF6B35] transition-colors font-mono font-medium uppercase tracking-[0.15em] text-[12px] md:text-[13px]">
                <div className="w-10 h-10 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#FF6B35] transition-colors">
                  <svg className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                </div>
                LinkedIn
             </a>
-            <a href="#" onClick={(e) => { e.preventDefault(); window.location.href = `mailto:${getEmail()}`; }} className="group flex items-center gap-4 text-slate-400 hover:text-[#FF6B35] transition-colors font-bold uppercase tracking-widest text-[12px] md:text-[14px]">
+            <a href="#" onClick={(e) => { e.preventDefault(); window.location.href = `mailto:${getEmail()}`; }} className="group flex items-center gap-4 text-slate-400 hover:text-[#FF6B35] transition-colors font-mono font-medium uppercase tracking-[0.15em] text-[12px] md:text-[13px]">
                <div className="w-10 h-10 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#FF6B35] transition-colors">
                  <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                </div>
                Email
             </a>
             {/* NEW: Resume Link in Footer */}
-            <a href="/Rohit_Mallavarapu_Resume.pdf" download className="group flex items-center gap-4 text-slate-400 hover:text-[#FF6B35] transition-colors font-bold uppercase tracking-widest text-[12px] md:text-[14px]">
+            <a href="/Rohit_Mallavarapu_Resume.pdf" download className="group flex items-center gap-4 text-slate-400 hover:text-[#FF6B35] transition-colors font-mono font-medium uppercase tracking-[0.15em] text-[12px] md:text-[13px]">
                <div className="w-10 h-10 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#FF6B35] transition-colors">
                  <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                </div>
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="order-1 md:order-2 bg-[#FF6B35] rounded-[40px] md:rounded-[64px] p-10 md:p-20 flex flex-col justify-between items-start text-white relative overflow-hidden group shadow-2xl">
+        <div className="order-1 md:order-2 bg-[#FF6B35] rounded-3xl md:rounded-[32px] p-10 md:p-20 flex flex-col justify-between items-start text-white relative overflow-hidden group shadow-2xl">
           <div className="z-10">
             <h3 className="text-5xl md:text-7xl font-display mb-6 md:mb-10 leading-tight">Building <br />something <br />AI-native?</h3>
             <p className="text-white/90 text-lg md:text-2xl font-light max-w-sm">I'm open to roles where marketing and building the product aren't separate jobs. Grab a slot.</p>
@@ -65,11 +65,10 @@ const Footer: React.FC = () => {
             <svg className="w-6 h-6 md:w-8 md:h-8 group-hover/btn:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </MagneticButton>
 
-          <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-white/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-2xl group-hover:bg-white/20 transition-all duration-700" />
         </div>
       </div>
       
-      <div className="max-w-7xl mx-auto mt-32 md:mt-48 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-slate-500 text-[11px] md:text-[13px] uppercase font-bold tracking-[0.4em] gap-8 text-center md:text-left">
+      <div className="max-w-7xl mx-auto mt-32 md:mt-48 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-slate-500 text-[11px] md:text-[12px] uppercase font-mono tracking-[0.2em] gap-8 text-center md:text-left">
         <p>© {currentYear} ROHIT MALLAVARAPU. ALL RIGHTS RESERVED.</p>
         <div className="flex gap-12 md:gap-16">
           <p>BENGALURU · OPEN TO REMOTE</p>

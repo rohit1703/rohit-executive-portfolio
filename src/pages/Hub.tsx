@@ -108,7 +108,7 @@ const Hub: React.FC = () => {
                   {view.label}
                 </h2>
                 <p className="text-slate-400 dark:text-slate-400 text-xs font-medium mb-4">{view.hook}</p>
-                <div className="flex items-center gap-2 text-[#FF6B35] font-black text-[10px] uppercase tracking-[0.2em] group-hover:gap-3 transition-all">
+                <div className="flex items-center gap-2 text-[#FF6B35] font-mono font-medium text-[10px] uppercase tracking-[0.15em] group-hover:gap-3 transition-all">
                   <span>Explore</span>
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </div>
@@ -135,7 +135,7 @@ const Hub: React.FC = () => {
               {views[2].label}
             </h2>
             <p className="text-slate-400 dark:text-slate-400 text-xs font-medium mb-4">{views[2].hook}</p>
-            <div className="flex items-center gap-2 text-[#FF6B35] font-black text-[10px] uppercase tracking-[0.2em] group-hover:gap-3 transition-all">
+            <div className="flex items-center gap-2 text-[#FF6B35] font-mono font-medium text-[10px] uppercase tracking-[0.15em] group-hover:gap-3 transition-all">
               <span>Explore</span>
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </div>
@@ -155,7 +155,7 @@ const Hub: React.FC = () => {
             <Link
               to={view.path}
               onClick={() => handleViewSelect(view.label, view.path)}
-              className={`block premium-card rounded-[48px] p-12 bg-white dark:bg-[#182A45]/40 group transition-all duration-500 h-full ${
+              className={`block premium-card rounded-[24px] p-12 bg-white dark:bg-[#182A45]/40 group transition-all duration-500 h-full ${
                 idx === 0
                   ? 'border border-[#FF6B35]/50 ring-1 ring-[#FF6B35]/20 shadow-[0_24px_70px_-24px_rgba(255,107,53,0.4)] hover:border-[#FF6B35]'
                   : 'border border-slate-200 dark:border-white/10 hover:border-[#FF6B35]/40'
@@ -165,7 +165,7 @@ const Hub: React.FC = () => {
                 {view.icon}
               </div>
               {idx === 0 && (
-                <span className="inline-block mb-3 px-3 py-1 rounded-full bg-[#FF6B35] text-white text-[10px] font-black uppercase tracking-[0.25em]">
+                <span className="inline-block mb-3 px-3 py-1 rounded-full bg-[#FF6B35] text-white text-[10px] font-mono font-medium uppercase tracking-[0.2em]">
                   Start here
                 </span>
               )}
@@ -175,7 +175,7 @@ const Hub: React.FC = () => {
               <p className="text-slate-500 dark:text-slate-300 font-light leading-relaxed text-base transition-colors">
                 {view.description}
               </p>
-              <div className="mt-8 flex items-center gap-3 text-[#FF6B35] font-black text-xs uppercase tracking-[0.3em] group-hover:gap-5 transition-all">
+              <div className="mt-8 flex items-center gap-3 text-[#FF6B35] font-mono font-medium text-xs uppercase tracking-[0.2em] group-hover:gap-5 transition-all">
                 <span>Explore</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </div>

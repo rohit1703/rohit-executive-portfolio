@@ -28,7 +28,7 @@ const Counter: React.FC<CounterProps> = ({ value, suffix = "" }) => {
   }, [value, isInView]);
 
   return (
-    <span ref={ref}>
+    <span ref={ref} className="font-mono tabular-nums tracking-tight">
       {count.toLocaleString('en-US')}{suffix}
     </span>
   );

@@ -38,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({ view }) => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-6 px-4 py-2 rounded-full border border-slate-300 dark:border-white/20 bg-white/60 dark:bg-white/10 backdrop-blur-md text-slate-600 dark:text-slate-300 text-[10px] md:text-xs font-black tracking-[0.2em] uppercase inline-block shadow-sm"
+            className="mb-6 px-4 py-2 rounded-full border border-slate-300 dark:border-white/20 bg-white/60 dark:bg-white/10 backdrop-blur-md text-slate-600 dark:text-slate-300 text-[10px] md:text-xs font-mono font-medium tracking-[0.2em] uppercase inline-block shadow-sm"
           >
             {data.badge}
           </motion.div>
@@ -87,11 +87,6 @@ const Hero: React.FC<HeroProps> = ({ view }) => {
           </div>
         </motion.div>
 
-        <motion.div
-          animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="hidden md:block absolute top-1/2 right-0 -translate-y-1/2 w-[80vw] h-[80vw] bg-[#FF6B35]/10 blur-[120px] rounded-full pointer-events-none z-0"
-        />
       </div>
     </div>
     </>

@@ -63,7 +63,7 @@ const PortfolioView: React.FC = () => {
             <section id="impact" className="py-32 px-6 md:px-12 max-w-7xl mx-auto">
               <div className="flex flex-col lg:flex-row gap-16 mb-24 items-start">
                 <div className="lg:w-1/2">
-                  <h2 className="text-[#FF6B35] font-black text-xs uppercase tracking-[0.5em] mb-6">{copy.impactLabel}</h2>
+                  <h2 className="text-[#FF6B35] font-mono font-medium text-xs uppercase tracking-[0.3em] mb-6">{copy.impactLabel}</h2>
                   <p className="text-5xl md:text-7xl font-display leading-[0.9] text-[#0A192F] dark:text-white uppercase italic font-black transition-colors duration-300">
                     {copy.impactHeadline} <br />market <span className="text-[#FF6B35]">{copy.impactAccent}</span>
                   </p>

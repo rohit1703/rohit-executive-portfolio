@@ -22,12 +22,11 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
       {/* Card 1: Wide */}
       <motion.div
         whileHover={{ scale: 1.01 }}
-        className="md:col-span-2 premium-card rounded-[32px] md:rounded-[48px] p-8 md:p-14 flex flex-col justify-between group overflow-hidden min-h-[400px]
+        className="md:col-span-2 premium-card rounded-2xl md:rounded-[24px] p-8 md:p-14 flex flex-col justify-between group overflow-hidden min-h-[400px]
         bg-white dark:bg-[#182A45]/40 border border-slate-200 dark:border-white/10"
       >
-        <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#FF6B35]/10 rounded-full blur-3xl group-hover:bg-[#FF6B35]/20 transition-all duration-700" />
         <div className="relative z-10">
-          <span className="text-[11px] md:text-sm font-black text-[#FF6B35] uppercase tracking-[0.3em]">{wide.label}</span>
+          <span className="text-[11px] md:text-sm font-mono font-medium text-[#FF6B35] uppercase tracking-[0.2em]">{wide.label}</span>
           <h3 className="text-4xl md:text-6xl font-display mt-4 text-[#0A192F] dark:text-white italic leading-none transition-colors">{wide.company} <span className="text-[#FF6B35]">{wide.id === 'grid-dynamics' ? 'India' : ''}</span></h3>
         </div>
         <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-10 md:gap-12 mt-12">
@@ -48,7 +47,7 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
                 <Counter value={wide.kpiValue} suffix={wide.kpiSuffix} />
               </span>
             )}
-            <p className="text-[11px] md:text-[13px] uppercase tracking-widest text-[#FF6B35] font-black mt-3">{wide.kpiLabel}</p>
+            <p className="text-[11px] md:text-[13px] uppercase tracking-[0.2em] text-[#FF6B35] font-mono font-medium mt-3">{wide.kpiLabel}</p>
           </div>
         </div>
       </motion.div>
@@ -56,10 +55,10 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
       {/* Card 2: Tall Accent */}
       <motion.div
         whileHover={{ scale: 1.01 }}
-        className="md:row-span-2 bg-[#FF6B35] rounded-[32px] md:rounded-[48px] p-10 md:p-14 flex flex-col justify-between text-[#0A192F] relative shadow-2xl overflow-hidden min-h-[500px] md:min-h-[700px]"
+        className="md:row-span-2 bg-[#FF6B35] rounded-2xl md:rounded-[24px] p-10 md:p-14 flex flex-col justify-between text-[#0A192F] relative shadow-2xl overflow-hidden min-h-[500px] md:min-h-[700px]"
       >
         <div className="relative z-10">
-          <span className="text-[11px] md:text-sm font-black uppercase tracking-[0.3em] opacity-80">{tall.label}</span>
+          <span className="text-[11px] md:text-sm font-mono font-medium uppercase tracking-[0.2em] opacity-80">{tall.label}</span>
           <h3 className="text-6xl md:text-8xl font-display mt-4">{tall.company}</h3>
         </div>
         <div className="relative z-10 flex flex-col items-center justify-center flex-grow py-12 md:py-0">
@@ -74,24 +73,23 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
             {tall.descriptions[view]}
           </p>
         </div>
-        <div className="absolute -bottom-16 -right-16 w-64 h-64 bg-white/20 rounded-full blur-3xl" />
       </motion.div>
 
       {/* Card 3: Standard */}
       <motion.div
         whileHover={{ scale: 1.01 }}
-        className="premium-card rounded-[32px] md:rounded-[40px] p-8 md:p-12 flex flex-col justify-between min-h-[320px]
+        className="premium-card rounded-2xl md:rounded-[24px] p-8 md:p-12 flex flex-col justify-between min-h-[320px]
         bg-white dark:bg-[#182A45]/40 border border-slate-200 dark:border-white/10"
       >
         <div className="z-10">
-          <span className="text-[11px] md:text-sm font-black text-[#FF6B35] uppercase tracking-[0.3em]">{standard.label}</span>
+          <span className="text-[11px] md:text-sm font-mono font-medium text-[#FF6B35] uppercase tracking-[0.2em]">{standard.label}</span>
           <h3 className="text-3xl md:text-4xl font-display text-[#0A192F] dark:text-white mt-4 italic leading-none transition-colors">{standard.company}</h3>
         </div>
         <div className="z-10 mt-10">
           <div className="text-6xl md:text-7xl font-display text-[#0A192F] dark:text-white leading-none transition-colors">
             <Counter value={standard.kpiValue} suffix={standard.kpiSuffix} />
           </div>
-          <p className="text-[11px] md:text-[13px] font-black uppercase tracking-[0.2em] text-[#FF6B35] mt-4">{standard.kpiLabel}</p>
+          <p className="text-[11px] md:text-[13px] font-mono font-medium uppercase tracking-[0.2em] text-[#FF6B35] mt-4">{standard.kpiLabel}</p>
           <p className="mt-4 text-sm md:text-base text-slate-600 dark:text-slate-300 font-light italic leading-tight">{standard.secondaryText?.[view]}</p>
         </div>
       </motion.div>
@@ -99,10 +97,10 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
       {/* Card 4: Dark — always dark bg, so all text forced white */}
       <motion.div
         whileHover={{ scale: 1.01 }}
-        className="rounded-[32px] md:rounded-[40px] p-8 md:p-12 flex flex-col justify-between bg-gradient-to-br from-[#182A45] to-[#0A192F] min-h-[320px] text-white border border-white/10"
+        className="rounded-2xl md:rounded-[24px] p-8 md:p-12 flex flex-col justify-between bg-gradient-to-br from-[#182A45] to-[#0A192F] min-h-[320px] text-white border border-white/10"
       >
         <div className="z-10 flex justify-between items-start">
-          <span className="text-[11px] md:text-sm font-black text-[#FF6B35] uppercase tracking-[0.3em]">{dark.label}</span>
+          <span className="text-[11px] md:text-sm font-mono font-medium text-[#FF6B35] uppercase tracking-[0.2em]">{dark.label}</span>
           <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center">
             <div className="w-2 h-2 rounded-full bg-[#FF6B35] animate-pulse" />
           </div>
@@ -111,8 +109,8 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
           <div className="text-6xl md:text-7xl font-display text-white leading-none flex items-baseline">
             <Counter value={dark.kpiValue} suffix={dark.kpiSuffix} />
           </div>
-          <p className="text-[11px] md:text-[13px] font-black uppercase tracking-[0.3em] text-[#FF6B35] mt-4">{dark.kpiLabel}</p>
-          <p className="mt-4 text-[10px] md:text-[11px] text-slate-400 font-medium uppercase tracking-[0.2em]">{dark.secondaryText?.[view]}</p>
+          <p className="text-[11px] md:text-[13px] font-mono font-medium uppercase tracking-[0.2em] text-[#FF6B35] mt-4">{dark.kpiLabel}</p>
+          <p className="mt-4 text-[10px] md:text-[11px] text-slate-400 font-mono uppercase tracking-[0.15em]">{dark.secondaryText?.[view]}</p>
         </div>
       </motion.div>
 

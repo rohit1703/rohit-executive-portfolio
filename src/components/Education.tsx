@@ -15,7 +15,7 @@ const Education: React.FC = () => {
           className="flex items-center gap-8 mb-10 md:mb-14"
         >
           <div className="w-12 md:w-20 h-px bg-[#FF6B35]" />
-          <span className="text-[#FF6B35] font-black text-sm md:text-lg uppercase tracking-[0.5em] md:tracking-[0.8em]">Credentials</span>
+          <span className="text-[#FF6B35] font-mono font-medium text-xs md:text-sm uppercase tracking-[0.3em]">Credentials</span>
         </motion.div>
 
         <h3 className="text-4xl md:text-7xl font-display text-[#0A192F] dark:text-white uppercase italic font-black leading-[0.9] tracking-tighter mb-16 md:mb-24 transition-colors">
@@ -30,7 +30,7 @@ const Education: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="premium-card rounded-[32px] md:rounded-[48px] p-10 md:p-14 border border-slate-200 dark:border-white/10 bg-white dark:bg-[#182A45]/40"
+              className="premium-card rounded-2xl md:rounded-[24px] p-10 md:p-14 border border-slate-200 dark:border-white/10 bg-white dark:bg-[#182A45]/40"
             >
               <div className="w-14 h-14 rounded-2xl bg-[#FF6B35]/10 border border-[#FF6B35]/20 flex items-center justify-center text-[#FF6B35] mb-8">
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,12 +41,12 @@ const Education: React.FC = () => {
               </div>
               <h4 className="text-2xl md:text-3xl font-display text-[#0A192F] dark:text-white italic tracking-tight mb-3 transition-colors">{ed.title}</h4>
               <p className="text-slate-500 dark:text-slate-300 font-light text-base md:text-lg">{ed.institution}</p>
-              <p className="text-[#FF6B35] font-black text-xs uppercase tracking-[0.3em] mt-4">{ed.year}</p>
+              <p className="text-[#FF6B35] font-mono font-medium text-xs tracking-[0.15em] mt-4">{ed.year}</p>
             </motion.div>
           ))}
 
           {/* Certifications */}
-          <div className="premium-card rounded-[32px] md:rounded-[48px] p-10 md:p-14 border border-slate-200 dark:border-white/10 bg-white dark:bg-[#182A45]/40">
+          <div className="premium-card rounded-2xl md:rounded-[24px] p-10 md:p-14 border border-slate-200 dark:border-white/10 bg-white dark:bg-[#182A45]/40">
             <div className="w-14 h-14 rounded-2xl bg-[#FF6B35]/10 border border-[#FF6B35]/20 flex items-center justify-center text-[#FF6B35] mb-8">
               <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
@@ -60,7 +60,7 @@ const Education: React.FC = () => {
                     <p className="text-[#0A192F] dark:text-white font-bold text-base md:text-lg transition-colors">{cert.title}</p>
                     <p className="text-slate-500 dark:text-slate-400 font-light text-sm mt-1">{cert.institution}</p>
                   </div>
-                  <span className="text-[#FF6B35] font-black text-xs uppercase tracking-[0.2em] flex-shrink-0 ml-4">{cert.year}</span>
+                  <span className="text-[#FF6B35] font-mono font-medium text-xs tracking-[0.15em] flex-shrink-0 ml-4">{cert.year}</span>
                 </div>
               ))}
             </div>

@@ -18,7 +18,7 @@ const Currly: React.FC<CurrlyProps> = ({ view }) => {
         className="flex items-center gap-6 md:gap-8 mb-10 md:mb-14"
       >
         <div className="w-12 md:w-20 h-px bg-[#FF6B35]" />
-        <span className="text-[#FF6B35] font-black text-sm md:text-lg uppercase tracking-[0.4em] md:tracking-[0.6em]">
+        <span className="text-[#FF6B35] font-mono font-medium text-xs md:text-sm uppercase tracking-[0.3em]">
           {CURRLY.eyebrow}
         </span>
       </motion.div>
@@ -45,7 +45,7 @@ const Currly: React.FC<CurrlyProps> = ({ view }) => {
             {CURRLY.stack.map((tech) => (
               <span
                 key={tech}
-                className="px-4 py-2 rounded-full border border-slate-300 dark:border-white/15 bg-white/60 dark:bg-white/5 text-slate-600 dark:text-slate-300 text-[11px] md:text-xs font-black uppercase tracking-[0.15em]"
+                className="px-3 py-1.5 rounded-full border border-slate-300 dark:border-white/15 bg-white/60 dark:bg-white/5 text-slate-600 dark:text-slate-300 text-[11px] md:text-xs font-mono lowercase tracking-tight"
               >
                 {tech}
               </span>
@@ -57,7 +57,7 @@ const Currly: React.FC<CurrlyProps> = ({ view }) => {
             href={CURRLY.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 inline-flex items-center gap-3 text-[#0A192F] dark:text-white font-black uppercase tracking-[0.2em] text-sm md:text-base border-b-2 border-[#FF6B35] pb-1 hover:text-[#FF6B35] transition-colors group"
+            className="mt-10 inline-flex items-center gap-3 text-[#0A192F] dark:text-white font-mono font-medium tracking-[0.08em] text-sm md:text-base border-b-2 border-[#FF6B35] pb-1 hover:text-[#FF6B35] transition-colors group"
           >
             <span>{CURRLY.urlLabel}</span>
             <svg className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,7 +68,7 @@ const Currly: React.FC<CurrlyProps> = ({ view }) => {
 
         {/* Right: engineering decisions — the persuasive part */}
         <div className="lg:w-7/12">
-          <span className="text-xs md:text-sm font-black uppercase tracking-[0.4em] text-slate-400 block mb-8 md:mb-10 border-b border-slate-300 dark:border-white/10 pb-4">
+          <span className="text-[11px] md:text-xs font-mono font-medium uppercase tracking-[0.3em] text-slate-400 block mb-8 md:mb-10 border-b border-slate-300 dark:border-white/10 pb-4">
             Engineering decisions
           </span>
           <div className="grid grid-cols-1 gap-5 md:gap-6">
@@ -79,10 +79,10 @@ const Currly: React.FC<CurrlyProps> = ({ view }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06, duration: 0.5 }}
-                className="premium-card rounded-[28px] md:rounded-[32px] p-7 md:p-9 bg-white dark:bg-[#182A45]/40 border border-slate-200 dark:border-white/10 hover:border-[#FF6B35]/40 transition-colors duration-500 group"
+                className="premium-card rounded-2xl p-7 md:p-9 bg-white dark:bg-[#182A45]/40 border border-slate-200 dark:border-white/10 hover:border-[#FF6B35]/40 transition-colors duration-500 group"
               >
                 <div className="flex items-start gap-5">
-                  <span className="text-sm font-black text-[#FF6B35] tabular-nums pt-1">0{i + 1}</span>
+                  <span className="text-sm font-mono text-[#FF6B35] tabular-nums pt-1">0{i + 1}</span>
                   <div>
                     <h3 className="text-xl md:text-2xl font-display font-bold text-[#0A192F] dark:text-white italic leading-tight tracking-tight transition-colors">
                       {point.label}

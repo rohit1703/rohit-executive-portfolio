@@ -52,7 +52,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ view }) => {
   return (
     <div className="relative py-24 md:py-40 border-t border-slate-300 dark:border-white/5 bg-slate-100/50 dark:bg-[#0A192F]/50 transition-colors">
       <div className="max-w-7xl mx-auto text-center mb-12 md:mb-24 px-6">
-        <h2 className="text-[#FF6B35] uppercase tracking-[0.5em] text-[11px] md:text-[14px] font-black mb-6">Leadership Feedback</h2>
+        <h2 className="text-[#FF6B35] uppercase tracking-[0.3em] text-[11px] md:text-[13px] font-mono font-medium mb-6">Leadership Feedback</h2>
         <h3 className="text-4xl md:text-7xl font-display text-[#0A192F] dark:text-white italic font-black tracking-tighter uppercase leading-none transition-colors">Market <span className="text-[#FF6B35]">Sentiment</span></h3>
       </div>
 
@@ -77,7 +77,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ view }) => {
           {[...sorted, ...sorted, ...sorted].map((t, idx) => (
             <div
               key={idx}
-              className="premium-card p-8 md:p-16 rounded-[32px] md:rounded-[64px] min-w-[320px] w-[90vw] md:min-w-[650px] md:max-w-[700px] flex flex-col justify-between whitespace-normal group border-slate-200 dark:border-white/10 hover:border-[#FF6B35]/40 bg-white dark:bg-[#182A45]/40 transition-colors shadow-xl select-none"
+              className="premium-card p-8 md:p-16 rounded-2xl md:rounded-[28px] min-w-[320px] w-[90vw] md:min-w-[650px] md:max-w-[700px] flex flex-col justify-between whitespace-normal group border-slate-200 dark:border-white/10 hover:border-[#FF6B35]/40 bg-white dark:bg-[#182A45]/40 transition-colors shadow-xl select-none"
             >
               <div>
                 <div className="flex gap-1.5 mb-6 md:mb-10">
@@ -96,7 +96,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ view }) => {
               </div>
               <div className="mt-8 md:mt-14 flex items-center justify-between pt-6 md:pt-10 border-t border-slate-200 dark:border-white/10 transition-colors">
                 <div className="flex flex-col">
-                  <p className="text-[#0A192F] dark:text-white font-black uppercase tracking-[0.3em] text-[11px] md:text-[14px] leading-none mb-2 transition-colors">{t.author}</p>
+                  <p className="text-[#0A192F] dark:text-white font-mono font-medium uppercase tracking-[0.2em] text-[11px] md:text-[13px] leading-none mb-2 transition-colors">{t.author}</p>
                   <p className="text-slate-500 font-medium uppercase tracking-[0.1em] text-[9px] md:text-[11px]">
                     {t.role} <span className="text-[#FF6B35]/40 mx-1 md:mx-2">|</span> {t.company}
                   </p>

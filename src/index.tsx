@@ -1,8 +1,13 @@
-import '@fontsource/inter/300.css';
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/700.css';
+import '@fontsource/geist-sans/400.css';
+import '@fontsource/geist-sans/500.css';
+import '@fontsource/geist-sans/600.css';
+import '@fontsource/geist-sans/700.css';
+
+import '@fontsource/geist-mono/400.css';
+import '@fontsource/geist-mono/500.css';
 
 import '@fontsource/outfit/700.css';
+import '@fontsource/outfit/800.css';
 import '@fontsource/outfit/900.css';
 
 import React from 'react';
