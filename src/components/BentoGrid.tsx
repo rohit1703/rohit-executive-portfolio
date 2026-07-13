@@ -17,12 +17,12 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
   const dark = sorted.find(c => c.variant === 'dark')!;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+    <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 md:gap-8">
 
       {/* Card 1: Wide */}
       <motion.div
         whileHover={{ scale: 1.01 }}
-        className="md:col-span-2 premium-card rounded-2xl md:rounded-[24px] p-8 md:p-14 flex flex-col justify-between group overflow-hidden min-h-[400px]
+        className="xl:col-span-2 premium-card rounded-2xl md:rounded-[24px] p-8 md:p-14 flex flex-col justify-between group overflow-hidden min-h-[400px]
         bg-white dark:bg-[#182A45]/40 border border-slate-200 dark:border-white/10"
       >
         <div className="relative z-10">
@@ -55,14 +55,14 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
       {/* Card 2: Tall Accent */}
       <motion.div
         whileHover={{ scale: 1.01 }}
-        className="md:row-span-2 bg-[#FF6B35] rounded-2xl md:rounded-[24px] p-10 md:p-14 flex flex-col justify-between text-[#0A192F] relative shadow-2xl overflow-hidden min-h-[500px] md:min-h-[700px]"
+        className="xl:row-span-2 bg-[#FF6B35] rounded-2xl md:rounded-[24px] p-10 md:p-14 flex flex-col justify-between text-[#0A192F] relative shadow-2xl overflow-hidden min-h-[420px] xl:min-h-[700px]"
       >
         <div className="relative z-10">
           <span className="text-[11px] md:text-sm font-mono font-medium uppercase tracking-[0.2em] opacity-80">{tall.label}</span>
           <h3 className="text-6xl md:text-8xl font-display mt-4">{tall.company}</h3>
         </div>
         <div className="relative z-10 flex flex-col items-center justify-center flex-grow py-12 md:py-0">
-          <div className="text-[110px] lg:text-[180px] font-display leading-[0.7] tracking-tighter text-center">
+          <div className="text-[110px] xl:text-[150px] font-display leading-[0.7] tracking-tighter text-center">
             <Counter value={tall.kpiValue} suffix={tall.kpiSuffix} />
           </div>
           <p className="text-[13px] md:text-[15px] font-black uppercase tracking-[0.5em] mt-8 text-center w-full">{tall.kpiLabel}</p>

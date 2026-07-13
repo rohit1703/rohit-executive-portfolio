@@ -95,16 +95,16 @@ const ExperienceBlock: React.FC<{ data: ExperienceEntry; index: number; view: Vi
           <p className="text-lg md:text-2xl text-slate-600 dark:text-slate-200 font-light leading-relaxed italic border-l-4 border-[#FF6B35] pl-6 transition-colors">
             {data.tagline[view]}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 pt-4">
-            <div className="space-y-3">
-              <div className="text-5xl md:text-7xl font-display text-[#0A192F] dark:text-white italic drop-shadow-sm dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-colors">
+          <div className="flex flex-wrap gap-x-10 gap-y-6 pt-4">
+            <div className="space-y-2 min-w-0">
+              <div className="text-5xl md:text-6xl font-display text-[#0A192F] dark:text-white italic leading-none drop-shadow-sm dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-colors">
                 <Counter value={kpi.value} suffix={kpi.suffix} />
               </div>
               <p className="text-[10px] md:text-xs font-mono font-medium uppercase tracking-[0.15em] text-slate-400">{kpi.label}</p>
             </div>
             {secondaryKpi && (
-              <div className="space-y-3">
-                <div className="text-4xl md:text-5xl font-display text-[#FF6B35] italic tracking-tighter drop-shadow-sm dark:drop-shadow-[0_0_15px_rgba(255,107,53,0.3)]">
+              <div className="space-y-2 min-w-0">
+                <div className="text-4xl md:text-5xl font-display text-[#FF6B35] italic leading-none tracking-tight drop-shadow-sm dark:drop-shadow-[0_0_15px_rgba(255,107,53,0.3)]">
                   <Counter value={secondaryKpi.value} suffix={secondaryKpi.suffix} />
                 </div>
                 <p className="text-[10px] md:text-xs font-mono font-medium uppercase tracking-[0.15em] text-slate-400">{secondaryKpi.label}</p>
