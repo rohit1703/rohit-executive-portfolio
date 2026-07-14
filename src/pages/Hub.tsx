@@ -59,8 +59,8 @@ const Hub: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#F0F4F8] dark:bg-[#0A192F] flex flex-col items-center justify-start pt-20 pb-10 md:justify-center md:py-16 px-5 md:px-6 transition-colors duration-500 relative">
       <SEO
-        title="Rohit Mallavarapu | Executive Portfolio"
-        description="Global marketing leader and partnerships strategist. Choose the view most relevant to you."
+        title="Rohit Mallavarapu | Builder-Marketer"
+        description="B2B marketing and partnerships, six years. Now I build the product too: Currly, an AI workflow platform I shipped solo (1,400+ tools, 111+ workflows in production)."
       />
 
       <div className="absolute top-4 right-4 md:top-8 md:right-8">

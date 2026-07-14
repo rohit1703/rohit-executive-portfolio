@@ -18,7 +18,7 @@ export const HERO_DATA: Record<ViewType, HeroData> = {
     headlineMid: '→',
     headlineBottom: 'NASDAQ',
     headlineAccent2: 'STAGE',
-    subtitle: 'Global marketing leader with deep expertise in scaling high-growth tech organizations. I design and execute <strong>AI-led growth strategies</strong> that fuel revenue acceleration & brand expansion, including strategic leadership for NASDAQ-listed organizations.',
+    subtitle: 'Six years in B2B marketing and partnerships across a NASDAQ firm, a Tiger Global–backed insurtech, and a fintech. <strong>Now I build the product too: Currly, an AI workflow platform I shipped solo.</strong>',
   },
   partnerships: {
     badge: 'Partnerships Leader',
@@ -36,6 +36,6 @@ export const HERO_DATA: Record<ViewType, HeroData> = {
     headlineMid: '→',
     headlineBottom: 'NASDAQ',
     headlineAccent2: 'STAGE',
-    subtitle: 'Global marketing leader designing <strong>AI-led growth strategies</strong> that fuel revenue acceleration and brand expansion. From Glassdoor turnarounds to flagship CXO summits, driving demand generation, content strategy, and measurable growth at scale.',
+    subtitle: 'Sole marketing owner for Grid Dynamics India: <strong>demand, brand, and employer brand, owned end to end.</strong> And I build the product I market, not just the campaigns around it.',
   },
 };

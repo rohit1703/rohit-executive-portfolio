@@ -8,7 +8,7 @@ interface ViewOG {
 const VIEW_OG: Record<string, ViewOG> = {
   '/about': {
     title: 'Rohit Mallavarapu | Builder-Marketer',
-    description: 'B2B marketing and partnerships, six years. Now I build the product too — Currly, an AI workflow platform shipped solo: 1,400+ tools, 111+ workflows in production.',
+    description: 'B2B marketing and partnerships, six years. Now I build the product too: Currly, an AI workflow platform I shipped solo (1,400+ tools, 111+ workflows in production).',
   },
   '/partnerships': {
     title: 'Rohit Mallavarapu | Partnerships, Built From Zero',
