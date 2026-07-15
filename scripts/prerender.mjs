@@ -82,10 +82,26 @@ async function run() {
   const routes = getRoutes();
   console.log('[prerender] routes:', routes.join(', '));
   const server = await startServer();
-  const browser = await puppeteer.launch({
-    headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  });
+
+  // On Vercel/Lambda the build container lacks the system libs full Chromium
+  // needs (libnspr4, libnss3, ...). Use @sparticuz/chromium there; use the
+  // bundled Puppeteer Chromium for local builds.
+  const onVercel = !!process.env.VERCEL || process.env.PRERENDER_SPARTICUZ === '1';
+  let browser;
+  if (onVercel) {
+    const chromium = (await import('@sparticuz/chromium')).default;
+    chromium.setGraphicsMode = false; // DOM prerender only; no WebGL needed
+    browser = await puppeteer.launch({
+      args: [...chromium.args, '--no-sandbox', '--disable-setuid-sandbox'],
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
+    });
+  } else {
+    browser = await puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    });
+  }
 
   for (const route of routes) {
     const page = await browser.newPage();
