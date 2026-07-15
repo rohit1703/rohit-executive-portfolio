@@ -162,6 +162,26 @@ const Timeline: React.FC<TimelineProps> = ({ view }) => {
           <ExperienceBlock key={item.company} data={item} index={idx} view={view} />
         ))}
       </div>
+
+      <div className="pb-20 md:pb-32">
+        <span className="text-xs md:text-sm font-mono font-medium uppercase tracking-[0.3em] text-slate-400 block mb-8">
+          Earlier
+        </span>
+        <div className="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-10 rounded-2xl md:rounded-[24px] border border-slate-200 dark:border-white/10 bg-white dark:bg-[#182A45]/40 p-8 md:p-10 shadow-sm transition-colors">
+          <span className="text-xs md:text-sm font-mono font-medium text-[#FF6B35] uppercase tracking-[0.15em] md:w-48 flex-shrink-0">
+            Jun 2020 – Jan 2021
+          </span>
+          <div>
+            <h4 className="text-2xl md:text-3xl font-display text-[#0A192F] dark:text-white leading-tight transition-colors">
+              GTM &amp; Recruitment Consultant{' '}
+              <span className="italic lowercase text-slate-500 dark:text-slate-400">— Northlance Agency</span>
+            </h4>
+            <p className="mt-3 text-base md:text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
+              Freelance. Advised early-stage startups on go-to-market positioning, outbound motions, and hiring pipelines.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

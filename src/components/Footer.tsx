@@ -8,6 +8,12 @@ const getEmail = () => {
   return parts.join('@');
 };
 
+// Obfuscate phone the same way; assembled only on user interaction
+const getPhone = () => {
+  const parts = ['+9177024', '06403'];
+  return parts.join('');
+};
+
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -44,6 +50,12 @@ const Footer: React.FC = () => {
                </div>
                Email
             </a>
+            <a href="#" onClick={(e) => { e.preventDefault(); window.location.href = `tel:${getPhone()}`; }} className="group flex items-center gap-4 text-slate-400 hover:text-[#FF6B35] transition-colors font-mono font-medium uppercase tracking-[0.15em] text-[12px] md:text-[13px]">
+               <div className="w-10 h-10 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#FF6B35] transition-colors">
+                 <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+               </div>
+               Phone
+            </a>
             {/* NEW: Resume Link in Footer */}
             <a href="/Rohit_Mallavarapu_Resume.pdf" download className="group flex items-center gap-4 text-slate-400 hover:text-[#FF6B35] transition-colors font-mono font-medium uppercase tracking-[0.15em] text-[12px] md:text-[13px]">
                <div className="w-10 h-10 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#FF6B35] transition-colors">
@@ -68,12 +80,22 @@ const Footer: React.FC = () => {
         </div>
       </div>
       
-      <div className="max-w-7xl mx-auto mt-32 md:mt-48 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-slate-500 text-[11px] md:text-[12px] uppercase font-mono tracking-[0.2em] gap-8 text-center md:text-left">
+      <div className="max-w-7xl mx-auto mt-32 md:mt-48 pt-12 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-10 md:gap-12">
+        {[
+          { label: 'Location', value: 'Bengaluru, India · open to remote & relocation' },
+          { label: 'Languages', value: 'English · Hindi · Telugu' },
+          { label: 'Notice period', value: 'Immediate to 30 days' },
+        ].map((d) => (
+          <div key={d.label}>
+            <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#FF6B35] mb-3">{d.label}</p>
+            <p className="text-slate-300 text-sm md:text-base font-light">{d.value}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="max-w-7xl mx-auto mt-16 md:mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-slate-500 text-[11px] md:text-[12px] uppercase font-mono tracking-[0.2em] gap-6 text-center md:text-left">
         <p>© {currentYear} ROHIT MALLAVARAPU. ALL RIGHTS RESERVED.</p>
-        <div className="flex gap-12 md:gap-16">
-          <p>BENGALURU · OPEN TO REMOTE</p>
-          <p>PORTFOLIO V5.0</p>
-        </div>
+        <p>PORTFOLIO V5.0</p>
       </div>
     </footer>
   );

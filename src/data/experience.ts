@@ -47,6 +47,7 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
           points: [
             'Sole marketing owner for India, client, talent, and brand. No team beneath me.',
             '12 Dynamic Talks across 3 cities → 4,600+ qualified talent prospects. Peak event: 664 registrations; 400+ average.',
+            'AI-native operator: full campaign cycles, research, content, decks, video, run at the pace of a larger team.',
           ],
         },
         {
@@ -79,6 +80,7 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
           points: [
             '12 Dynamic Talks across 3 cities → 4,600+ qualified talent prospects. Peak: 664 registrations; 400+ average.',
             '2 India flagship client events; the latest with ISB, 200+ Fortune 1000 CXOs.',
+            'AI-native operator: research, content, decks, and video scripts run with Claude, NotebookLM, and Perplexity.',
           ],
         },
         {
@@ -140,7 +142,7 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
         {
           title: 'The ecosystem',
           points: [
-            'Built Plum’s partner base from zero, 50+ partners onboarded in 6 months; 100+ enterprise accounts.',
+            'Built Plum’s partner base from zero, government bodies, associations, VCs, HRMS platforms, and coworking networks; 50+ onboarded in 6 months, 100+ enterprise accounts.',
             '$3M+ in key accounts; 45% YoY partner growth; 35% engagement improvement.',
           ],
         },
