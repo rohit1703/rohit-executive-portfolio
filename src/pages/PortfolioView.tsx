@@ -14,6 +14,7 @@ const BentoGrid = React.lazy(() => import('../components/BentoGrid'));
 const Timeline = React.lazy(() => import('../components/Timeline'));
 const Testimonials = React.lazy(() => import('../components/Testimonials'));
 const LinkedInFeed = React.lazy(() => import('../components/LinkedInFeed'));
+const Moments = React.lazy(() => import('../components/Moments'));
 const Education = React.lazy(() => import('../components/Education'));
 const Footer = React.lazy(() => import('../components/Footer'));
 
@@ -86,6 +87,10 @@ const PortfolioView: React.FC = () => {
 
             <section id="feed">
               <LinkedInFeed view={currentView} />
+            </section>
+
+            <section id="moments" className="bg-slate-200/50 dark:bg-[#081526]/50 border-y border-slate-300 dark:border-white/5 transition-colors duration-300">
+              <Moments />
             </section>
 
             <section id="testimonials" className="py-32 overflow-hidden">

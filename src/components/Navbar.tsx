@@ -36,6 +36,7 @@ const Navbar: React.FC = () => {
     { name: 'Proof', id: 'impact' },
     { name: 'Work', id: 'experience-centre' },
     { name: 'Writing', id: 'feed' },
+    { name: 'Moments', id: 'moments' },
     { name: 'Voices', id: 'testimonials' },
   ];
 
