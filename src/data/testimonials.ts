@@ -58,4 +58,20 @@ export const TESTIMONIALS: Testimonial[] = [
     company: "Clear",
     priority: { about: 6, partnerships: 6, marketing: 6 },
   },
+  {
+    heading: "He is an asset to any company he works for",
+    text: "Rohit has worked as an integral part of the team. He has a great zeal and enthusiasm towards taking up challenging tasks and closing them with the best possible solution. His dedication towards work is tremendous. He is an asset to any company that he is/will be part working for.",
+    author: "Akshay Bhatt",
+    role: "Strategic Alliances & Growth",
+    company: "Clear",
+    priority: { about: 7, partnerships: 7, marketing: 7 },
+  },
+  {
+    heading: "The all-rounder of the team",
+    text: "One of the most hardworking and dedicated person I have worked with. He was basically the all-rounder of the team, involved in all sorts of verticals. I would love to get a chance to work with him again.",
+    author: "Abhishek Srivastava",
+    role: "Partnerships",
+    company: "Clear",
+    priority: { about: 8, partnerships: 8, marketing: 8 },
+  },
 ];
