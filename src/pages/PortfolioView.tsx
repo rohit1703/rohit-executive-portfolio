@@ -11,6 +11,7 @@ import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 const BentoGrid = React.lazy(() => import('../components/BentoGrid'));
+const Personas = React.lazy(() => import('../components/Personas'));
 const Timeline = React.lazy(() => import('../components/Timeline'));
 const Testimonials = React.lazy(() => import('../components/Testimonials'));
 const LinkedInFeed = React.lazy(() => import('../components/LinkedInFeed'));
@@ -80,6 +81,7 @@ const PortfolioView: React.FC = () => {
               </div>
 
               <BentoGrid view={currentView} />
+              <Personas />
             </section>
 
             <section id="experience-centre" className="py-32 bg-slate-200/50 dark:bg-[#081526]/50 border-y border-slate-300 dark:border-white/5 transition-colors duration-300">

@@ -16,6 +16,12 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
   const standard = sorted.find(c => c.variant === 'standard')!;
   const dark = sorted.find(c => c.variant === 'dark')!;
 
+  // The tall accent card uses a huge centered number; long values (e.g. 150,000)
+  // would overflow the narrow 3-column width, so shrink the type for those.
+  const tallKpi = tall.kpi[view];
+  const tallDisplay = `${tallKpi.prefix ?? ''}${tallKpi.value.toLocaleString('en-US')}${tallKpi.suffix}`;
+  const tallSizeClass = tallDisplay.length >= 6 ? 'text-7xl md:text-8xl xl:text-7xl' : 'text-[110px] xl:text-[150px]';
+
   return (
     <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 md:gap-8">
 
@@ -34,20 +40,10 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
             {wide.descriptions[view]}
           </p>
           <div className="flex flex-col items-start md:items-end flex-shrink-0">
-            {wide.id === 'grid-dynamics' && (
-              <div className="flex items-baseline gap-4">
-                <span className="text-slate-400 dark:text-slate-500 line-through text-2xl md:text-3xl italic opacity-50 font-display">3</span>
-                <span className="text-6xl md:text-8xl font-display text-[#0A192F] dark:text-white leading-none transition-colors">
-                  <Counter value={wide.kpiValue} suffix={wide.kpiSuffix} />
-                </span>
-              </div>
-            )}
-            {wide.id !== 'grid-dynamics' && (
-              <span className="text-6xl md:text-8xl font-display text-[#0A192F] dark:text-white leading-none transition-colors">
-                <Counter value={wide.kpiValue} suffix={wide.kpiSuffix} />
-              </span>
-            )}
-            <p className="text-[11px] md:text-[13px] uppercase tracking-[0.2em] text-[#FF6B35] font-mono font-medium mt-3">{wide.kpiLabel}</p>
+            <span className="text-6xl md:text-8xl font-display text-[#0A192F] dark:text-white leading-none transition-colors">
+              <Counter value={wide.kpi[view].value} suffix={wide.kpi[view].suffix} prefix={wide.kpi[view].prefix} />
+            </span>
+            <p className="text-[11px] md:text-[13px] uppercase tracking-[0.2em] text-[#FF6B35] font-mono font-medium mt-3">{wide.kpi[view].label}</p>
           </div>
         </div>
       </motion.div>
@@ -62,10 +58,10 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
           <h3 className="text-6xl md:text-8xl font-display mt-4">{tall.company}</h3>
         </div>
         <div className="relative z-10 flex flex-col items-center justify-center flex-grow py-12 md:py-0">
-          <div className="text-[110px] xl:text-[150px] font-display leading-[0.7] tracking-tighter text-center">
-            <Counter value={tall.kpiValue} suffix={tall.kpiSuffix} />
+          <div className={`${tallSizeClass} font-display leading-[0.7] tracking-tighter text-center`}>
+            <Counter value={tallKpi.value} suffix={tallKpi.suffix} prefix={tallKpi.prefix} />
           </div>
-          <p className="text-[13px] md:text-[15px] font-black uppercase tracking-[0.5em] mt-8 text-center w-full">{tall.kpiLabel}</p>
+          <p className="text-[13px] md:text-[15px] font-black uppercase tracking-[0.5em] mt-8 text-center w-full">{tallKpi.label}</p>
         </div>
         <div className="relative z-10">
           <div className="h-px w-full bg-[#0A192F]/20 mb-10" />
@@ -87,9 +83,9 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
         </div>
         <div className="z-10 mt-10">
           <div className="text-6xl md:text-7xl font-display text-[#0A192F] dark:text-white leading-none transition-colors">
-            <Counter value={standard.kpiValue} suffix={standard.kpiSuffix} />
+            <Counter value={standard.kpi[view].value} suffix={standard.kpi[view].suffix} prefix={standard.kpi[view].prefix} />
           </div>
-          <p className="text-[11px] md:text-[13px] font-mono font-medium uppercase tracking-[0.2em] text-[#FF6B35] mt-4">{standard.kpiLabel}</p>
+          <p className="text-[11px] md:text-[13px] font-mono font-medium uppercase tracking-[0.2em] text-[#FF6B35] mt-4">{standard.kpi[view].label}</p>
           <p className="mt-4 text-sm md:text-base text-slate-600 dark:text-slate-300 font-light italic leading-tight">{standard.secondaryText?.[view]}</p>
         </div>
       </motion.div>
@@ -107,9 +103,9 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
         </div>
         <div className="z-10 mt-10">
           <div className="text-6xl md:text-7xl font-display text-white leading-none flex items-baseline">
-            <Counter value={dark.kpiValue} suffix={dark.kpiSuffix} />
+            <Counter value={dark.kpi[view].value} suffix={dark.kpi[view].suffix} prefix={dark.kpi[view].prefix} />
           </div>
-          <p className="text-[11px] md:text-[13px] font-mono font-medium uppercase tracking-[0.2em] text-[#FF6B35] mt-4">{dark.kpiLabel}</p>
+          <p className="text-[11px] md:text-[13px] font-mono font-medium uppercase tracking-[0.2em] text-[#FF6B35] mt-4">{dark.kpi[view].label}</p>
           <p className="mt-4 text-[10px] md:text-[11px] text-slate-400 font-mono uppercase tracking-[0.15em]">{dark.secondaryText?.[view]}</p>
         </div>
       </motion.div>

@@ -1,13 +1,18 @@
 import { ViewType } from './views';
 
+export interface MetricKPI {
+  value: number;
+  suffix: string;
+  label: string;
+  prefix?: string;
+}
+
 export interface MetricCard {
   id: string;
   company: string;
   label: string;
   descriptions: Record<ViewType, string>;
-  kpiValue: number;
-  kpiSuffix: string;
-  kpiLabel: string;
+  kpi: Record<ViewType, MetricKPI>;
   secondaryText?: Record<ViewType, string>;
   order: Record<ViewType, number>;
   variant: 'wide' | 'tall-accent' | 'standard' | 'dark';
@@ -26,13 +31,15 @@ export const METRIC_CARDS: MetricCard[] = [
       marketing:
         'Sole owner of India marketing. 12 events → 4,600+ qualified prospects; brand awareness 20% → 80%.',
     },
-    kpiValue: 3.9,
-    kpiSuffix: '',
-    kpiLabel: 'Glassdoor Score',
+    kpi: {
+      about: { value: 4600, suffix: '+', label: 'Qualified Prospects' },
+      partnerships: { value: 200, suffix: '+', label: 'Fortune 1000 CXOs' },
+      marketing: { value: 12, suffix: '', label: 'Events, 3 Cities' },
+    },
     secondaryText: {
-      about: '3.2 → 3.9 in the employer-brand rebuild',
-      partnerships: '200+ Fortune 1000 CXOs engaged',
-      marketing: '4,600+ qualified prospects across 12 events',
+      about: '20% → 80% brand awareness; Glassdoor 3.2 → 3.9',
+      partnerships: '2 flagship client events; ISB partnership',
+      marketing: '664 peak registrations; 400+ average',
     },
     order: { about: 1, partnerships: 3, marketing: 1 },
     variant: 'wide',
@@ -49,13 +56,15 @@ export const METRIC_CARDS: MetricCard[] = [
       marketing:
         'Integrated BFSI campaigns end to end, 50+ partner microsites and mailers; 150,000 consumers reached.',
     },
-    kpiValue: 20,
-    kpiSuffix: 'x',
-    kpiLabel: 'YoY Growth',
+    kpi: {
+      about: { value: 7, suffix: 'M', prefix: '₹', label: 'BFSI Revenue' },
+      partnerships: { value: 54, suffix: '', label: 'Partnerships' },
+      marketing: { value: 150000, suffix: '', label: 'Consumers Reached' },
+    },
     secondaryText: {
       about: '54 partnerships built from zero',
-      partnerships: 'API, CG & PWA integrations, end to end',
-      marketing: '150,000 consumers reached',
+      partnerships: '20x YoY growth for the vertical',
+      marketing: '50+ partner microsites and mailers',
     },
     order: { about: 2, partnerships: 1, marketing: 4 },
     variant: 'tall-accent',
@@ -72,13 +81,15 @@ export const METRIC_CARDS: MetricCard[] = [
       marketing:
         '8+ experiential events across 7 cities → 150 enterprise SALs; 35% engagement improvement.',
     },
-    kpiValue: 45,
-    kpiSuffix: '%',
-    kpiLabel: 'YoY Partner Growth',
+    kpi: {
+      about: { value: 3, suffix: 'M+', prefix: '$', label: 'Key Accounts' },
+      partnerships: { value: 45, suffix: '%', label: 'YoY Partner Growth' },
+      marketing: { value: 2, suffix: 'x', label: 'Promotions, <2 Yrs' },
+    },
     secondaryText: {
-      about: 'Community Builder → Senior Associate → AGM',
-      partnerships: '$3M+ in key accounts',
-      marketing: '150 enterprise SALs from 8+ events',
+      about: 'Promoted twice; 8+ enterprise events across 7 cities',
+      partnerships: '$3M+ key accounts; 100+ enterprise accounts',
+      marketing: '8+ enterprise events, 7 cities → 150 SALs',
     },
     order: { about: 3, partnerships: 2, marketing: 3 },
     variant: 'standard',
@@ -95,9 +106,11 @@ export const METRIC_CARDS: MetricCard[] = [
       marketing:
         'I build the product I market. Currly: 1,400+ tools, 111+ workflows, 84 ISR use-case pages of programmatic SEO.',
     },
-    kpiValue: 1400,
-    kpiSuffix: '+',
-    kpiLabel: 'Tools in Production',
+    kpi: {
+      about: { value: 1400, suffix: '+', label: 'Tools in Production' },
+      partnerships: { value: 1400, suffix: '+', label: 'Tools in Production' },
+      marketing: { value: 1400, suffix: '+', label: 'Tools in Production' },
+    },
     secondaryText: {
       about: '111+ workflows · p95 search < 400ms',
       partnerships: '5-signal Postgres ranking engine',

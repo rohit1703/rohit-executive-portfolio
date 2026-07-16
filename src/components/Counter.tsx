@@ -5,9 +5,10 @@ import { useInView, animate } from 'framer-motion';
 interface CounterProps {
   value: number;
   suffix?: string;
+  prefix?: string;
 }
 
-const Counter: React.FC<CounterProps> = ({ value, suffix = "" }) => {
+const Counter: React.FC<CounterProps> = ({ value, suffix = "", prefix = "" }) => {
   const [count, setCount] = useState<number>(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -29,7 +30,7 @@ const Counter: React.FC<CounterProps> = ({ value, suffix = "" }) => {
 
   return (
     <span ref={ref} className="font-mono tabular-nums tracking-tight">
-      {count.toLocaleString('en-US')}{suffix}
+      {prefix}{count.toLocaleString('en-US')}{suffix}
     </span>
   );
 };
