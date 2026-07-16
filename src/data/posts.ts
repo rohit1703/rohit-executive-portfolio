@@ -10,6 +10,27 @@ export interface LinkedInPost {
 
 export const LINKEDIN_POSTS: LinkedInPost[] = [
   {
+    title: "Marketing Will Work This Way by 2027. I Already Do.",
+    category: "AI-native",
+    description: "The autonomous-marketing whitepapers all draw the same five-stage roadmap. I already operate at the stage they put years out.",
+    link: "https://www.linkedin.com/posts/rohitmallavarapu17_ai-aiagents-marketingleadership-ugcPost-7479997114245292032-jaOe",
+    priority: { about: 1, partnerships: 1, marketing: 1 },
+  },
+  {
+    title: "What Context Engineering Actually Meant For Me",
+    category: "Context Engineering",
+    description: "I ran ~250 million tokens building a platform. Over 95% was input, the context I re-loaded every session. What the term actually means in practice.",
+    link: "https://www.linkedin.com/posts/rohitmallavarapu17_contextengineering-ai-aiagents-ugcPost-7477600314964152324-LcAB",
+    priority: { about: 2, partnerships: 2, marketing: 2 },
+  },
+  {
+    title: "From Writing Emails to Building AI Agents",
+    category: "The Build",
+    description: "I wasn't a developer. I started with ChatGPT for emails. Three years later I'm building AI agents trained on my own work with Claude.",
+    link: "https://www.linkedin.com/posts/rohitmallavarapu17_i-wasnt-a-developer-i-started-with-chatgpt-ugcPost-7473526166977396736-Z0sQ",
+    priority: { about: 3, partnerships: 3, marketing: 3 },
+  },
+  {
     title: "Top 25 Emerging Leaders, 2024",
     category: "Recognition",
     description: "Named to the Indian Startup Times' Top 25 Emerging Leaders.",

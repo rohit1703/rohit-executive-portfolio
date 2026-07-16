@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import MagneticButton from './MagneticButton';
 import { ViewType } from '../data/views';
@@ -11,8 +11,10 @@ interface LinkedInFeedProps {
 
 const LinkedInFeed: React.FC<LinkedInFeedProps> = ({ view }) => {
   const copy = SECTION_COPY[view];
-  const sorted = [...LINKEDIN_POSTS].sort((a, b) => a.priority[view] - b.priority[view]);
-  const visiblePosts = sorted.slice(0, 3);
+  // Show 3 random posts; a new set is picked on every page load/refresh.
+  const [visiblePosts] = useState(() =>
+    [...LINKEDIN_POSTS].sort(() => Math.random() - 0.5).slice(0, 3)
+  );
 
   return (
     <div className="py-24 md:py-48 px-6 bg-slate-200/50 dark:bg-[#081526]/50 transition-colors">
@@ -75,8 +77,8 @@ const LinkedInFeed: React.FC<LinkedInFeedProps> = ({ view }) => {
       </div>
 
       <div className="max-w-7xl mx-auto mt-24 md:mt-32 text-center">
-        <MagneticButton href="https://www.linkedin.com/in/rohitmallavarapu17/" target="_blank" className="text-[#FF6B35] font-mono font-medium uppercase tracking-[0.25em] text-sm md:text-lg hover:text-[#0A192F] dark:hover:text-white transition-colors decoration-0 group flex flex-col items-center gap-4">
-          <span>Read the series on LinkedIn</span>
+        <MagneticButton href="https://www.linkedin.com/in/rohitmallavarapu17/recent-activity/all/" target="_blank" className="text-[#FF6B35] font-mono font-medium uppercase tracking-[0.25em] text-sm md:text-lg hover:text-[#0A192F] dark:hover:text-white transition-colors decoration-0 group flex flex-col items-center gap-4">
+          <span>Read every post on LinkedIn</span>
           <svg className="w-6 h-6 animate-bounce mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
         </MagneticButton>
       </div>
