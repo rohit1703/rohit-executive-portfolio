@@ -9,15 +9,15 @@ export interface CurrlyPoint {
 // lands the same in every view; the framing shifts to match the lens.
 export const CURRLY_INTRO: Record<ViewType, string> = {
   about:
-    'This is the part that separates me from every other B2B marketer with the same numbers. I build the product now, not just the go-to-market around it.',
+    'The distinction that matters: I now build the product, not only the go-to-market around it.',
   partnerships:
-    "I don't only build partner pipelines anymore. I build the product too, solo, in production.",
+    'I no longer only build partner pipelines. I build the product itself, solo and in production.',
   marketing:
-    "I don't only run the marketing. I build the product it sells, solo, in production.",
+    'I no longer only run the marketing. I build the product it sells, solo and in production.',
 };
 
 export const CURRLY = {
-  eyebrow: 'What I build now',
+  eyebrow: 'Current focus',
   name: 'Currly',
   url: 'https://currlyai.com',
   urlLabel: 'currlyai.com',

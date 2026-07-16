@@ -12,7 +12,7 @@ export const CAREER_STATS: CareerStat[] = [
     value: 10,
     prefix: '$',
     suffix: 'M+',
-    caption: 'contributed in revenue and pipeline across six years, one operator.',
+    caption: 'in revenue and pipeline across six years.',
   },
   {
     value: 35,

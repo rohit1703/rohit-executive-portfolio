@@ -90,7 +90,7 @@ const ExperienceBlock: React.FC<{ data: ExperienceEntry; index: number; view: Vi
             <div className="w-12 h-12 rounded-full overflow-hidden border border-[#FF6B35]/30">
               <img src="/rohit.webp" alt="Rohit Mallavarapu" className="w-full h-full object-cover" />
             </div>
-            <p className="text-xs font-mono font-medium text-[#FF6B35] uppercase tracking-[0.2em]">Leadership Note</p>
+            <p className="text-xs font-mono font-medium text-[#FF6B35] uppercase tracking-[0.2em]">Summary</p>
           </div>
           <p className="text-lg md:text-2xl text-slate-600 dark:text-slate-200 font-light leading-relaxed italic border-l-4 border-[#FF6B35] pl-6 transition-colors">
             {data.tagline[view]}
@@ -116,7 +116,7 @@ const ExperienceBlock: React.FC<{ data: ExperienceEntry; index: number; view: Vi
 
       <div className="w-full lg:w-7/12 mt-14 lg:mt-0">
         <div className="mb-14 md:mb-24">
-          <span className="text-xs md:text-sm font-mono font-medium uppercase tracking-[0.3em] text-slate-400 block mb-12 md:mb-16 border-b border-slate-300 dark:border-white/5 pb-4">Detailed Operational Rigor</span>
+          <span className="text-xs md:text-sm font-mono font-medium uppercase tracking-[0.3em] text-slate-400 block mb-12 md:mb-16 border-b border-slate-300 dark:border-white/5 pb-4">Selected highlights</span>
           <div className="space-y-12 md:space-y-16">
             {data.categories[view].map((cat, i) => (
               <Pillar

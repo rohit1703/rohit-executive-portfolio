@@ -12,30 +12,30 @@ export interface HeroData {
 
 export const HERO_DATA: Record<ViewType, HeroData> = {
   about: {
-    badge: 'Executive Portfolio',
+    badge: 'Marketing · Partnerships · Product',
     headlineTop: 'STARTUP',
     headlineAccent1: 'SPARK',
     headlineMid: '→',
     headlineBottom: 'NASDAQ',
     headlineAccent2: 'STAGE',
-    subtitle: 'Six years in B2B marketing and partnerships across a NASDAQ firm, a Tiger Global–backed insurtech, and a fintech. <strong>Now I build the product too: Currly, an AI workflow platform I shipped solo.</strong>',
+    subtitle: 'Six years in B2B marketing and partnerships across a NASDAQ firm, a Tiger Global–backed insurtech, and a fintech. <strong>I now design and ship the product as well: Currly, an AI workflow platform built solo.</strong>',
   },
   partnerships: {
-    badge: 'Partnerships Leader',
+    badge: 'Partnerships · Built From Zero',
     headlineTop: 'ZERO',
     headlineAccent1: 'TO',
     headlineMid: '→',
     headlineBottom: '₹7M',
     headlineAccent2: 'REVENUE',
-    subtitle: 'I build partnership engines from scratch. <strong>54 BFSI partnerships, ₹7M revenue, 20x YoY growth.</strong> Every system designed, built, and scaled by me across ClearTax and Plum.',
+    subtitle: 'I build partnership channels from zero. <strong>54 BFSI partnerships, ₹7M revenue, 20x YoY growth,</strong> designed and scaled across ClearTax and Plum.',
   },
   marketing: {
-    badge: 'Marketing Leader',
+    badge: 'Marketing · Owned End to End',
     headlineTop: 'STARTUP',
     headlineAccent1: 'SPARK',
     headlineMid: '→',
     headlineBottom: 'NASDAQ',
     headlineAccent2: 'STAGE',
-    subtitle: 'Sole marketing owner for Grid Dynamics India: <strong>demand, brand, and employer brand, owned end to end.</strong> And I build the product I market, not just the campaigns around it.',
+    subtitle: 'Sole marketing owner for Grid Dynamics India: <strong>demand, brand, and employer brand, owned end to end.</strong> I also build the product I market.',
   },
 };

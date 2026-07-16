@@ -39,16 +39,16 @@ const Stack: React.FC = () => {
       >
         <div className="w-12 md:w-20 h-px bg-[#FF6B35]" />
         <span className="text-[#FF6B35] font-mono font-medium text-xs md:text-sm uppercase tracking-[0.3em]">
-          How I work
+          Across disciplines
         </span>
       </motion.div>
 
       <h3 className="text-5xl md:text-8xl font-display text-[#0A192F] dark:text-white uppercase italic font-black leading-[0.9] tracking-tighter transition-colors">
-        THE STACK.
+        CAPABILITIES.
       </h3>
       <p className="mt-6 md:mt-8 max-w-2xl text-lg md:text-2xl text-slate-600 dark:text-slate-300 font-light leading-relaxed">
-        Marketing and partnerships is the half most people see. The other half is
-        the product itself, shipped in code.
+        Marketing and partnerships is the visible half. The other half is the
+        product itself, built in code.
       </p>
 
       {featured && (

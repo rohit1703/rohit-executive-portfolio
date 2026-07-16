@@ -16,7 +16,7 @@ const Personas: React.FC = () => {
         {/* The numbers */}
         <div className="lg:w-2/5 flex-shrink-0">
           <span className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.25em] text-[#FF6B35] block mb-6">
-            The range
+            Cumulative impact
           </span>
           <div className="flex flex-col sm:flex-row lg:flex-col gap-8 sm:gap-12 lg:gap-8">
             {CAREER_STATS.map((stat) => (

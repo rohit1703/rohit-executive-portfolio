@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
           </div>
 
           <p className="text-2xl md:text-3xl text-slate-300 leading-relaxed font-light italic border-l-4 border-[#FF6B35] pl-6 md:pl-10 py-3 md:py-6">
-            "Six years marketing B2B software: a NASDAQ firm, a Tiger Global–backed insurtech, a fintech. Now I build it too. Currly is an AI workflow platform I shipped solo. If you're building something AI-native, let's talk."
+            "Six years in B2B marketing and partnerships across a NASDAQ firm, a Tiger Global–backed insurtech, and a fintech. I now design and ship the product as well: Currly, an AI workflow platform built solo."
           </p>
           
           <div className="flex flex-wrap gap-8 md:gap-10 mt-16 md:mt-20">
@@ -68,8 +68,8 @@ const Footer: React.FC = () => {
         
         <div className="order-1 md:order-2 bg-[#FF6B35] rounded-3xl md:rounded-[32px] p-10 md:p-20 flex flex-col justify-between items-start text-white relative overflow-hidden group shadow-2xl">
           <div className="z-10">
-            <h3 className="text-5xl md:text-7xl font-display mb-6 md:mb-10 leading-tight">Building <br />something <br />AI-native?</h3>
-            <p className="text-white/90 text-lg md:text-2xl font-light max-w-sm">I'm open to roles where marketing and building the product aren't separate jobs. Grab a slot.</p>
+            <h3 className="text-5xl md:text-7xl font-display mb-6 md:mb-10 leading-tight">Open to <br />the right <br />role.</h3>
+            <p className="text-white/90 text-lg md:text-2xl font-light max-w-sm">I'm looking for roles where marketing and building the product are the same job. Book a time below.</p>
           </div>
           
           <MagneticButton href="https://calendar.app.google/7dcJhghECcU1QPke7" target="_blank" rel="noopener noreferrer" className="z-10 mt-12 md:mt-16 bg-[#0A192F] text-white px-10 md:px-14 py-5 md:py-6 rounded-2xl md:rounded-[32px] font-display font-bold text-xl md:text-3xl hover:scale-105 active:scale-95 transition-transform flex items-center gap-4 md:gap-6 group/btn shadow-2xl inline-flex decoration-0">

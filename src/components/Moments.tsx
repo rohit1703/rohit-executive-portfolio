@@ -13,15 +13,15 @@ const Moments: React.FC = () => {
       >
         <div className="w-12 md:w-20 h-px bg-[#FF6B35]" />
         <span className="text-[#FF6B35] font-mono font-medium text-xs md:text-sm uppercase tracking-[0.3em]">
-          In the room
+          Selected appearances
         </span>
       </motion.div>
 
       <h3 className="text-5xl md:text-8xl font-display text-[#0A192F] dark:text-white uppercase italic font-black leading-[0.9] tracking-tighter transition-colors">
-        MOMENTS.
+        SELECTED EVENTS.
       </h3>
       <p className="mt-6 md:mt-8 max-w-2xl text-lg md:text-2xl text-slate-600 dark:text-slate-300 font-light leading-relaxed">
-        Talks I hosted, launches I ran, and the rooms I built. The events behind the numbers.
+        A selection of talks, launches, and flagship events, hosted and run end to end.
       </p>
 
       <div className="mt-12 md:mt-16 columns-1 sm:columns-2 lg:columns-3 gap-4 md:gap-6">

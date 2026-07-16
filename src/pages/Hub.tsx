@@ -9,7 +9,7 @@ const views = [
   {
     label: 'About Me',
     hook: 'Builder-marketer',
-    description: 'Six years in B2B marketing and partnerships, and the AI workflow platform I now build solo. Start here for the full picture.',
+    description: 'Six years in B2B marketing and partnerships, and the AI workflow platform I now build solo. Start here.',
     path: '/about',
     icon: (
       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,7 +80,7 @@ const Hub: React.FC = () => {
           ROHIT <span className="text-[#FF6B35]">MALLAVARAPU</span>
         </h1>
         <p className="text-sm md:text-2xl text-slate-500 dark:text-slate-300 font-light max-w-2xl mx-auto transition-colors">
-          I market B2B software, and now I build it too. Pick a lens.
+          Six years in B2B marketing and partnerships. Now I build the product too. Choose a view.
         </p>
       </motion.div>
 
