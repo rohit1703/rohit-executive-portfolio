@@ -11,10 +11,14 @@ interface LinkedInFeedProps {
 
 const LinkedInFeed: React.FC<LinkedInFeedProps> = ({ view }) => {
   const copy = SECTION_COPY[view];
-  // Show 3 random posts; a new set is picked on every page load/refresh.
-  const [visiblePosts] = useState(() =>
-    [...LINKEDIN_POSTS].sort(() => Math.random() - 0.5).slice(0, 3)
-  );
+  const [expanded, setExpanded] = useState(false);
+  // Show 3 random posts, reshuffled on every page load. The button below
+  // expands to reveal the rest of the posts inline.
+  const [{ visiblePosts, restPosts }] = useState(() => {
+    const shuffled = [...LINKEDIN_POSTS].sort(() => Math.random() - 0.5);
+    return { visiblePosts: shuffled.slice(0, 3), restPosts: shuffled.slice(3) };
+  });
+  const displayedPosts = expanded ? [...visiblePosts, ...restPosts] : visiblePosts;
 
   return (
     <div className="py-24 md:py-48 px-6 bg-slate-200/50 dark:bg-[#081526]/50 transition-colors">
@@ -32,7 +36,7 @@ const LinkedInFeed: React.FC<LinkedInFeedProps> = ({ view }) => {
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
         <AnimatePresence mode="popLayout">
-          {visiblePosts.map((post, idx) => (
+          {displayedPosts.map((post, idx) => (
             <motion.div
               key={post.title}
               layout
@@ -76,12 +80,18 @@ const LinkedInFeed: React.FC<LinkedInFeedProps> = ({ view }) => {
         </AnimatePresence>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-24 md:mt-32 text-center">
-        <MagneticButton href="https://www.linkedin.com/in/rohitmallavarapu17/recent-activity/all/" target="_blank" className="text-[#FF6B35] font-mono font-medium uppercase tracking-[0.25em] text-sm md:text-lg hover:text-[#0A192F] dark:hover:text-white transition-colors decoration-0 group flex flex-col items-center gap-4">
-          <span>Read every post on LinkedIn</span>
-          <svg className="w-6 h-6 animate-bounce mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
-        </MagneticButton>
-      </div>
+      {restPosts.length > 0 && (
+        <div className="max-w-7xl mx-auto mt-16 md:mt-24 text-center">
+          <button
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={expanded}
+            className="text-[#FF6B35] font-mono font-medium uppercase tracking-[0.25em] text-sm md:text-lg hover:text-[#0A192F] dark:hover:text-white transition-colors inline-flex flex-col items-center gap-3"
+          >
+            <span>{expanded ? 'Show fewer' : `Read ${restPosts.length} more posts`}</span>
+            <svg className={`w-6 h-6 transition-transform duration-300 ${expanded ? 'rotate-180' : 'animate-bounce'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+          </button>
+        </div>
+      )}
     </div>
   );
 };
