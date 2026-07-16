@@ -1,11 +1,25 @@
-// Cumulative career impact (revenue + pipeline influenced across roles) and the
+// Cumulative career impact (revenue + pipeline influenced, events hosted) and the
 // breadth of partner ecosystems Rohit has built across.
-export const CAREER_IMPACT = {
-  value: 10,
-  prefix: '$',
-  suffix: 'M+',
-  caption: 'contributed in revenue and pipeline across six years, one operator.',
-};
+export interface CareerStat {
+  value: number;
+  prefix?: string;
+  suffix: string;
+  caption: string;
+}
+
+export const CAREER_STATS: CareerStat[] = [
+  {
+    value: 10,
+    prefix: '$',
+    suffix: 'M+',
+    caption: 'contributed in revenue and pipeline across six years, one operator.',
+  },
+  {
+    value: 35,
+    suffix: '+',
+    caption: 'events hosted across three companies and cities.',
+  },
+];
 
 export const PARTNER_PERSONAS: string[] = [
   'BFSI — banks & NBFCs',
