@@ -80,11 +80,10 @@ const Footer: React.FC = () => {
         </div>
       </div>
       
-      <div className="max-w-7xl mx-auto mt-32 md:mt-48 pt-12 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-10 md:gap-12">
+      <div className="max-w-7xl mx-auto mt-32 md:mt-48 pt-12 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-12">
         {[
           { label: 'Location', value: 'Bengaluru, India · open to remote & relocation' },
           { label: 'Languages', value: 'English · Hindi · Telugu' },
-          { label: 'Notice period', value: 'Immediate to 30 days' },
         ].map((d) => (
           <div key={d.label}>
             <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#FF6B35] mb-3">{d.label}</p>
