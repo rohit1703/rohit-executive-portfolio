@@ -90,23 +90,23 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
         </div>
       </motion.div>
 
-      {/* Card 4: Dark — always dark bg, so all text forced white */}
+      {/* Card 4: the "build" card — light surface in light mode, dark gradient in dark mode */}
       <motion.div
         whileHover={{ scale: 1.01 }}
-        className="rounded-2xl md:rounded-[24px] p-8 md:p-12 flex flex-col justify-between bg-gradient-to-br from-[#182A45] to-[#0A192F] min-h-[320px] text-white border border-white/10"
+        className="rounded-2xl md:rounded-[24px] p-8 md:p-12 flex flex-col justify-between min-h-[320px] bg-white dark:bg-gradient-to-br dark:from-[#182A45] dark:to-[#0A192F] border border-slate-200 dark:border-white/10 shadow-sm transition-colors"
       >
         <div className="z-10 flex justify-between items-start">
           <span className="text-[11px] md:text-sm font-mono font-medium text-[#FF6B35] uppercase tracking-[0.2em]">{dark.label}</span>
-          <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center">
+          <div className="w-8 h-8 rounded-full border border-slate-200 dark:border-white/10 flex items-center justify-center">
             <div className="w-2 h-2 rounded-full bg-[#FF6B35] animate-pulse" />
           </div>
         </div>
         <div className="z-10 mt-10">
-          <div className="text-6xl md:text-7xl font-display text-white leading-none flex items-baseline">
+          <div className="text-6xl md:text-7xl font-display text-[#0A192F] dark:text-white leading-none flex items-baseline transition-colors">
             <Counter value={dark.kpi[view].value} suffix={dark.kpi[view].suffix} prefix={dark.kpi[view].prefix} />
           </div>
           <p className="text-[11px] md:text-[13px] font-mono font-medium uppercase tracking-[0.2em] text-[#FF6B35] mt-4">{dark.kpi[view].label}</p>
-          <p className="mt-4 text-[10px] md:text-[11px] text-slate-400 font-mono uppercase tracking-[0.15em]">{dark.secondaryText?.[view]}</p>
+          <p className="mt-4 text-[10px] md:text-[11px] text-slate-500 dark:text-slate-400 font-mono uppercase tracking-[0.15em]">{dark.secondaryText?.[view]}</p>
         </div>
       </motion.div>
 
