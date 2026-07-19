@@ -43,7 +43,7 @@ const Stack: React.FC = () => {
         </span>
       </motion.div>
 
-      <h3 className="text-5xl md:text-8xl font-display text-[#0A192F] dark:text-white uppercase italic font-black leading-[0.9] tracking-tighter transition-colors">
+      <h3 className="text-[clamp(2.5rem,13vw,3rem)] md:text-8xl font-display text-[#0A192F] dark:text-white uppercase italic font-black leading-[0.9] tracking-tighter transition-colors">
         CAPABILITIES.
       </h3>
       <p className="mt-6 md:mt-8 max-w-2xl text-lg md:text-2xl text-slate-600 dark:text-slate-300 font-light leading-relaxed">
