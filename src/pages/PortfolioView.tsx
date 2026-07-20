@@ -4,6 +4,7 @@ import { VALID_VIEWS, VIEW_META, ViewType } from '../data/views';
 import { SECTION_COPY } from '../data/sectionCopy';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import ProofBand from '../components/ProofBand';
 import Currly from '../components/Currly';
 import CustomCursor from '../components/CustomCursor';
 import LogoMarquee from '../components/LogoMarquee';
@@ -32,11 +33,12 @@ const PortfolioView: React.FC = () => {
     mainRef.current?.focus();
   }, [view]);
 
-  if (!view || !VALID_VIEWS.includes(view as ViewType)) {
+  // "/" (no param) is the default landing; only an *invalid* explicit view redirects.
+  if (view && !VALID_VIEWS.includes(view as ViewType)) {
     return <Navigate to="/" replace />;
   }
 
-  const currentView = view as ViewType;
+  const currentView: ViewType = (view as ViewType) || 'about';
   const meta = VIEW_META[currentView];
   const copy = SECTION_COPY[currentView];
 
@@ -55,8 +57,19 @@ const PortfolioView: React.FC = () => {
           <Hero view={currentView} />
         </section>
 
+        <ProofBand />
+
         <section id="currly">
           <Currly view={currentView} />
+        </section>
+
+        <section id="forward" className="px-6 md:px-12 max-w-7xl mx-auto pb-8 md:pb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[.4fr_1fr] gap-8 lg:gap-16 items-start border-t border-slate-300 dark:border-white/10 pt-16 md:pt-20 transition-colors">
+            <span className="font-mono text-[11px] md:text-xs uppercase tracking-[0.3em] text-[#FF6B35] pt-2">What this means for you</span>
+            <p className="font-display text-2xl md:text-4xl font-black italic tracking-tight leading-[1.15] text-[#0A192F] dark:text-white transition-colors">
+              A marketer who can build the funnel <span className="text-[#FF6B35]">and the product behind it</span>, and who knows exactly where AI moves the needle, because I ship it, not slideware it.
+            </p>
+          </div>
         </section>
 
         <LogoMarquee />

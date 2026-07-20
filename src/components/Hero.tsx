@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { ViewType } from '../data/views';
 import { HERO_DATA } from '../data/hero';
 
@@ -8,88 +7,102 @@ interface HeroProps {
   view: ViewType;
 }
 
+const KPIS: [string, string][] = [
+  ['111+', 'Workflows live'],
+  ['<400ms', 'p95 search'],
+  ['5', 'Signal ranking'],
+];
+
 const Hero: React.FC<HeroProps> = ({ view }) => {
   const data = HERO_DATA[view];
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  });
-
-  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 0.95]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const yPos = useTransform(scrollYProgress, [0, 1], [0, -50]);
-  const imageY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   return (
-    <>
-    <Helmet>
-      <link rel="preload" as="image" href="/rohit.webp" fetchPriority="high" />
-    </Helmet>
-    <div ref={containerRef} className="relative min-h-[92dvh] md:min-h-[90vh] bg-[#F0F4F8] dark:bg-[#0A192F] transition-colors duration-500 overflow-hidden flex flex-col justify-center">
-
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 flex flex-col md:flex-row items-center justify-between relative z-20">
-
-        <motion.div
-          style={{ scale: heroScale, opacity: heroOpacity, y: yPos }}
-          className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mb-2 md:mb-0 relative z-30"
-        >
+    <div className="relative bg-[#F0F4F8] dark:bg-[#0A192F] transition-colors duration-500 overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 pt-32 md:pt-44 pb-16 md:pb-24 grid grid-cols-1 lg:grid-cols-[1.12fr_.88fr] gap-12 lg:gap-16 items-center">
+        {/* Left: thesis */}
+        <div>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-6 px-4 py-2 rounded-full border border-slate-300 dark:border-white/20 bg-white/60 dark:bg-white/10 backdrop-blur-md text-slate-600 dark:text-slate-300 text-[10px] md:text-xs font-mono font-medium tracking-[0.2em] uppercase inline-block shadow-sm"
+            transition={{ duration: 0.7 }}
+            className="flex items-center gap-4 text-[#FF6B35] font-mono font-medium text-xs md:text-sm uppercase tracking-[0.3em] mb-7"
           >
+            <span className="w-10 md:w-12 h-px bg-[#FF6B35]" />
             {data.badge}
           </motion.div>
 
-          <h1 className="font-display text-[12vw] md:text-[6rem] lg:text-[7.5rem] tracking-tighter leading-[0.9] text-[#0A192F] dark:text-white font-black transition-colors duration-300">
-            {data.headlineTop} <br />
-            <span className="text-[#FF6B35]">{data.headlineAccent1}</span>
-            <span className="text-slate-300 dark:text-white/20 mx-4 lg:mx-6 font-light">{data.headlineMid}</span>
+          <motion.h1
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.05 }}
+            className="font-display text-[clamp(2.75rem,11vw,5rem)] lg:text-[clamp(3.25rem,5.6vw,5.8rem)] font-black italic uppercase tracking-tighter leading-[0.9] text-[#0A192F] dark:text-white transition-colors"
+          >
+            {data.headline}
             <br />
-            {data.headlineBottom} <span className="text-[#FF6B35]">{data.headlineAccent2}</span>
-          </h1>
+            <span className="text-[#FF6B35]">{data.headlineAccent}</span>
+          </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 1 }}
-            className="mt-6 md:mt-8 max-w-lg text-slate-600 dark:text-slate-300 text-sm md:text-lg font-light leading-relaxed
-                       p-4 md:p-0 rounded-2xl
-                       bg-white/60 dark:bg-[#0A192F]/60 backdrop-blur-md border border-white/20 shadow-lg
-                       md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none md:border-none md:shadow-none"
+            transition={{ delay: 0.35, duration: 0.8 }}
+            className="mt-7 max-w-xl text-lg md:text-xl text-slate-600 dark:text-slate-300 font-light leading-relaxed transition-colors"
             dangerouslySetInnerHTML={{ __html: data.subtitle }}
           />
-        </motion.div>
 
-        <motion.div
-          style={{ y: imageY, opacity: useTransform(scrollYProgress, [0, 0.4], [1, 0]) }}
-          className="relative md:absolute z-10 w-full md:w-1/2 h-[50vh] md:h-[80vh] md:right-0 md:bottom-0 pointer-events-none flex items-end justify-center md:justify-end mt-[-5vh] md:mt-0"
-        >
-          <div className="relative w-full h-full">
-            <img
-              src="/rohit.webp"
-              alt="Rohit Mallavarapu"
-              fetchPriority="high"
-              loading="eager"
-              width="800"
-              height="1000"
-              className="w-full h-full object-cover object-top md:object-center
-                         grayscale-0 md:grayscale-[20%] hover:grayscale-0 transition-all duration-1000
-                         opacity-80 dark:opacity-90 mix-blend-normal dark:mix-blend-luminosity"
-              style={{
-                maskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)',
-                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)'
-              }}
-            />
-            <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#F0F4F8] dark:from-[#0A192F] via-[#F0F4F8]/50 dark:via-[#0A192F]/50 to-transparent z-20" />
+          <div className="mt-9 flex flex-wrap gap-4">
+            <a
+              href="#footer"
+              className="bg-[#0A192F] dark:bg-white text-white dark:text-[#0A192F] font-display font-bold text-base md:text-lg px-7 py-4 rounded-2xl hover:bg-[#FF6B35] dark:hover:bg-[#FF6B35] hover:text-white transition-colors shadow-lg"
+            >
+              Get in touch
+            </a>
+            <a
+              href="#impact"
+              className="border border-[#0A192F] dark:border-white/40 text-[#0A192F] dark:text-white font-display font-bold text-base md:text-lg px-7 py-4 rounded-2xl hover:border-[#FF6B35] hover:text-[#FF6B35] transition-colors inline-flex items-center gap-2"
+            >
+              See the work
+              <span aria-hidden>↓</span>
+            </a>
           </div>
-        </motion.div>
+        </div>
 
+        {/* Right: live proof — the product I'm building */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.6 }}
+          className="relative rounded-2xl md:rounded-[28px] bg-white dark:bg-[#182A45]/50 border border-slate-200 dark:border-white/10 p-8 md:p-10 shadow-2xl"
+        >
+          <div className="absolute top-6 right-6 w-2.5 h-2.5 rounded-full bg-[#FF6B35] animate-pulse shadow-[0_0_0_6px_rgba(255,107,53,0.12)]" />
+          <span className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.25em] text-[#FF6B35]">
+            Currently building
+          </span>
+          <h2 className="mt-3 font-display text-4xl md:text-5xl font-black italic tracking-tight text-[#0A192F] dark:text-white transition-colors">
+            Currly
+          </h2>
+          <p className="mt-1 text-sm md:text-base italic text-slate-500 dark:text-slate-400">
+            AI workflow platform, shipped solo
+          </p>
+
+          <div className="mt-7 flex flex-wrap gap-x-8 gap-y-5">
+            {KPIS.map(([n, k]) => (
+              <div key={k}>
+                <div className="font-display text-2xl md:text-3xl font-black italic tracking-tight text-[#0A192F] dark:text-white transition-colors">
+                  {n}
+                </div>
+                <div className="mt-1 font-mono text-[9px] uppercase tracking-[0.15em] text-[#FF6B35]">{k}</div>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-7 pt-5 border-t border-slate-200 dark:border-white/10 text-sm text-slate-600 dark:text-slate-300 font-light leading-relaxed transition-colors">
+            Rebuilt a broken stack: found and fixed a{' '}
+            <span className="font-mono text-[#0A192F] dark:text-white">search_path</span> bug that had silently killed semantic search in production, and cut 60MB payloads to kilobytes.
+          </p>
+        </motion.div>
       </div>
     </div>
-    </>
   );
 };
 
