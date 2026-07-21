@@ -27,7 +27,7 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
 
       {/* Card 1: Wide */}
       <motion.div
-        whileHover={{ scale: 1.01 }}
+        whileHover={{ y: -6, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } }}
         className="xl:col-span-2 premium-card rounded-2xl md:rounded-[24px] p-8 md:p-14 flex flex-col justify-between group overflow-hidden min-h-[400px]
         bg-white dark:bg-[#182A45]/40 border border-slate-200 dark:border-white/10"
       >
@@ -50,7 +50,7 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
 
       {/* Card 2: Tall Accent */}
       <motion.div
-        whileHover={{ scale: 1.01 }}
+        whileHover={{ y: -6, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } }}
         className="xl:row-span-2 bg-[#FF6B35] rounded-2xl md:rounded-[24px] p-10 md:p-14 flex flex-col justify-between text-[#0A192F] relative shadow-2xl overflow-hidden min-h-[420px] xl:min-h-[700px]"
       >
         <div className="relative z-10">
@@ -73,7 +73,7 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
 
       {/* Card 3: Standard */}
       <motion.div
-        whileHover={{ scale: 1.01 }}
+        whileHover={{ y: -6, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } }}
         className="premium-card rounded-2xl md:rounded-[24px] p-8 md:p-12 flex flex-col justify-between min-h-[320px]
         bg-white dark:bg-[#182A45]/40 border border-slate-200 dark:border-white/10"
       >
@@ -92,7 +92,7 @@ const BentoGrid: React.FC<BentoGridProps> = ({ view }) => {
 
       {/* Card 4: the "build" card — light surface in light mode, dark gradient in dark mode */}
       <motion.div
-        whileHover={{ scale: 1.01 }}
+        whileHover={{ y: -6, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } }}
         className="rounded-2xl md:rounded-[24px] p-8 md:p-12 flex flex-col justify-between min-h-[320px] bg-white dark:bg-gradient-to-br dark:from-[#182A45] dark:to-[#0A192F] border border-slate-200 dark:border-white/10 shadow-sm transition-colors"
       >
         <div className="z-10 flex justify-between items-start">

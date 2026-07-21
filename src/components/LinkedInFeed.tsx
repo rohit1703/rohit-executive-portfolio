@@ -43,7 +43,8 @@ const LinkedInFeed: React.FC<LinkedInFeedProps> = ({ view }) => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.6 }}
+              transition={{ delay: (idx % 3) * 0.08, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ y: -6, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } }}
               className="rounded-2xl md:rounded-[24px] p-8 md:p-14 flex flex-col justify-between min-h-[450px] md:min-h-[500px] group border border-slate-200 dark:border-white/10 hover:border-[#FF6B35]/40 transition-all duration-500 shadow-xl relative overflow-hidden bg-white dark:bg-[#182A45]/40"
             >
               <div className="relative z-10">
