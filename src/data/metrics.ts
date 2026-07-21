@@ -25,7 +25,7 @@ export const METRIC_CARDS: MetricCard[] = [
     label: 'Sole Owner, India',
     descriptions: {
       about:
-        'Sole marketing owner for Grid Dynamics India, client, talent, and brand. No team beneath me.',
+        'Sole marketing owner for Grid Dynamics India, client, talent, and brand. The latest flagship event, with ISB, engaged 200+ Fortune 1000 CXOs.',
       partnerships:
         'I own the India CXO relationships. Two flagship client events; the latest, with ISB, engaged 200+ Fortune 1000 CXOs.',
       marketing:
