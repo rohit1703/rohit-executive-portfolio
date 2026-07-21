@@ -25,10 +25,32 @@ const Hero: React.FC<HeroProps> = ({ view }) => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="flex items-center gap-4 text-[#FF6B35] font-mono font-medium text-xs md:text-sm uppercase tracking-[0.3em] mb-7"
+            className="flex items-center gap-4 mb-8"
           >
-            <span className="w-10 md:w-12 h-px bg-[#FF6B35]" />
-            {data.badge}
+            <div className="relative flex-shrink-0">
+              <div className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-full overflow-hidden border-2 border-[#FF6B35]/40 shadow-lg">
+                <img
+                  src="/rohit.webp"
+                  alt="Rohit Mallavarapu"
+                  width="800"
+                  height="1000"
+                  fetchPriority="high"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <span
+                className="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-[#FF6B35] border-2 border-[#F0F4F8] dark:border-[#0A192F] animate-pulse"
+                title="Open to roles"
+              />
+            </div>
+            <div>
+              <div className="text-[#FF6B35] font-mono font-medium text-xs md:text-sm uppercase tracking-[0.3em]">
+                {data.badge}
+              </div>
+              <div className="mt-1.5 text-xs md:text-sm text-slate-500 dark:text-slate-400 font-mono tracking-wide">
+                Rohit Mallavarapu · Bengaluru
+              </div>
+            </div>
           </motion.div>
 
           <motion.h1
