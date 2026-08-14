@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLenis } from 'lenis/react';
 import MagneticButton from './MagneticButton';
 import ThemeToggle from './ThemeToggle';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const lenis = useLenis();
 
   useEffect(() => {
     if (isOpen) {
@@ -19,14 +21,12 @@ const Navbar: React.FC = () => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+      if (lenis) {
+        lenis.scrollTo(element, { offset: -80 });
+      } else {
+        const offsetPosition = element.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
     }
     setIsOpen(false);
   };

@@ -47,6 +47,7 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
           points: [
             'Sole marketing owner for India, client, talent, and brand. No team beneath me.',
             '12 Dynamic Talks across 3 cities → 4,600+ qualified talent prospects. Peak event: 664 registrations; 400+ average.',
+            '2 India flagship client events; the latest, with ISB, engaged 200+ Fortune 1000 CXOs.',
             'AI-native operator: full campaign cycles, research, content, decks, video, run at the pace of a larger team.',
           ],
         },
@@ -54,7 +55,7 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
           title: 'Brand, moved',
           points: [
             'Brand awareness among target tech talent: 20% → 80%.',
-            "Glassdoor 3.2 → 3.9. AmbitionBox 2.0 → 3.1. India grew to 48% of the company's global LinkedIn following.",
+            "Glassdoor 3.2 → 3.9. AmbitionBox 2.0 → 3.1. India grew to 48% of the company's global LinkedIn following; 1,200+ talent leads.",
           ],
         },
       ],

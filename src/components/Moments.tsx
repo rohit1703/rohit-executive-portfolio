@@ -34,7 +34,8 @@ const Moments: React.FC = () => {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: (i % 3) * 0.05, duration: 0.5 }}
+            transition={{ delay: (i % 3) * 0.06, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            whileHover={{ y: -6, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } }}
             className="group relative block mb-4 md:mb-6 break-inside-avoid overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-[#182A45]/40 shadow-sm hover:border-[#FF6B35]/50 transition-colors duration-500"
           >
             <img
