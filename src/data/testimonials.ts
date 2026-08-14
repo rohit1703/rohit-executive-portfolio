@@ -74,4 +74,12 @@ export const TESTIMONIALS: Testimonial[] = [
     company: "Clear",
     priority: { about: 8, partnerships: 8, marketing: 8 },
   },
+  {
+    heading: "Always innovating his way of working, delivering super fast and accurate",
+    text: "I have had an immense honour to work alongside Rohit, although we are on opposite sides of the planet. He is a memorable colleague and human being and a wonderful professional, always on point, always innovating his way of working and delivering super fast and accurate. Any employer would be lucky to have him in their team.",
+    author: "Petrisor Guta",
+    role: "Senior Comms & Social Strategist",
+    company: "Grid Dynamics",
+    priority: { about: 3, partnerships: 9, marketing: 3 },
+  },
 ];

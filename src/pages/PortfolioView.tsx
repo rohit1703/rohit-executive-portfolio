@@ -17,7 +17,7 @@ const Personas = React.lazy(() => import('../components/Personas'));
 const Timeline = React.lazy(() => import('../components/Timeline'));
 const Testimonials = React.lazy(() => import('../components/Testimonials'));
 const LinkedInFeed = React.lazy(() => import('../components/LinkedInFeed'));
-const Stack = React.lazy(() => import('../components/Stack'));
+const Capabilities = React.lazy(() => import('../components/Capabilities'));
 const Moments = React.lazy(() => import('../components/Moments'));
 const Education = React.lazy(() => import('../components/Education'));
 const Footer = React.lazy(() => import('../components/Footer'));
@@ -105,7 +105,7 @@ const PortfolioView: React.FC = () => {
             </section>
 
             <section id="stack">
-              <Stack />
+              <Capabilities />
             </section>
 
             <section id="feed">
