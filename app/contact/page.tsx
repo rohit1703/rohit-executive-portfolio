@@ -9,7 +9,7 @@ export default function ContactPage() {
       <section style={{ padding: 'clamp(48px,7vw,104px) 0 clamp(30px,4vw,56px)' }}>
         <figure className="pull">
           <blockquote>
-            &ldquo;I&rsquo;m looking for roles where marketing and <em>building the product</em> are the same job.&rdquo;
+            &ldquo;I&rsquo;m looking for the one role where marketing the product and <em>building it</em> are the same job.&rdquo;
           </blockquote>
         </figure>
         <span className="mini-eyebrow" style={{ letterSpacing: '.16em', marginBottom: 16 }}>Get in touch</span>
@@ -17,8 +17,8 @@ export default function ContactPage() {
           Open to the <span className="ital">right role.</span>
         </h1>
         <p className="lead" style={{ maxWidth: '54ch' }}>
-          Six years in B2B marketing and partnerships — and the AI workflow platform I now build
-          solo. Growth, partnerships, or builder-marketer roles. Book a time below, or reach me directly.
+          Six years in B2B marketing and partnerships, and an AI platform I build solo. I want a
+          role that uses both. I can start immediately — book a time below, or just email me.
         </p>
         <div style={{ marginTop: 28 }}>
           <a className="pill pill-primary" href={CAL} target="_blank" rel="noopener noreferrer">Book a call ↗</a>
@@ -31,7 +31,7 @@ export default function ContactPage() {
           <a className="contact-row" href={PHONE_HREF}><span className="k">Phone</span><span className="v tnum">{PHONE}</span></a>
           <a className="contact-row" href={LINKEDIN} target="_blank" rel="noopener noreferrer"><span className="k">LinkedIn</span><span className="v">in/rohitmallavarapu17</span></a>
           <a className="contact-row" href={RESUME}><span className="k">Résumé</span><span className="v">Download PDF</span></a>
-          <div className="contact-row b"><span className="k">Location</span><span className="v">Bengaluru · remote &amp; relocation</span></div>
+          <div className="contact-row b"><span className="k">Location</span><span className="v">Bengaluru · open to remote &amp; relocation</span></div>
           <div className="contact-row b"><span className="k">Languages</span><span className="v">English · Hindi · Telugu</span></div>
         </div>
       </section>

@@ -1,42 +1,41 @@
-// Shared content — references (Home rail + Proof) and events (Home).
+// Shared content — references (Home rail) and events (Home).
 export interface Reference {
   name: string;
   title: string;
   company: string;
-  pre: string;   // quote text before the highlighted phrase
-  hl: string;    // the accent-italic phrase
-  post: string;  // quote text after
+  pre: string;
+  hl: string;
+  post: string;
 }
 
+// v2 order: lead with the ones that describe the work (Saurabh, Adwitiya),
+// keep the CEO (Poddar) prominent. Trimmed to two sentences each.
 export const REFERENCES: Reference[] = [
-  { name: 'Abhishek Poddar', title: 'Co-Founder & CEO', company: 'Plum Benefits',
-    pre: 'Rohit was the driving force behind many key initiatives at Plum, bringing innovative ideas and ',
-    hl: 'exceptional execution', post: ' to the table.' },
-  { name: 'Adwitiya Singh', title: 'Head, BFSI & Payroll', company: 'Clear',
-    pre: 'The go-to person and the ',
-    hl: 'load balance between internal customers and external stakeholders',
-    post: '. He pushed the whole team towards newer possibilities and use cases.' },
   { name: 'Saurabh Arora', title: 'Co-Founder & CTO', company: 'Plum Benefits',
-    pre: 'Rohit approaches work like a sport, always a team player — ',
-    hl: 'a natural community builder', post: ', from partnerships to experiential marketing.' },
+    pre: 'Rohit approaches work like a sport, always a team player. ',
+    hl: 'A natural community builder', post: ', he took on everything from partnerships to experiential marketing.' },
+  { name: 'Adwitiya Singh', title: 'Head, BFSI & Payroll', company: 'Clear',
+    pre: 'Rohit was the ',
+    hl: 'load balance between internal customers and external stakeholders',
+    post: '. He pushed the whole team toward newer possibilities and use cases.' },
+  { name: 'Abhishek Poddar', title: 'Co-Founder & CEO', company: 'Plum Benefits',
+    pre: 'Rohit was the driving force behind many of our key initiatives at Plum — ',
+    hl: 'innovative ideas and exceptional execution', post: ', on everything he took on.' },
   { name: 'Shriya Shah', title: 'Performance Lead', company: 'Plum Benefits',
     pre: "Rohit's ", hl: 'energy and grit is unmatched',
-    post: '. He ideates, executes, and achieves all of his goals, aligning teams and managing stakeholders.' },
+    post: '. He ideates, executes, and hits his goals — reliable on every initiative.' },
   { name: 'Prerit Bajaj', title: 'Associate Director, ABM', company: 'Plum Benefits',
-    pre: 'Rohit consistently ', hl: 'went above and beyond',
-    post: ', spearheading multiple high-impact campaigns. His infectious energy drove our results.' },
+    pre: 'Rohit ', hl: 'went above and beyond',
+    post: ', leading multiple high-impact campaigns. His focus and consistency drove the results.' },
   { name: 'Tanushree Upadhyay', title: 'Account Management', company: 'Clear',
-    pre: 'Handles even the ', hl: 'toughest client effortlessly',
-    post: ' — a skill that often takes years. He leads by example and kept team morale up.' },
+    pre: 'Rohit handled ', hl: 'the toughest client effortlessly',
+    post: " — a skill that usually takes years. He led by example and kept the team's morale up." },
   { name: 'Akshay Bhatt', title: 'Strategic Alliances & Growth', company: 'Clear',
-    pre: 'Great zeal and enthusiasm towards challenging tasks, closing them with the best solution — ',
+    pre: 'Rohit closes hard problems with the best solution. He’s ',
     hl: 'an asset to any company', post: ' he works for.' },
   { name: 'Abhishek Srivastava', title: 'Partnerships', company: 'Clear',
-    pre: 'One of the most hardworking people I have worked with — ',
-    hl: 'the all-rounder of the team', post: ". I'd love the chance to work with him again." },
-  { name: 'Petrisor Guta', title: 'Senior Comms & Social Strategist', company: 'Grid Dynamics',
-    pre: 'A wonderful professional, always on point, always innovating his way of working and ',
-    hl: 'delivering super fast and accurate', post: '. Any employer would be lucky to have him.' },
+    pre: "One of the most dedicated people I've worked with — ",
+    hl: 'the all-rounder of the team', post: ', across every vertical. I’d work with him again in a heartbeat.' },
 ];
 
 export interface EventItem { title: string; photo: string; }

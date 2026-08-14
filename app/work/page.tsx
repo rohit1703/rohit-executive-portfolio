@@ -10,45 +10,46 @@ interface Role {
 
 const ROLES: Role[] = [
   {
-    idx: '01 · Jul 2024 – Present', title: 'Marketing Lead, India', company: 'Grid Dynamics (NASDAQ: GDYN)',
-    summary: 'Sole marketing owner for Grid Dynamics India — client, talent, and brand. No team beneath me, no daily supervision.',
-    stats: [{ n: '4,600+', l: 'Qualified prospects', accent: true }, { n: '80%', l: 'Brand awareness (from 20%)' }],
+    idx: '01 · Jul 2024 – Aug 2026', title: 'Marketing Lead, India', company: 'Grid Dynamics (NASDAQ: GDYN)',
+    summary: "I ran India marketing on my own — client, talent, and brand. No team beneath me, no one checking the work day to day. So I built AI into everything and ran at a bigger team's pace.",
+    stats: [{ n: '5,000+', l: 'Qualified prospects', accent: true }, { n: '80%', l: 'Brand awareness (from 20%)' }],
     bullets: [
-      '12 Dynamic Talks across 3 cities → 4,600+ qualified talent prospects. Peak event: 664 registrations; 400+ average.',
-      '2 India flagship client events; the latest, with ISB, engaged 200+ Fortune 1000 CXOs.',
-      "Brand awareness among target talent 20% → 80%; Glassdoor 3.2 → 3.9; India grew to 48% of the company's global LinkedIn following.",
-      'AI-native operator: full campaign cycles — research, content, decks, video — run at the pace of a larger team.',
+      '12+ Dynamic Talks across 3 cities → 5,000+ qualified prospects. The best one pulled 664 registrations; 400+ was normal.',
+      'Two flagship client events. The one with ISB put me in a room with 200+ Fortune 1000 CXOs.',
+      "Brand awareness 20% → 80%. Glassdoor 3.2 → 3.9. India grew to 48% of the company's global LinkedIn following.",
+      'Ran full campaign cycles — research, content, decks, video — solo, by handing the team-sized parts to AI.',
     ],
   },
   {
     idx: '02 · Jul 2022 – Jul 2024', title: 'AGM, Partnerships', company: 'Plum Benefits (Tiger Global / Sequoia)',
-    summary: "Promoted twice in under two years — Community Builder → Senior Associate → AGM. Built Plum's partner ecosystem from zero.",
+    summary: 'I came in to build partnerships and community from nothing, and got promoted twice in under two years doing it.',
     stats: [{ n: '$3M+', l: 'Key accounts', accent: true }, { n: '45%', l: 'YoY partner growth' }],
     bullets: [
-      '50+ partners onboarded in 6 months; 100+ enterprise accounts; $3M+ in key accounts.',
-      '45% YoY partner growth; 35% engagement improvement across partner and customer programs.',
-      '8+ experiential events across 7 cities → 150 enterprise SALs.',
-      'Top 25 Emerging Leaders 2024, Indian Startup Times.',
+      'Built the partner ecosystem from zero — VCs, HRMS platforms, accelerators, coworking networks.',
+      '50+ partners in the first 6 months; 100+ enterprise accounts.',
+      '$3M+ in key accounts. 45% YoY partner growth. 35% lift in engagement.',
+      '8+ experiential events across 7 cities → 150 enterprise SALs. Top 25 Emerging Leaders 2024, Indian Startup Times.',
     ],
   },
   {
-    idx: '03 · Feb 2021 – Jul 2022', title: 'Partnerships Manager, BFSI & Payroll', company: 'Clear (formerly ClearTax)',
-    summary: "Built ClearTax's BFSI & Payroll partnership channel from zero — 54 partnerships across banks, NBFCs, and fintechs.",
+    idx: '03 · Feb 2021 – Jul 2022', title: 'Partnerships Manager, BFSI & Payroll', company: 'Clear (ClearTax)',
+    summary: "My first channel from zero. I built ClearTax's BFSI & Payroll partnerships into $7M and 20x growth in a year — and got my first real taste of the product side.",
     stats: [{ n: '54', l: 'Partnerships built', accent: true }, { n: '20x', l: 'YoY growth' }],
     bullets: [
-      '₹7M revenue; 20x YoY growth; 150,000 consumers reached.',
-      'Owned API, CG, and PWA integrations end to end, cutting onboarding friction.',
-      'Led a 12-member team → 40% output improvement.',
+      'Built the BFSI & Payroll channel from scratch — 54 partnerships across banks, NBFCs, and fintechs.',
+      '$7M in revenue, 20x in a year, 150,000 consumers reached.',
+      'Owned the API, CG, and PWA integrations end to end — where I first started thinking like a builder.',
+      'Led a 12-member team and lifted output 40%.',
     ],
   },
   {
     idx: 'Earlier · Jun 2020 – Jan 2021', title: 'GTM & Recruitment Consultant', company: 'Northlance Agency · Freelance',
-    summary: 'Advised early-stage startups on go-to-market positioning, outbound motions, and hiring pipelines.',
+    summary: 'Advised early-stage startups on go-to-market positioning, outbound, and hiring pipelines.',
   },
 ];
 
 const CAPS: [string, string[]][] = [
-  ['Technical & AI', ['Next.js', 'React', 'Python', 'Supabase', 'Postgres', 'pgvector', 'LLM pipelines', 'Evals', 'Programmatic SEO', 'Claude Code', 'n8n']],
+  ['Technical & AI', ['Next.js', 'React', 'TypeScript', 'Python', 'Supabase', 'Postgres', 'pgvector', 'LLM pipelines', 'Evals', 'Programmatic SEO', 'Claude Code', 'n8n']],
   ['Marketing', ['Demand generation', 'Integrated campaigns', 'Field & experiential', 'Employer brand', 'Content strategy', 'Product marketing', 'Budget & ROI']],
   ['Partnerships & GTM', ['Partner ecosystems', 'Co-marketing', 'Channel strategy', 'Partner enablement', 'Business development', 'Pipeline ownership', 'CXO stakeholders']],
   ['Tools & Channels', ['LinkedIn Ads', 'Meta Ads', 'Google Analytics', 'Attribution', 'Webflow', 'Canva', 'Mailchimp', 'Notion', 'HubSpot']],
@@ -64,10 +65,10 @@ const CERTS: [string, string][] = [
 export default function WorkPage() {
   return (
     <div className="container">
-      <section className="page-hero" style={{ maxWidth: '62ch' }}>
+      <section className="page-hero" style={{ maxWidth: '64ch' }}>
         <span className="mini-eyebrow" style={{ letterSpacing: '.16em', marginBottom: 18 }}>Reverse chronological</span>
         <h1>The <span className="ital">work.</span></h1>
-        <p className="lead">Three companies in six years — a NASDAQ firm, a Tiger Global–backed insurtech, a fintech. Most of it built from, or near, zero.</p>
+        <p className="lead">Three companies in six years — a NASDAQ firm, a Tiger Global–backed insurtech, a fintech. I built most of what&rsquo;s here from zero, or close to it. This is the marketing-and-partnerships half of the story. Currly is the other half.</p>
       </section>
 
       {ROLES.map((r) => (
@@ -101,8 +102,8 @@ export default function WorkPage() {
       <section className="section-top">
         <span className="mini-eyebrow" style={{ letterSpacing: '.16em', marginBottom: 8 }}>Across disciplines</span>
         <h2 className="serif" style={{ fontSize: 'clamp(28px,3.2vw,40px)', lineHeight: 1.06, margin: '0 0 8px' }}>Capabilities.</h2>
-        <p className="lead" style={{ maxWidth: '56ch', fontSize: 15, margin: '0 0 30px' }}>
-          Marketing and partnerships is the visible half. The other half is the product itself, built in code.
+        <p className="lead" style={{ maxWidth: '58ch', fontSize: 15, margin: '0 0 30px' }}>
+          The marketing and partnerships is the half people expect. The other half is the product itself, written in code. Here&rsquo;s what I actually work with.
         </p>
         <div className="caps-grid">
           {CAPS.map(([h, items]) => (

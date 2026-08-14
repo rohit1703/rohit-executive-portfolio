@@ -303,3 +303,17 @@ a.contact-row:hover .v { color:var(--accent); }
 @media (max-width:760px) {
   .caps-grid { grid-template-columns:1fr 1fr; }
 }
+
+/* through-line v2 (stacked heading + intro, then 3 disciplines) */
+.through-head { max-width:64ch; }
+.through-head h2 { font-family:var(--serif); font-weight:600; font-size:clamp(30px,3.2vw,42px); line-height:1.04; margin:12px 0 0; }
+.through-intro { font-family:var(--body); font-size:16px; line-height:1.62; color:var(--muted); margin:18px 0 0; }
+.through-intro p { margin:0 0 14px; }
+.disc-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,3vw,40px); margin-top:clamp(28px,4vw,44px); }
+.ccard-lead { font-family:var(--serif); font-style:italic; font-size:16px; color:var(--muted); margin:6px 0 0; }
+@media (max-width:900px){ .disc-3 { grid-template-columns:1fr; } }
+@media (max-width:640px){ .disc-3 { grid-template-columns:1fr; } }
+
+/* v2 hero headline wraps (it's a full sentence, not a short phrase) */
+.hero h1 .l1 { white-space:normal; }
+.hero .lead + .lead { margin-top:14px; }

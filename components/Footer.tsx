@@ -7,8 +7,8 @@ export default function Footer() {
         <div>
           <h3>Let&rsquo;s build something.</h3>
           <p className="blurb">
-            Growth, partnerships, or builder-marketer roles where marketing and building
-            the product are the same job.
+            The rare both — I take products to market, and I build them. Looking for a
+            role that needs both.
           </p>
           <a className="pill pill-primary" href={CAL} target="_blank" rel="noopener noreferrer" style={{ marginTop: 18 }}>
             Book a call ↗

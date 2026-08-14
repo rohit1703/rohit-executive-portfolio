@@ -5,13 +5,13 @@ export const metadata: Metadata = { title: 'Writing — Rohit Mallavarapu' };
 
 const FEATURED: { cat: string; title: string; ex: string; href: string }[] = [
   { cat: 'Context engineering', title: 'What Context Engineering Actually Meant For Me',
-    ex: 'I ran ~250 million tokens building a platform. Over 95% was input, the context I re-loaded every session. What the term actually means in practice.',
+    ex: "I ran ~250 million tokens building a platform. Over 95% of it was input — the context I re-loaded every session. Here's what the term actually means once you've lived it.",
     href: 'https://www.linkedin.com/posts/rohitmallavarapu17_contextengineering-ai-aiagents-ugcPost-7477600314964152324-LcAB' },
   { cat: 'AI-native', title: 'Marketing Will Work This Way by 2027. I Already Do.',
-    ex: 'The autonomous-marketing whitepapers all draw the same five-stage roadmap. I already operate at the stage they put years out.',
+    ex: 'The autonomous-marketing whitepapers all draw the same five-stage roadmap. I got there in eighteen months, alone, mostly by breaking things — and they get the texture completely wrong.',
     href: 'https://www.linkedin.com/posts/rohitmallavarapu17_ai-aiagents-marketingleadership-ugcPost-7479997114245292032-jaOe' },
   { cat: 'Recognition', title: 'Top 25 Emerging Leaders, 2024',
-    ex: "Named to the Indian Startup Times' Top 25 Emerging Leaders — recognising operators building from zero.",
+    ex: "Named to the Indian Startup Times' Top 25 Emerging Leaders — a list for operators building from zero.",
     href: 'https://www.linkedin.com/posts/rohitmallavarapu17_the-new-wave-meet-the-25-emerging-community-activity-7185479454809305088-uJcV' },
 ];
 
@@ -27,7 +27,7 @@ export default function WritingPage() {
       <section className="page-hero" style={{ maxWidth: '64ch' }}>
         <span className="mini-eyebrow" style={{ letterSpacing: '.16em', marginBottom: 18 }}>Notes from building</span>
         <h1>Selected <span className="ital">writing.</span></h1>
-        <p className="lead">A LinkedIn series on building product as a marketer — what I learned shipping Currly and running marketing at the pace of a larger team.</p>
+        <p className="lead">I write about building product as a marketer — what I&rsquo;m actually learning shipping Currly, and where the &ldquo;future of marketing&rdquo; whitepapers get it wrong. This is the most honest thing on the site.</p>
       </section>
 
       <section className="section" style={{ paddingBottom: 'clamp(40px,5vw,60px)' }}>

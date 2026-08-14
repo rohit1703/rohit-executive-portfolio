@@ -4,21 +4,20 @@ export const metadata: Metadata = { title: 'Proof — Rohit Mallavarapu' };
 
 const BAND: [string, string][] = [
   ['54', 'Partnerships, from zero'],
-  ['₹7M', 'Channel revenue · 20x'],
+  ['$7M', 'Channel revenue · 20x'],
   ['$3M+', 'Key accounts at Plum'],
   ['150K', 'Consumers reached'],
 ];
 
 const QUOTES: { q: string; name: string; cap: string }[] = [
-  { q: 'Rohit was the driving force behind many key initiatives at Plum, bringing innovative ideas and exceptional execution to the table.', name: 'Abhishek Poddar', cap: 'Co-Founder & CEO, Plum Benefits' },
-  { q: 'The go-to person and the load balance between internal customers and external stakeholders. He pushed the whole team towards newer possibilities and use cases.', name: 'Adwitiya Singh', cap: 'Head BFSI, Payroll, Corp Alliances, Clear' },
-  { q: 'Rohit approaches work like a sport, always playing as a team player. A natural community builder, from partnerships to experiential marketing.', name: 'Saurabh Arora', cap: 'Co-Founder & CTO, Plum Benefits' },
-  { q: "Rohit's energy and grit is unmatched. He ideates, executes, and achieves all of his goals — aligning internal teams and managing external stakeholders to make each a success.", name: 'Shriya Shah', cap: 'Performance Lead, Plum Benefits' },
-  { q: 'Rohit consistently went above and beyond, spearheading multiple high-impact campaigns with remarkable success. His infectious energy was a driving force behind our results.', name: 'Prerit Bajaj', cap: 'Associate Director, ABM, Plum Benefits' },
-  { q: 'Impressed by his ability to handle even the toughest client effortlessly — a skill that often takes years. He leads by example and always kept team morale up.', name: 'Tanushree Upadhyay', cap: 'Account Management, Clear' },
-  { q: 'Great zeal and enthusiasm towards challenging tasks, closing them with the best possible solution. An asset to any company he works for.', name: 'Akshay Bhatt', cap: 'Strategic Alliances & Growth, Clear' },
-  { q: "One of the most hardworking and dedicated people I have worked with — the all-rounder of the team. I'd love the chance to work with him again.", name: 'Abhishek Srivastava', cap: 'Partnerships, Clear' },
-  { q: 'A wonderful professional, always on point, always innovating his way of working and delivering super fast and accurate. Any employer would be lucky to have him in their team.', name: 'Petrisor Guta', cap: 'Senior Comms & Social Strategist, Grid Dynamics' },
+  { q: 'Rohit approaches work like a sport, always playing as a team player. A natural community builder, he has taken on various roles at Plum, from building partnerships to experiential marketing.', name: 'Saurabh Arora', cap: 'Co-Founder & CTO, Plum Benefits' },
+  { q: 'Rohit is the go-to person and the load balance between internal customers and external stakeholders. Managing him was easy when he was hitting his goals, and rewarding when he pushed the whole team toward newer possibilities and use cases.', name: 'Adwitiya Singh', cap: 'Head, BFSI & Payroll, Clear' },
+  { q: "I had the pleasure of working with Rohit at Plum, and he's one of the most high-energy people I've worked with. He was the driving force behind many key initiatives, bringing innovative ideas and exceptional execution to the table.", name: 'Abhishek Poddar', cap: 'Co-Founder & CEO, Plum Benefits' },
+  { q: "Rohit's energy and grit is unmatched. He ideates, executes, and achieves his goals. He picked up new initiatives, aligned internal teams, managed external stakeholders, and made all of them a success.", name: 'Shriya Shah', cap: 'Performance Lead, Plum Benefits' },
+  { q: 'Rohit consistently went above and beyond, leading multiple high-impact campaigns with real success. His ability to stay upbeat and focused is rare. I wish him all the best.', name: 'Prerit Bajaj', cap: 'Associate Director, ABM, Plum Benefits' },
+  { q: "During my internship I was struck by how effortlessly Rohit handled even the toughest client — a skill that usually takes years. He was always helpful, led by example, and kept the team's morale up.", name: 'Tanushree Upadhyay', cap: 'Account Management, Clear' },
+  { q: "Rohit was an integral part of the team, with real zeal for challenging tasks and closing them with the best solution. His dedication is tremendous. He's an asset to any company he works for.", name: 'Akshay Bhatt', cap: 'Strategic Alliances & Growth, Clear' },
+  { q: "One of the most hardworking, dedicated people I've worked with — basically the all-rounder of the team, across every vertical. I'd love the chance to work with him again.", name: 'Abhishek Srivastava', cap: 'Partnerships, Clear' },
 ];
 
 export default function ProofPage() {
@@ -27,7 +26,7 @@ export default function ProofPage() {
       <section className="page-hero" style={{ maxWidth: '62ch' }}>
         <span className="mini-eyebrow" style={{ letterSpacing: '.16em', marginBottom: 18 }}>The record</span>
         <h1>Proof of <span className="ital">work.</span></h1>
-        <p className="lead">Channels built from zero and run with accountability. The numbers first, then the people I built them with.</p>
+        <p className="lead">I build channels from zero and run them like I own the outcome. The numbers first — then the people I built them with.</p>
       </section>
 
       <section className="section" style={{ paddingBottom: 'clamp(30px,4vw,44px)' }}>
