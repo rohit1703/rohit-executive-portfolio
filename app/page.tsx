@@ -1,0 +1,209 @@
+import Link from 'next/link';
+import ReferencesRail from '@/components/ReferencesRail';
+import { EVENTS } from '@/lib/content';
+import { CAL, LINKEDIN_ACTIVITY } from '@/lib/site';
+
+const DISCIPLINES: [string, string][] = [
+  ['Partnerships', 'Channels built from zero — 54 BFSI partnerships, ₹7M, 20x YoY, promoted twice at Plum.'],
+  ['Marketing', 'Sole owner of India marketing. Brand awareness 20% → 80%; 4,600+ qualified prospects.'],
+  ['Product', 'Currly — 1,400+ tools, 111+ workflows, p95 search under 400ms, shipped solo.'],
+];
+
+const STATS: [string, string][] = [
+  ['$10M+', 'Revenue & pipeline'],
+  ['54', 'Partnerships, from zero'],
+  ['1,400+', 'Tools in Currly'],
+  ['6 yrs', 'Three companies'],
+];
+
+const ARC: { yr: string; co: string; sec: string; met: string; href: string }[] = [
+  { yr: '2021 — 2022', co: 'Clear', sec: 'Fintech · ClearTax', met: '54 partnerships · ₹7M · 20x YoY', href: '/work' },
+  { yr: '2022 — 2024', co: 'Plum', sec: 'Insurtech', met: '$3M+ key accounts · promoted twice', href: '/work' },
+  { yr: '2024 — Now', co: 'Grid Dynamics', sec: 'NASDAQ: GDYN', met: 'Brand 20% → 80% · 4,600+ prospects', href: '/work' },
+  { yr: 'Now', co: 'Currly', sec: 'Built solo', met: '1,400+ tools · in production', href: '/currly' },
+];
+
+const CURRLY_ROWS: { label: string; width: string; val: string }[] = [
+  { label: 'Semantic search · 5-signal Postgres ranking', width: '82%', val: 'p95 <400ms' },
+  { label: 'Paraphrase stability · eval harness', width: '62%', val: '29 → 62%' },
+  { label: 'Builder community · programmatic SEO loop', width: '45%', val: '450+ builders' },
+];
+
+const PARTNER_TAGS = [
+  'BFSI — banks & NBFCs', 'Payroll & HRMS', 'VCs', 'Accelerators', 'Incubators',
+  'Coworking spaces', 'Government & associations', 'Enterprises — Fortune 1000',
+  'Global Capability Centres',
+];
+
+const WRITING: [string, string][] = [
+  ['Context engineering', 'What Context Engineering Actually Meant For Me'],
+  ['AI-native', 'Marketing Will Work This Way by 2027. I Already Do.'],
+  ['Recognition', 'Top 25 Emerging Leaders, 2024'],
+];
+
+export default function Home() {
+  return (
+    <div className="container">
+      {/* Hero */}
+      <section className="hero">
+        <div>
+          <span className="avail">
+            Open to the right role
+            <span className="avail-year">2026</span>
+          </span>
+          <h1>
+            <span className="l1">I market the product,</span>
+            <span className="l2">now I build it too.</span>
+          </h1>
+          <p className="lead">
+            Six years in B2B marketing and partnerships across a NASDAQ firm, a Tiger
+            Global–backed insurtech, and a fintech — and Currly, the AI workflow platform
+            I designed and shipped solo. I&rsquo;m looking for growth, partnerships, or
+            builder-marketer roles where the two are the same job.
+          </p>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 28 }}>
+            <a className="pill pill-primary" href={CAL} target="_blank" rel="noopener noreferrer">Book a call ↗</a>
+          </div>
+        </div>
+        <figure className="hero-figure">
+          <img src="/rohit.webp" alt="Rohit Mallavarapu" width={520} height={440} />
+        </figure>
+      </section>
+
+      {/* Stat band */}
+      <section className="section">
+        <div className="band">
+          {STATS.map(([num, label]) => (
+            <div className="band-item" key={label}>
+              <p className="band-num">{num}</p>
+              <p className="band-label">{label}</p>
+            </div>
+          ))}
+          <span className="band-mark">✷</span>
+        </div>
+      </section>
+
+      {/* Through-line */}
+      <section className="section">
+        <span className="eyebrow faint" style={{ marginBottom: 20 }}>Built across three disciplines</span>
+        <div className="through">
+          <h2>Everything in <span className="ital">one story.</span></h2>
+          {DISCIPLINES.map(([lbl, txt]) => (
+            <div key={lbl}>
+              <p className="lbl">{lbl}</p>
+              <p className="txt">{txt}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Currly teaser */}
+      <section className="section">
+        <div className="ccard">
+          <div className="ccard-head">
+            <div>
+              <span className="eyebrow faint">Now building</span>
+              <h3 className="ccard-title">Currly — in production</h3>
+            </div>
+            <span className="live">LIVE ●</span>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 13 }}>
+            {CURRLY_ROWS.map((row) => (
+              <div className="crow" key={row.label}>
+                <span className="crow-chip" />
+                <span className="crow-label">{row.label}</span>
+                <span className="crow-bar"><span style={{ width: row.width }} /></span>
+                <span className="crow-val">{row.val}</span>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: 22 }}>
+            <Link className="pill pill-ghost" href="/currly">The full build ▸</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Career arc */}
+      <section className="section">
+        <div className="section-head">
+          <div>
+            <span className="eyebrow faint">The arc, in order</span>
+            <h2 className="serif" style={{ fontSize: 'clamp(26px,3vw,38px)', lineHeight: 1.04, margin: '10px 0 0' }}>
+              Six years, <span className="ital">four chapters.</span>
+            </h2>
+          </div>
+          <Link className="pill pill-ghost" href="/work">See the full work →</Link>
+        </div>
+        <div className="arc-wrap">
+          <div className="arc-line" />
+          {ARC.map((a) => (
+            <Link className="arc" href={a.href} key={a.co}>
+              <span className="yr">{a.yr}</span>
+              <span className="co">{a.co}</span>
+              <span className="sec">{a.sec}</span>
+              <span className="met">{a.met}</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* References */}
+      <section className="section" style={{ paddingBottom: 'clamp(40px,6vw,72px)' }}>
+        <div className="section-head" style={{ marginBottom: 28 }}>
+          <div>
+            <span className="eyebrow faint">References</span>
+            <h2 className="serif" style={{ fontSize: 'clamp(30px,3.4vw,44px)', lineHeight: 1.04, margin: '10px 0 0' }}>
+              What they <span className="ital">say.</span>
+            </h2>
+          </div>
+          <Link className="pill pill-ghost" href="/proof">All references &amp; events →</Link>
+        </div>
+        <ReferencesRail />
+      </section>
+
+      {/* Partnerships across */}
+      <section className="section" style={{ paddingBottom: 'clamp(40px,5vw,60px)' }}>
+        <span className="mini-eyebrow">Partnerships built across</span>
+        <div className="tagrow">
+          {PARTNER_TAGS.map((t) => <span className="tag" key={t}>{t}</span>)}
+        </div>
+      </section>
+
+      {/* Events */}
+      <section style={{ borderTop: '1px solid var(--line)', padding: 'clamp(40px,5vw,64px) 0' }}>
+        <span className="mini-eyebrow" style={{ letterSpacing: '.16em', marginBottom: 8 }}>Selected appearances</span>
+        <h2 className="serif" style={{ fontSize: 'clamp(28px,3.2vw,40px)', lineHeight: 1.06, margin: '0 0 26px' }}>
+          Events, hosted <span className="ital">end to end.</span>
+        </h2>
+        <div className="events">
+          {EVENTS.map((ev) => (
+            <a className="ev" href={LINKEDIN_ACTIVITY} target="_blank" rel="noopener noreferrer" key={ev.title}>
+              <span className="evthumb"><img src={ev.photo} alt="" width={230} height={150} loading="lazy" /></span>
+              <span className="ev-title">{ev.title}</span>
+              <span className="evgo">↗</span>
+            </a>
+          ))}
+        </div>
+        <p style={{ fontFamily: 'var(--body)', fontSize: 14, margin: '22px 0 0' }}>
+          <a href={LINKEDIN_ACTIVITY} target="_blank" rel="noopener noreferrer">See more on LinkedIn →</a>
+        </p>
+      </section>
+
+      {/* Latest writing */}
+      <section className="section" style={{ paddingBottom: 'clamp(30px,4vw,56px)' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', borderTop: '1px solid var(--line)', paddingTop: 24 }}>
+          <span className="eyebrow faint">Latest writing</span>
+          <Link className="navlink" href="/writing" style={{ fontSize: 14 }}>All posts →</Link>
+        </div>
+        <div className="writing-3" style={{ marginTop: 26 }}>
+          {WRITING.map(([cat, title]) => (
+            <Link className="card-hover wcard" href="/writing" key={title}>
+              <span className="cat">{cat}</span>
+              <h4>{title}</h4>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
