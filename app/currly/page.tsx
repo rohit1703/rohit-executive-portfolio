@@ -23,7 +23,7 @@ export default function CurrlyPage() {
     <div className="container">
       <section className="currly-hero">
         <div>
-          <span className="currly-eyebrow">Current focus · LIVE ●</span>
+          <span className="currly-eyebrow">A product I shipped · In production</span>
           <h1 className="currly-name">Currly</h1>
           <p className="currly-tagline">Describe the outcome. Get the workflow.</p>
           <p className="currly-blurb">

@@ -20,7 +20,7 @@ const ARC: { yr: string; co: string; sec: string; met: string; href: string }[] 
   { yr: '2021 — 2022', co: 'Clear', sec: 'Fintech · ClearTax', met: '54 partnerships · $7M · 20x YoY', href: '/work' },
   { yr: '2022 — 2024', co: 'Plum', sec: 'Insurtech', met: '$3M+ key accounts · promoted twice', href: '/work' },
   { yr: '2024 — 2026', co: 'Grid Dynamics', sec: 'NASDAQ: GDYN', met: 'Brand 20% → 80% · 5,000+ prospects', href: '/work' },
-  { yr: 'Now', co: 'Currly', sec: 'Built solo', met: '1,400+ tools · in production', href: '/currly' },
+  { yr: '2025', co: 'Currly', sec: 'Built solo', met: '111+ workflows · in production', href: '/currly' },
 ];
 
 const CURRLY_ROWS: { label: string; width: string; val: string }[] = [
@@ -84,11 +84,11 @@ export default function Home() {
         <div className="ccard">
           <div className="ccard-head">
             <div>
-              <span className="eyebrow faint">Now building</span>
+              <span className="eyebrow faint">Built &amp; shipped solo</span>
               <p className="ccard-lead">This is the part people don&rsquo;t expect. So I put it first.</p>
-              <h3 className="ccard-title">Currly — in production</h3>
+              <h3 className="ccard-title">Currly</h3>
             </div>
-            <span className="live">LIVE ●</span>
+            <span className="live">In production</span>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 13 }}>
             {CURRLY_ROWS.map((row) => (
