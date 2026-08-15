@@ -7,6 +7,7 @@ import type { CoverflowItem } from '@/lib/content';
  * EventsCoverflow — an auto-rotating 3D coverflow carousel.
  * Cards sit on a disc rotating toward the viewer; the centre card faces front.
  * Autoplays and loops; pauses on hover; steerable via arrows, dots, side cards.
+ * Offset/depth scale from the live card width so it stays correct on any screen.
  */
 type Props = { items: CoverflowItem[]; interval?: number; seeMoreHref?: string };
 
@@ -15,11 +16,24 @@ export default function EventsCoverflow({ items, interval = 3200, seeMoreHref }:
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
   const reduceMotion = useRef(false);
+  const stageRef = useRef<HTMLDivElement>(null);
+  const [itemW, setItemW] = useState(300);
 
   useEffect(() => {
     reduceMotion.current =
       typeof window !== 'undefined' &&
       !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  }, []);
+
+  // Measure the live card width so the 3D offset/depth scale to any screen.
+  useEffect(() => {
+    const measure = () => {
+      const item = stageRef.current?.querySelector<HTMLElement>('.cf-item');
+      if (item) setItemW(item.offsetWidth || 300);
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
   }, []);
 
   const go = useCallback((i: number) => setCurrent(((i % n) + n) % n), [n]);
@@ -43,8 +57,10 @@ export default function EventsCoverflow({ items, interval = 3200, seeMoreHref }:
     if (off > n / 2) off -= n;
     if (off < -n / 2) off += n;
     const abs = Math.abs(off);
+    const step = Math.min(190, itemW * 0.62);
+    const depth = Math.min(260, itemW * 0.72);
     return {
-      transform: `translate(-50%, -50%) translateX(${off * 190}px) translateZ(${-abs * 260}px) rotateY(${off * -42}deg)`,
+      transform: `translate(-50%, -50%) translateX(${off * step}px) translateZ(${-abs * depth}px) rotateY(${off * -42}deg)`,
       opacity: abs > 2 ? 0 : 1 - abs * 0.28,
       zIndex: 100 - abs,
       pointerEvents: abs > 2 ? 'none' : 'auto',
@@ -56,7 +72,7 @@ export default function EventsCoverflow({ items, interval = 3200, seeMoreHref }:
       <span className="cf-eyebrow">Selected appearances</span>
       <h2 className="cf-heading">Events, hosted <em>end to end.</em></h2>
 
-      <div className="cf-stage" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+      <div className="cf-stage" ref={stageRef} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
         <div className="cf-track">
           {items.map((it, i) => {
             const isCenter = ((((i - current) % n) + n) % n) === 0;
