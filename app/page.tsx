@@ -11,8 +11,8 @@ const DISCIPLINES: [string, string][] = [
 
 const STATS: [string, string][] = [
   ['$10M+', 'Revenue & pipeline'],
-  ['54', 'Partnerships, from zero'],
-  ['1,400+', 'Tools in Currly'],
+  ['100+', 'Partnerships, from zero'],
+  ['35+', 'Events hosted'],
   ['6 yrs', 'Three companies'],
 ];
 
