@@ -6,7 +6,7 @@ import { CAL, LINKEDIN_ACTIVITY } from '@/lib/site';
 const DISCIPLINES: { num: string; label: string; stat: string; body: string }[] = [
   { num: '01', label: 'Partnerships', stat: '$7M · 20x YoY', body: 'I build channels from zero. 54 BFSI partnerships at ClearTax, and two promotions at Plum building the ecosystem.' },
   { num: '02', label: 'Marketing', stat: '20% → 80%', body: "I ran a NASDAQ company's India marketing on my own — brand awareness up fourfold, 5,000+ qualified prospects." },
-  { num: '03', label: 'Product', stat: '1,400+ tools', body: 'I build the thing itself. Currly — 111+ workflows, live in production. Written and shipped solo.' },
+  { num: '03', label: 'Product', stat: '29% → 62%', body: 'Raised paraphrase stability on an eval harness I built. Currly — 111+ workflows, shipped solo.' },
 ];
 
 const STATS: [string, string][] = [
