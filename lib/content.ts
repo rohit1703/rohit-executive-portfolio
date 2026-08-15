@@ -107,14 +107,14 @@ export const GALLERY: GalleryItem[] = [
   { src: '/moments/01-anthill-trek.jpg', w: 1600, h: 900, caption: 'Anthill Ventures trek', tag: 'Team offsite', href: P_ANTHILL },
 ];
 
-export interface CoverflowItem { src: string; alt: string; title: string; meta: string; href?: string; pos?: string; }
+export interface CoverflowItem { src: string; alt: string; title: string; meta: string; href?: string; pos?: string; fit?: 'cover' | 'contain'; }
 
 // Events coverflow cards — every photo, title + short meta. object-fit:cover
 // normalises the mixed portrait/landscape shots.
 export const COVERFLOW: CoverflowItem[] = [
   { src: '/moments/07-dynamic-talks-blr.jpg', alt: 'Rohit hosting Dynamic Talks in Bengaluru', title: 'Dynamic Talks, Bengaluru', meta: 'Bengaluru · 2025', href: P_COCREATOR, pos: 'center 12%' },
   { src: '/moments/10-dynamic-talks-hyd-mic.jpg', alt: 'Rohit on the mic at Dynamic Talks, Hyderabad', title: 'Dynamic Talks, Hyderabad', meta: 'On the mic · 2024', href: P_PACKED },
-  { src: '/moments/08-temporal-agentic-ai.jpg', alt: 'Grid Dynamics × Temporal — Agentic AI', title: 'Grid Dynamics × Temporal', meta: 'Agentic AI · 2025', href: P_TEMPORAL, pos: 'center 15%' },
+  { src: '/moments/08-temporal-agentic-ai.jpg', alt: 'Grid Dynamics × Temporal — Agentic AI', title: 'Grid Dynamics × Temporal', meta: 'Agentic AI · 2025', href: P_TEMPORAL, fit: 'contain' },
   { src: '/moments/19-tech-innovation-stage.jpg', alt: 'Technology & Innovation Day 2024, on stage', title: 'Technology & Innovation Day', meta: 'On stage · 2024', href: P_TECHINNO2 },
   { src: '/moments/16-gpen-chennai-talk.jpg', alt: 'GPEN Chennai — meetup with Ford', title: 'GPEN Chennai — with Ford', meta: 'Chennai · 2024', href: LI_ACTIVITY },
   { src: '/moments/11-dynamic-talks-hyd-group.jpg', alt: 'Dynamic Talks, Hyderabad — the room', title: 'Dynamic Talks, Hyderabad', meta: 'The room · 2024', href: P_INCREDIBLE },
@@ -131,5 +131,5 @@ export const COVERFLOW: CoverflowItem[] = [
   { src: '/moments/02-talent-deck.jpg', alt: 'The Talent Deck — People Connect', title: 'The Talent Deck', meta: 'Delhi · 2024', href: P_TALENTDECK, pos: 'center 22%' },
   { src: '/moments/14-dynamic-talks-hyd-group3.jpg', alt: 'Dynamic Talks, Hyderabad — full house', title: 'Dynamic Talks, Hyderabad', meta: 'Full house · 2024', href: P_INCREDIBLE },
   { src: '/moments/01-anthill-trek.jpg', alt: 'Anthill Ventures — partner offsite', title: 'Anthill Ventures', meta: 'Partner offsite · 2022', href: P_ANTHILL },
-  { src: '/moments/20-saurabh-note.jpg', alt: 'A note from Saurabh Arora, CTO of Plum', title: 'A note from Saurabh, CTO', meta: 'Plum · “Rockstar you!!”', href: LI_ACTIVITY },
+  { src: '/moments/20-saurabh-note.jpg', alt: 'A note from Saurabh Arora, CTO of Plum', title: 'A note from Saurabh, CTO', meta: 'Plum · “Rockstar you!!”', href: LI_ACTIVITY, fit: 'contain' },
 ];
