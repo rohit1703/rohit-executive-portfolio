@@ -1,21 +1,39 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Rohit Mallavarapu — Portfolio
 
-# Run and deploy your AI Studio app
+Personal editorial portfolio for Rohit Mallavarapu (builder-marketer).
+Next.js (App Router) + TypeScript, statically prerendered, deployed on Vercel.
+No backend, no database, no environment variables.
 
-This contains everything you need to run your app locally.
+## Develop
 
-View your app in AI Studio: https://ai.studio/apps/drive/1AQcMTz1tDrKAxby41bkRrTlcpktpGayS
+Prerequisites: **Node.js 20+**.
 
-## Run Locally
+```bash
+npm install
+npm run dev        # http://localhost:3000
+```
 
-**Prerequisites:**  Node.js
+## Build
 
+```bash
+npm run build      # static prerender of every route
+npm start          # serve the production build
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
-# rohit-executive-portfolio
+`npm run build` fails on type or lint errors, so it doubles as the check.
+
+## Structure
+
+- `app/` — routes (`/`, `/currly`, `/work`, `/proof`, `/writing`, `/contact`), `layout.tsx`, `globals.css`
+- `components/` — `Nav`, `Footer`, `ThemeToggle`, `ReferencesRail`, `EventsCoverflow`
+- `lib/` — `content.ts` (copy + data), `site.ts` (contact + links), `fonts.ts` (next/font)
+- `public/` — portrait, résumé, event photos (`moments/`), Currly screenshots (`currly/`)
+
+## Design
+
+Design system (tokens, type, colour, motion) lives in [DESIGN.md](DESIGN.md).
+Read it before changing anything visual.
+
+## Deploy
+
+Auto-deploys on push to `main` via Vercel. `vercel.json` pins the framework to Next.js.
