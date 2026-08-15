@@ -1,6 +1,25 @@
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = { title: 'Work — Rohit Mallavarapu' };
+const WORK_DESC =
+  'Three companies in six years — a NASDAQ firm, a Tiger Global–backed insurtech, a fintech. $10M+ in revenue and pipeline, 100+ partnerships built from zero, 35+ events hosted.';
+
+export const metadata: Metadata = {
+  title: 'Work — Rohit Mallavarapu',
+  description: WORK_DESC,
+  openGraph: {
+    type: 'website',
+    url: '/work',
+    title: 'The Work — Rohit Mallavarapu',
+    description: WORK_DESC,
+    images: [{ url: '/og-work.png', width: 1200, height: 630, alt: 'Rohit Mallavarapu — selected work, built from zero' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Work — Rohit Mallavarapu',
+    description: WORK_DESC,
+    images: ['/og-work.png'],
+  },
+};
 
 interface Role {
   idx: string; title: string; company: string; summary: string;
