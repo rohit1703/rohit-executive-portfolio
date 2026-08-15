@@ -52,8 +52,8 @@ export default function Home() {
             <span className="avail-year">2026</span>
           </span>
           <h1>
-            <span className="l1">I got impatient with what one marketer could do.</span>
-            <span className="l2">So I taught myself to build.</span>
+            I got impatient with what one marketer could do.{' '}
+            <em>So I taught myself to build.</em>
           </h1>
           <p className="lead">
             Six years in B2B marketing and partnerships — a NASDAQ company, a Tiger
