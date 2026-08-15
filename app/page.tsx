@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import ReferencesRail from '@/components/ReferencesRail';
-import { EVENTS } from '@/lib/content';
+import { EVENTS, GALLERY } from '@/lib/content';
 import { CAL, LINKEDIN_ACTIVITY } from '@/lib/site';
 
 const DISCIPLINES: [string, string][] = [
@@ -193,13 +193,27 @@ export default function Home() {
         </h2>
         <div className="events">
           {EVENTS.map((ev) => (
-            <a className="ev" href={LINKEDIN_ACTIVITY} target="_blank" rel="noopener noreferrer" key={ev.title}>
+            <a className="ev" href={ev.href} target="_blank" rel="noopener noreferrer" key={ev.title}>
               <span className="evthumb"><img src={ev.photo} alt="" width={230} height={150} loading="lazy" /></span>
               <span className="ev-title">{ev.title}</span>
               <span className="evgo">↗</span>
             </a>
           ))}
         </div>
+
+        {/* Full photo set — aspect-ratio masonry so nothing is cropped. */}
+        <div className="gallery-masonry">
+          {GALLERY.map((g) => (
+            <a className="gmoment" href={g.href} target="_blank" rel="noopener noreferrer" key={g.src}>
+              <img src={g.src} width={g.w} height={g.h} alt={g.caption} loading="lazy" />
+              <span className="cap">
+                <span className="gt">{g.tag}</span>
+                <span className="gc">{g.caption}</span>
+              </span>
+            </a>
+          ))}
+        </div>
+
         <p style={{ fontFamily: 'var(--body)', fontSize: 14, margin: '22px 0 0' }}>
           <a href={LINKEDIN_ACTIVITY} target="_blank" rel="noopener noreferrer">See more on LinkedIn →</a>
         </p>
