@@ -1,5 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { serif, sans, body } from '@/lib/fonts';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
@@ -44,6 +46,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <BottomBar />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
