@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import ReferencesRail from '@/components/ReferencesRail';
-import { GALLERY } from '@/lib/content';
+import { EVENTS } from '@/lib/content';
 import { CAL, LINKEDIN_ACTIVITY } from '@/lib/site';
 
 const DISCIPLINES: { num: string; label: string; stat: string; body: string }[] = [
@@ -192,15 +192,12 @@ export default function Home() {
         <h2 className="serif" style={{ fontSize: 'clamp(28px,3.2vw,40px)', lineHeight: 1.06, margin: '0 0 26px' }}>
           Events, hosted <span className="ital">end to end.</span>
         </h2>
-        {/* Every event photo, each with a visible caption — nothing missed. */}
-        <div className="moments">
-          {GALLERY.map((g) => (
-            <a className="moment" href={g.href} target="_blank" rel="noopener noreferrer" key={g.src}>
-              <img src={g.src} width={g.w} height={g.h} alt={g.caption} loading="lazy" />
-              <figcaption>
-                <span className="mtag">{g.tag}</span>
-                <span className="mcap">{g.caption}</span>
-              </figcaption>
+        <div className="events">
+          {EVENTS.map((ev) => (
+            <a className="ev" href={ev.href} target="_blank" rel="noopener noreferrer" key={ev.title}>
+              <span className="evthumb"><img src={ev.photo} alt="" loading="lazy" /></span>
+              <span className="ev-title">{ev.title}</span>
+              <span className="evgo">↗</span>
             </a>
           ))}
         </div>
