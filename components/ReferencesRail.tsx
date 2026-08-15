@@ -3,13 +3,19 @@
 import { useState } from 'react';
 import { REFERENCES } from '@/lib/content';
 
+/**
+ * Desktop: a featured quote + a rail of names; hovering/clicking a name swaps
+ * the featured quote. Mobile (≤900): an accordion — tapping a name reveals its
+ * quote inline right below it (the featured column is hidden), so touch users
+ * see the result of their tap.
+ */
 export default function ReferencesRail() {
   const [active, setActive] = useState(0);
   const r = REFERENCES[active];
 
   return (
     <div className="refs">
-      <div>
+      <div className="refs-featured">
         <blockquote className="feat-q">
           {r.pre}
           <span className="hl">{r.hl}</span>
@@ -19,19 +25,26 @@ export default function ReferencesRail() {
           <strong>{r.name}</strong> — {r.title}, {r.company}
         </p>
       </div>
-      <div>
+      <div className="refs-rail">
         {REFERENCES.map((ref, i) => (
-          <button
-            key={ref.name}
-            className="railbtn"
-            data-active={i === active ? '1' : undefined}
-            onMouseEnter={() => setActive(i)}
-            onFocus={() => setActive(i)}
-            onClick={() => setActive(i)}
-          >
-            <span className="rn">{ref.name}</span>
-            <span className="rt">{ref.title} · {ref.company}</span>
-          </button>
+          <div className="railitem" key={ref.name}>
+            <button
+              className="railbtn"
+              data-active={i === active ? '1' : undefined}
+              aria-expanded={i === active}
+              onMouseEnter={() => setActive(i)}
+              onFocus={() => setActive(i)}
+              onClick={() => setActive(i)}
+            >
+              <span className="rn">{ref.name}</span>
+              <span className="rt">{ref.title} · {ref.company}</span>
+            </button>
+            <blockquote className="railquote" data-open={i === active ? '1' : undefined}>
+              {ref.pre}
+              <span className="hl">{ref.hl}</span>
+              {ref.post}
+            </blockquote>
+          </div>
         ))}
       </div>
     </div>
