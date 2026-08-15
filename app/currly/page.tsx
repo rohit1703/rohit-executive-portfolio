@@ -61,10 +61,19 @@ export default function CurrlyPage() {
       <section className="section">
         <span className="mini-eyebrow" style={{ letterSpacing: '.16em', marginBottom: 18 }}>Inside the product</span>
         <div className="gallery">
-          <div className="ph" style={{ height: 300 }}>Workflow / search</div>
+          <figure className="shot">
+            <img src="/currly/search.png" width={2000} height={1225} alt="Currly search — describe the outcome, get the ordered route" loading="lazy" />
+            <figcaption>Search → the ordered route</figcaption>
+          </figure>
           <div className="gallery-col">
-            <div className="ph" style={{ height: '100%' }}>Ranking dashboard</div>
-            <div className="ph" style={{ height: '100%' }}>Use-case page</div>
+            <figure className="shot">
+              <img src="/currly/workflows.png" width={2000} height={1225} alt="Currly — proven workflows with real success rates" loading="lazy" />
+              <figcaption>Proven workflows</figcaption>
+            </figure>
+            <figure className="shot">
+              <img src="/currly/community.png" width={2000} height={1079} alt="Currly — two ways to use it, and the community" loading="lazy" />
+              <figcaption>Two ways to use it</figcaption>
+            </figure>
           </div>
         </div>
       </section>

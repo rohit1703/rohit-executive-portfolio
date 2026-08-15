@@ -335,3 +335,10 @@ a.contact-row:hover .v { color:var(--accent); }
 /* currly product screenshot frame (no img-grade — keep UI colors true) */
 .currly-shot { margin:0; border-radius:14px; overflow:hidden; border:1px solid var(--card-line); background:var(--card); box-shadow:0 20px 50px -30px rgba(0,0,0,.5); }
 .currly-shot img { width:100%; height:auto; display:block; }
+
+/* currly "inside the product" — framed screenshots at natural aspect */
+.gallery { align-items:start; }
+.gallery-col { display:flex; flex-direction:column; gap:16px; }
+.shot { margin:0; }
+.shot img { width:100%; height:auto; display:block; border-radius:12px; border:1px solid var(--card-line); background:var(--card); box-shadow:0 16px 40px -28px rgba(0,0,0,.5); }
+.shot figcaption { font-family:var(--sans); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); margin-top:8px; }
