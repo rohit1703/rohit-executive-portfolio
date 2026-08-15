@@ -18,6 +18,7 @@ const QUOTES: { q: string; name: string; cap: string }[] = [
   { q: "During my internship I was struck by how effortlessly Rohit handled even the toughest client — a skill that usually takes years. He was always helpful, led by example, and kept the team's morale up.", name: 'Tanushree Upadhyay', cap: 'Account Management, Clear' },
   { q: "Rohit was an integral part of the team, with real zeal for challenging tasks and closing them with the best solution. His dedication is tremendous. He's an asset to any company he works for.", name: 'Akshay Bhatt', cap: 'Strategic Alliances & Growth, Clear' },
   { q: "One of the most hardworking, dedicated people I've worked with — basically the all-rounder of the team, across every vertical. I'd love the chance to work with him again.", name: 'Abhishek Srivastava', cap: 'Partnerships, Clear' },
+  { q: 'I have had an immense honour to work alongside Rohit, although we are on opposite sides of the planet. He is a memorable colleague and a wonderful professional — always on point, always innovating his way of working and delivering super fast and accurate. Any employer would be lucky to have him in their team.', name: 'Petrisor Guta', cap: 'Senior Comms & Social Strategist, Grid Dynamics' },
 ];
 
 export default function ProofPage() {

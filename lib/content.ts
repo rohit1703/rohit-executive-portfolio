@@ -30,6 +30,9 @@ export const REFERENCES: Reference[] = [
   { name: 'Abhishek Srivastava', title: 'Partnerships', company: 'Clear',
     pre: "One of the most dedicated people I've worked with — ",
     hl: 'the all-rounder of the team', post: ', across every vertical. I’d work with him again in a heartbeat.' },
+  { name: 'Petrisor Guta', title: 'Senior Comms & Social Strategist', company: 'Grid Dynamics',
+    pre: 'A memorable colleague and a wonderful professional — always on point, always innovating his way of working and ',
+    hl: 'delivering super fast and accurate', post: '. Any employer would be lucky to have him.' },
 ];
 
 // LinkedIn post links, verified per production notes (LinkedIn routes on the
