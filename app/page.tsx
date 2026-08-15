@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import ReferencesRail from '@/components/ReferencesRail';
-import { EVENTS, GALLERY } from '@/lib/content';
+import { GALLERY } from '@/lib/content';
 import { CAL, LINKEDIN_ACTIVITY } from '@/lib/site';
 
 const DISCIPLINES: { num: string; label: string; stat: string; body: string }[] = [
@@ -192,30 +192,20 @@ export default function Home() {
         <h2 className="serif" style={{ fontSize: 'clamp(28px,3.2vw,40px)', lineHeight: 1.06, margin: '0 0 26px' }}>
           Events, hosted <span className="ital">end to end.</span>
         </h2>
-        <div className="events">
-          {EVENTS.map((ev) => (
-            <a className="ev" href={ev.href} target="_blank" rel="noopener noreferrer" key={ev.title}>
-              <span className="evthumb"><img src={ev.photo} alt="" loading="lazy" /></span>
-              <span className="ev-title">{ev.title}</span>
-              <span className="evgo">↗</span>
-            </a>
-          ))}
-        </div>
-
-        {/* Full photo set — aspect-ratio masonry so nothing is cropped. */}
-        <div className="gallery-masonry">
+        {/* Every event photo, each with a visible caption — nothing missed. */}
+        <div className="moments">
           {GALLERY.map((g) => (
-            <a className="gmoment" href={g.href} target="_blank" rel="noopener noreferrer" key={g.src}>
+            <a className="moment" href={g.href} target="_blank" rel="noopener noreferrer" key={g.src}>
               <img src={g.src} width={g.w} height={g.h} alt={g.caption} loading="lazy" />
-              <span className="cap">
-                <span className="gt">{g.tag}</span>
-                <span className="gc">{g.caption}</span>
-              </span>
+              <figcaption>
+                <span className="mtag">{g.tag}</span>
+                <span className="mcap">{g.caption}</span>
+              </figcaption>
             </a>
           ))}
         </div>
 
-        <p style={{ fontFamily: 'var(--body)', fontSize: 14, margin: '22px 0 0' }}>
+        <p style={{ fontFamily: 'var(--body)', fontSize: 14, margin: '28px 0 0' }}>
           <a href={LINKEDIN_ACTIVITY} target="_blank" rel="noopener noreferrer">See more on LinkedIn →</a>
         </p>
       </section>
