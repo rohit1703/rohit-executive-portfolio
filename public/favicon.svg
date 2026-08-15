@@ -1,7 +1,8 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="16" fill="#FF6B35"/>
-  
-  <text x="50%" y="50%" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="42" fill="#0A192F" text-anchor="middle" dominant-baseline="central" dy="2">
-    R
-  </text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="24" fill="#285C70"/>
+  <g stroke="#f0eae0" stroke-width="8" stroke-linecap="round">
+    <line x1="50" y1="23" x2="50" y2="77"/>
+    <line x1="26.6" y1="36.5" x2="73.4" y2="63.5"/>
+    <line x1="26.6" y1="63.5" x2="73.4" y2="36.5"/>
+  </g>
 </svg>
