@@ -10,14 +10,9 @@ export default function Nav() {
   return (
     <nav className="nav">
       <Link href="/" className="nav-brand">✷ ROHIT</Link>
-      <div className="nav-links">
+      <div className="nav-desktop">
         {NAV_LINKS.map(([href, label]) => (
-          <Link
-            key={href}
-            href={href}
-            className="navlink"
-            data-here={path === href ? '1' : undefined}
-          >
+          <Link key={href} href={href} className="navlink" data-here={path === href ? '1' : undefined}>
             {label}
           </Link>
         ))}
@@ -25,6 +20,9 @@ export default function Nav() {
         <a className="pill pill-primary" href={CAL} target="_blank" rel="noopener noreferrer">
           Book a call ↗
         </a>
+      </div>
+      <div className="nav-mobile-actions">
+        <ThemeToggle />
       </div>
     </nav>
   );

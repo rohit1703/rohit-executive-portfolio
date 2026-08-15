@@ -47,7 +47,7 @@ export default function Home() {
     <div className="container">
       {/* Hero — the why. No numbers yet. */}
       <section className="hero">
-        <div>
+        <div className="hero-head">
           <span className="avail">
             Open to the right role
             <span className="avail-year">2026</span>
@@ -56,6 +56,11 @@ export default function Home() {
             I got impatient with what one marketer could do.{' '}
             <em>So I taught myself to build.</em>
           </h1>
+        </div>
+        <figure className="hero-portrait">
+          <img src="/rohit.webp" alt="Rohit Mallavarapu" width={520} height={440} />
+        </figure>
+        <div className="hero-body">
           <p className="lead">
             Six years in B2B marketing and partnerships — a NASDAQ company, a Tiger
             Global–backed insurtech, a fintech. Real work, real numbers. But I kept hitting
@@ -75,9 +80,6 @@ export default function Home() {
             <a className="pill pill-primary" href={CAL} target="_blank" rel="noopener noreferrer">Book a call ↗</a>
           </div>
         </div>
-        <figure className="hero-figure">
-          <img src="/rohit.webp" alt="Rohit Mallavarapu" width={520} height={440} />
-        </figure>
       </section>
 
       {/* Currly card — moved up: the surprising proof. */}

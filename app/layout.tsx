@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { serif, sans, body } from '@/lib/fonts';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import BottomBar from '@/components/BottomBar';
 
 export const metadata: Metadata = {
   title: 'Rohit Mallavarapu — Builder-Marketer',
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Nav />
         <main>{children}</main>
         <Footer />
+        <BottomBar />
       </body>
     </html>
   );
