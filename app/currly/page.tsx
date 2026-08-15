@@ -42,7 +42,9 @@ export default function CurrlyPage() {
             <a className="pill pill-primary" href={CURRLY} target="_blank" rel="noopener noreferrer">currlyai.com ↗</a>
           </div>
         </div>
-        <div className="ph" style={{ height: 'clamp(300px,40vw,420px)' }}>Currly — hero product screenshot</div>
+        <figure className="currly-shot">
+          <img src="/currly/hero.png" alt="Currly — describe the outcome, get the AI workflow" width={2000} height={1008} />
+        </figure>
       </section>
 
       <section className="section">
