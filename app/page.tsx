@@ -190,7 +190,7 @@ export default function Home() {
       </section>
 
       {/* Events — 3D coverflow carousel */}
-      <EventsCoverflow items={COVERFLOW} interval={2000} seeMoreHref={LINKEDIN_ACTIVITY} />
+      <EventsCoverflow items={COVERFLOW} interval={1500} seeMoreHref={LINKEDIN_ACTIVITY} />
 
       {/* Latest writing — "how I think" */}
       <section className="section" style={{ paddingBottom: 'clamp(30px,4vw,56px)' }}>
