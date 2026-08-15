@@ -73,8 +73,7 @@ export default function Home() {
           </p>
           <p className="lead">
             I&rsquo;m two things that don&rsquo;t usually sit in one person: the marketer who
-            takes a product to market, and the one who can build it. I want a role where
-            those are the same job.
+            takes a product to market, and the one who can build it.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 28 }}>
             <a className="pill pill-primary" href={CAL} target="_blank" rel="noopener noreferrer">Book a call ↗</a>
