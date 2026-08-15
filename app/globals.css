@@ -341,3 +341,19 @@ a.contact-row:hover .v { color:var(--accent); }
 .shot { margin:0; }
 .shot img { width:100%; height:auto; display:block; border-radius:12px; border:1px solid var(--card-line); background:var(--card); box-shadow:0 16px 40px -28px rgba(0,0,0,.5); }
 .shot figcaption { font-family:var(--sans); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); margin-top:8px; }
+
+/* through-line disciplines v2 — numbered columns, dividers, highlighted stat */
+.disc-3 { grid-template-columns:repeat(3,1fr); gap:0; margin-top:clamp(40px,5vw,60px); }
+.disc { padding:0 clamp(22px,3vw,44px); }
+.disc:first-child { padding-left:0; }
+.disc + .disc { border-left:1px solid var(--line); }
+.disc-num { display:block; font-family:var(--serif); font-weight:500; font-size:clamp(46px,4vw,62px); line-height:1; color:color-mix(in srgb, var(--accent) 55%, transparent); font-feature-settings:'tnum' 1; }
+.disc-label { display:block; font-family:var(--sans); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--faint); margin-top:16px; }
+.disc-stat { display:inline-block; font-family:var(--serif); font-weight:600; font-size:clamp(24px,2.2vw,30px); line-height:1.1; color:var(--ink); margin:14px 0 0; padding-bottom:4px; border-bottom:2px solid var(--accent); }
+.disc-body { font-family:var(--body); font-size:15px; line-height:1.6; color:var(--muted); margin:16px 0 0; }
+@media (max-width:900px) {
+  .disc-3 { grid-template-columns:1fr; }
+  .disc { padding:26px 0 0; }
+  .disc:first-child { padding-top:0; }
+  .disc + .disc { border-left:0; border-top:1px solid var(--line); }
+}

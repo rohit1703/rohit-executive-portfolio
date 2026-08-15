@@ -3,10 +3,10 @@ import ReferencesRail from '@/components/ReferencesRail';
 import { EVENTS, GALLERY } from '@/lib/content';
 import { CAL, LINKEDIN_ACTIVITY } from '@/lib/site';
 
-const DISCIPLINES: [string, string][] = [
-  ['Partnerships', 'I build channels from zero. 54 BFSI partnerships at ClearTax — $7M in revenue, 20x in a year. Two promotions at Plum building the ecosystem.'],
-  ['Marketing', "I ran a NASDAQ company's India marketing on my own. Brand awareness 20% to 80%; 5,000+ qualified prospects."],
-  ['Product', 'I build the thing itself. Currly — 1,400+ tools, 111+ workflows, live in production. Written and shipped solo.'],
+const DISCIPLINES: { num: string; label: string; stat: string; body: string }[] = [
+  { num: '01', label: 'Partnerships', stat: '$7M · 20x YoY', body: 'I build channels from zero. 54 BFSI partnerships at ClearTax, and two promotions at Plum building the ecosystem.' },
+  { num: '02', label: 'Marketing', stat: '20% → 80%', body: "I ran a NASDAQ company's India marketing on my own — brand awareness up fourfold, 5,000+ qualified prospects." },
+  { num: '03', label: 'Product', stat: '1,400+ tools', body: 'I build the thing itself. Currly — 111+ workflows, live in production. Written and shipped solo.' },
 ];
 
 const STATS: [string, string][] = [
@@ -112,15 +112,16 @@ export default function Home() {
           <span className="eyebrow faint">Built across three disciplines</span>
           <h2>Everything in <span className="ital">one story.</span></h2>
           <div className="through-intro">
-            <p>Most people in my field are one thing. A partnerships person. A demand-gen marketer. A builder.</p>
-            <p>I ended up all three, mostly because I got restless staying in one lane. And it turns out they compound. Partnerships taught me how buyers actually decide. Marketing taught me how to move them. Building the product taught me what&rsquo;s true underneath both.</p>
+            <p>Most people in my field are one thing — a partnerships person, a demand-gen marketer, a builder. I ended up all three because I got restless staying in one lane, and it turns out they compound: partnerships taught me how buyers actually decide, marketing taught me how to move them, and building the product taught me what&rsquo;s true underneath both.</p>
           </div>
         </div>
         <div className="disc-3">
-          {DISCIPLINES.map(([lbl, txt]) => (
-            <div key={lbl}>
-              <p className="lbl" style={{ fontFamily: 'var(--sans)', fontWeight: 600, fontSize: 15, margin: '0 0 9px' }}>{lbl}</p>
-              <p className="txt" style={{ fontFamily: 'var(--body)', fontSize: 15, lineHeight: 1.6, margin: 0, color: 'var(--muted)' }}>{txt}</p>
+          {DISCIPLINES.map((d) => (
+            <div className="disc" key={d.label}>
+              <span className="disc-num">{d.num}</span>
+              <span className="disc-label">{d.label}</span>
+              <p className="disc-stat">{d.stat}</p>
+              <p className="disc-body">{d.body}</p>
             </div>
           ))}
         </div>
