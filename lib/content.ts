@@ -106,3 +106,30 @@ export const GALLERY: GalleryItem[] = [
   { src: '/moments/02-talent-deck.jpg', w: 1199, h: 1600, caption: 'The Talent Deck — People Connect', tag: 'Delhi', href: P_TALENTDECK },
   { src: '/moments/01-anthill-trek.jpg', w: 1600, h: 900, caption: 'Anthill Ventures trek', tag: 'Team offsite', href: P_ANTHILL },
 ];
+
+export interface CoverflowItem { src: string; alt: string; title: string; meta: string; href?: string; }
+
+// Events coverflow cards — every photo, title + short meta. object-fit:cover
+// normalises the mixed portrait/landscape shots.
+export const COVERFLOW: CoverflowItem[] = [
+  { src: '/moments/07-dynamic-talks-blr.jpg', alt: 'Rohit hosting Dynamic Talks in Bengaluru', title: 'Dynamic Talks, Bengaluru', meta: 'Bengaluru · 2025', href: P_COCREATOR },
+  { src: '/moments/10-dynamic-talks-hyd-mic.jpg', alt: 'Rohit on the mic at Dynamic Talks, Hyderabad', title: 'Dynamic Talks, Hyderabad', meta: 'On the mic · 2024', href: P_PACKED },
+  { src: '/moments/08-temporal-agentic-ai.jpg', alt: 'Grid Dynamics × Temporal — Agentic AI', title: 'Grid Dynamics × Temporal', meta: 'Agentic AI · 2025', href: P_TEMPORAL },
+  { src: '/moments/19-tech-innovation-stage.jpg', alt: 'Technology & Innovation Day 2024, on stage', title: 'Technology & Innovation Day', meta: 'On stage · 2024', href: P_TECHINNO2 },
+  { src: '/moments/16-gpen-chennai-talk.jpg', alt: 'GPEN Chennai — meetup with Ford', title: 'GPEN Chennai — with Ford', meta: 'Chennai · 2024', href: LI_ACTIVITY },
+  { src: '/moments/11-dynamic-talks-hyd-group.jpg', alt: 'Dynamic Talks, Hyderabad — the room', title: 'Dynamic Talks, Hyderabad', meta: 'The room · 2024', href: P_INCREDIBLE },
+  { src: '/moments/18-tech-innovation-award.jpg', alt: 'Technology & Innovation Day 2024 — the recognition', title: 'Technology & Innovation Day', meta: 'The recognition · 2024', href: P_TECHINNO1 },
+  { src: '/moments/06-csr-nirmaan.jpg', alt: 'CSR — Grid Dynamics × Nirmaan', title: 'CSR — Grid Dynamics × Nirmaan', meta: '610 students · 2025', href: P_CSR },
+  { src: '/moments/15-dynamic-talks-hyd-cohost.jpg', alt: 'Dynamic Talks, Hyderabad — with co-hosts', title: 'Dynamic Talks, Hyderabad', meta: 'With co-hosts · 2024', href: P_INCREDIBLE },
+  { src: '/moments/09-temporal-session.jpg', alt: 'Grid Dynamics × Temporal — the session', title: 'Grid Dynamics × Temporal', meta: 'The session · 2025', href: P_TEMPORAL },
+  { src: '/moments/04-top-25-emerging-leaders.jpg', alt: 'Top 25 Emerging Leaders 2024', title: 'Top 25 Emerging Leaders', meta: 'Indian Startup Times · 2024', href: P_TOP25 },
+  { src: '/moments/12-seeing-machines-launch.jpg', alt: 'Dynamic Talks, Hyderabad — on stage', title: 'Dynamic Talks, Hyderabad', meta: 'On stage · 2024', href: P_PACKED },
+  { src: '/moments/17-gpen-chennai-group.jpg', alt: 'GPEN Chennai — the room', title: 'GPEN Chennai — with Ford', meta: 'The room · 2024', href: LI_ACTIVITY },
+  { src: '/moments/03-humanising-workplaces.jpg', alt: 'Humanising Workplaces — Plum', title: 'Humanising Workplaces', meta: 'Plum · 2024', href: P_HUMANISING },
+  { src: '/moments/13-dynamic-talks-hyd-group2.jpg', alt: 'Dynamic Talks, Hyderabad — the cohort', title: 'Dynamic Talks, Hyderabad', meta: 'The cohort · 2024', href: P_PACKED },
+  { src: '/moments/05-growthx-networking.jpg', alt: 'GrowthX Founders Masterclass', title: 'GrowthX Founders Masterclass', meta: 'Community · 2024', href: P_GROWTHX },
+  { src: '/moments/02-talent-deck.jpg', alt: 'The Talent Deck — People Connect', title: 'The Talent Deck', meta: 'Delhi · 2024', href: P_TALENTDECK },
+  { src: '/moments/14-dynamic-talks-hyd-group3.jpg', alt: 'Dynamic Talks, Hyderabad — full house', title: 'Dynamic Talks, Hyderabad', meta: 'Full house · 2024', href: P_INCREDIBLE },
+  { src: '/moments/01-anthill-trek.jpg', alt: 'Anthill Ventures — partner offsite', title: 'Anthill Ventures', meta: 'Partner offsite · 2022', href: P_ANTHILL },
+  { src: '/moments/20-saurabh-note.jpg', alt: 'A note from Saurabh Arora, CTO of Plum', title: 'A note from Saurabh, CTO', meta: 'Plum · “Rockstar you!!”', href: LI_ACTIVITY },
+];

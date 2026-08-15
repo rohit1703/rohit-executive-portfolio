@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import ReferencesRail from '@/components/ReferencesRail';
-import { EVENTS } from '@/lib/content';
+import EventsCoverflow from '@/components/EventsCoverflow';
+import { COVERFLOW } from '@/lib/content';
 import { CAL, LINKEDIN_ACTIVITY } from '@/lib/site';
 
 const DISCIPLINES: { num: string; label: string; stat: string; body: string }[] = [
@@ -186,26 +187,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Events */}
-      <section style={{ borderTop: '1px solid var(--line)', padding: 'clamp(40px,5vw,64px) 0' }}>
-        <span className="mini-eyebrow" style={{ letterSpacing: '.16em', marginBottom: 8 }}>Selected appearances</span>
-        <h2 className="serif" style={{ fontSize: 'clamp(28px,3.2vw,40px)', lineHeight: 1.06, margin: '0 0 26px' }}>
-          Events, hosted <span className="ital">end to end.</span>
-        </h2>
-        <div className="events">
-          {EVENTS.map((ev) => (
-            <a className="ev" href={ev.href} target="_blank" rel="noopener noreferrer" key={ev.title}>
-              <span className="evthumb"><img src={ev.photo} alt="" loading="lazy" /></span>
-              <span className="ev-title">{ev.title}</span>
-              <span className="evgo">↗</span>
-            </a>
-          ))}
-        </div>
-
-        <p style={{ fontFamily: 'var(--body)', fontSize: 14, margin: '28px 0 0' }}>
-          <a href={LINKEDIN_ACTIVITY} target="_blank" rel="noopener noreferrer">See more on LinkedIn →</a>
-        </p>
-      </section>
+      {/* Events — 3D coverflow carousel */}
+      <EventsCoverflow items={COVERFLOW} seeMoreHref={LINKEDIN_ACTIVITY} />
 
       {/* Latest writing — "how I think" */}
       <section className="section" style={{ paddingBottom: 'clamp(30px,4vw,56px)' }}>
