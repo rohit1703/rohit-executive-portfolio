@@ -62,7 +62,7 @@ export default function EventsCoverflow({ items, interval = 3200, seeMoreHref }:
             const isCenter = ((((i - current) % n) + n) % n) === 0;
             const card = (
               <>
-                <div className="cf-pic"><img src={it.src} alt={it.alt} loading="lazy" /></div>
+                <div className="cf-pic"><img src={it.src} alt={it.alt} loading="lazy" style={it.pos ? { objectPosition: it.pos } : undefined} /></div>
                 <div className="cf-lbl">
                   <div className="cf-ti">{it.title}</div>
                   <div className="cf-mt">{it.meta}</div>
