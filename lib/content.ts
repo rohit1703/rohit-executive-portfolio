@@ -53,18 +53,30 @@ const P_TECHINNO2 = 'https://www.linkedin.com/posts/rohitmallavarapu17_griddynam
 
 export interface EventItem { title: string; photo: string; href: string; }
 
-// The named appearances (text list). Each row links to its specific post.
+// The named appearances (text list); hovering a row reveals its photo.
+// One row per photo (all 20), with a distinct, relevant title. Each links
+// to its specific post.
 export const EVENTS: EventItem[] = [
   { title: 'Grid Dynamics × Temporal — Agentic AI', photo: '/moments/08-temporal-agentic-ai.jpg', href: P_TEMPORAL },
+  { title: 'Grid Dynamics × Temporal — the session', photo: '/moments/09-temporal-session.jpg', href: P_TEMPORAL },
+  { title: 'Dynamic Talks, Bengaluru — The AI Co-creator Era', photo: '/moments/07-dynamic-talks-blr.jpg', href: P_COCREATOR },
+  { title: 'Dynamic Talks, Hyderabad — on the mic', photo: '/moments/10-dynamic-talks-hyd-mic.jpg', href: P_PACKED },
+  { title: 'Dynamic Talks, Hyderabad — on stage', photo: '/moments/12-seeing-machines-launch.jpg', href: P_PACKED },
+  { title: 'Dynamic Talks, Hyderabad — with co-hosts', photo: '/moments/15-dynamic-talks-hyd-cohost.jpg', href: P_INCREDIBLE },
+  { title: 'Dynamic Talks, Hyderabad — the room', photo: '/moments/11-dynamic-talks-hyd-group.jpg', href: P_INCREDIBLE },
+  { title: 'Dynamic Talks, Hyderabad — the cohort', photo: '/moments/13-dynamic-talks-hyd-group2.jpg', href: P_PACKED },
+  { title: 'Dynamic Talks, Hyderabad — full house', photo: '/moments/14-dynamic-talks-hyd-group3.jpg', href: P_INCREDIBLE },
+  { title: 'Technology & Innovation Day 2024 — on stage', photo: '/moments/19-tech-innovation-stage.jpg', href: P_TECHINNO2 },
+  { title: 'Technology & Innovation Day 2024 — the recognition', photo: '/moments/18-tech-innovation-award.jpg', href: P_TECHINNO1 },
   { title: 'GPEN Chennai — meetup with Ford', photo: '/moments/16-gpen-chennai-talk.jpg', href: LI_ACTIVITY },
-  { title: 'Dynamic Talks, Bengaluru', photo: '/moments/07-dynamic-talks-blr.jpg', href: P_COCREATOR },
-  { title: 'Dynamic Talks, Hyderabad', photo: '/moments/10-dynamic-talks-hyd-mic.jpg', href: P_PACKED },
-  { title: 'Technology & Innovation Day 2024', photo: '/moments/19-tech-innovation-stage.jpg', href: P_TECHINNO2 },
+  { title: 'GPEN Chennai — the room', photo: '/moments/17-gpen-chennai-group.jpg', href: LI_ACTIVITY },
   { title: 'CSR — Grid Dynamics × Nirmaan', photo: '/moments/06-csr-nirmaan.jpg', href: P_CSR },
   { title: 'Top 25 Emerging Leaders 2024 — Indian Startup Times', photo: '/moments/04-top-25-emerging-leaders.jpg', href: P_TOP25 },
   { title: 'Humanising Workplaces — Plum', photo: '/moments/03-humanising-workplaces.jpg', href: P_HUMANISING },
-  { title: 'GrowthX Founders Masterclass', photo: '/moments/05-growthx-networking.jpg', href: P_GROWTHX },
   { title: 'The Talent Deck — People Connect', photo: '/moments/02-talent-deck.jpg', href: P_TALENTDECK },
+  { title: 'GrowthX Founders Masterclass', photo: '/moments/05-growthx-networking.jpg', href: P_GROWTHX },
+  { title: 'Anthill Ventures — partner offsite', photo: '/moments/01-anthill-trek.jpg', href: P_ANTHILL },
+  { title: '“Rockstar you!!” — a note from Saurabh Arora, CTO', photo: '/moments/20-saurabh-note.jpg', href: LI_ACTIVITY },
 ];
 
 export interface GalleryItem { src: string; w: number; h: number; caption: string; tag: string; href: string; }
