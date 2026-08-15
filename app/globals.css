@@ -4,7 +4,7 @@
    (--serif/--sans/--body) are injected by next/font on <html>.
    ============================================================ */
 :root {
-  --bg:#f0eae0; --ink:#1c1b19; --muted:#5f5a52; --faint:#8c8172;
+  --bg:#f0eae0; --ink:#1c1b19; --muted:#5f5a52; --faint:#6b655c;
   --line:#ded7d3; --card:#faf7f2; --card-line:#e2dbcd;
   --band:#1a1917; --band-ink:#f0eae0; --band-line:rgba(240,234,224,.16);
   --accent:#285C70; --accent-ink:#f0eae0; --accent-soft:#dbe4e6; --accent-soft-ink:#1c4152;
@@ -12,7 +12,7 @@
   --img-grade:sepia(.14) saturate(.9) contrast(1.03);
 }
 html[data-theme="dark"] {
-  --bg:#15181d; --ink:#ece7da; --muted:#9aa0a6; --faint:#6f767d;
+  --bg:#15181d; --ink:#ece7da; --muted:#9aa0a6; --faint:#878d94;
   --line:rgba(236,231,218,.14); --card:#1b1f24; --card-line:rgba(236,231,218,.12);
   --band:#0e1013; --band-ink:#ece7da; --band-line:rgba(236,231,218,.14);
   --accent:#6C9BAD; --accent-ink:#0e1013; --accent-soft:#22303a; --accent-soft-ink:#bcd4de;
@@ -98,6 +98,23 @@ html[data-theme="dark"] .theme-moon { display:none; }
 .seeking > div { min-width:0; }
 .seeking dt { font-family:var(--sans); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--faint); margin:0 0 5px; }
 .seeking dd { margin:0; font-family:var(--body); font-size:14px; line-height:1.3; color:var(--ink); }
+
+/* Scroll-reveal — progressive enhancement. Content is fully visible where
+   view-timelines aren't supported (Firefox, older Safari) and for users who
+   prefer reduced motion; supporting browsers fade each block up as it enters. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .section, .section-top, .role, .events-cf {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      animation-range: entry 4% entry 44%;
+    }
+    @keyframes reveal-in {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: none; }
+    }
+  }
+}
 .hero h1 { margin:22px 0 0; font-family:var(--serif); font-weight:600; font-size:clamp(30px,4.7vw,60px); line-height:1.08; letter-spacing:-.01em; }
 .hero h1 em { font-style:italic; font-weight:500; }
 .hero p.lead { font-family:var(--body); font-size:16.5px; line-height:1.62; margin:24px 0 0; max-width:46ch; color:var(--muted); }
@@ -142,7 +159,7 @@ html[data-theme="dark"] .theme-moon { display:none; }
 .arc:hover { transform:translateY(-3px); box-shadow:0 12px 28px color-mix(in srgb, var(--accent) 22%, transparent); opacity:1; }
 .arc .yr { font-family:var(--sans); font-size:12px; letter-spacing:.06em; color:var(--accent); font-feature-settings:'tnum' 1; }
 .arc .co { font-family:var(--serif); font-size:24px; line-height:1; }
-.arc .sec { font-family:var(--sans); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--faint); }
+.arc .sec { font-family:var(--sans); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
 .arc .met { font-family:var(--body); font-size:13px; line-height:1.45; color:var(--muted); margin-top:3px; }
 
 /* references rail -------------------------------------------- */
@@ -169,12 +186,12 @@ html[data-theme="dark"] .theme-moon { display:none; }
 .writing-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,3vw,32px); }
 .wcard { border:1px solid var(--card-line); border-radius:14px; padding:26px; display:block; color:var(--ink); }
 .wcard .cat { font-family:var(--sans); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
-.wcard h4 { font-family:var(--serif); font-weight:600; font-size:22px; line-height:1.16; margin:14px 0 0; }
+.wcard h3 { font-family:var(--serif); font-weight:600; font-size:22px; line-height:1.16; margin:14px 0 0; }
 
 /* footer ----------------------------------------------------- */
 .footer { border-top:1px solid var(--line); margin-top:clamp(20px,4vw,40px); }
 .footer-grid { max-width:1180px; margin:0 auto; padding:clamp(36px,5vw,56px) clamp(20px,5vw,64px); display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:30px; }
-.footer h3 { font-family:var(--serif); font-weight:600; font-size:26px; margin:0 0 10px; }
+.footer h2 { font-family:var(--serif); font-weight:600; font-size:26px; margin:0 0 10px; }
 .footer .blurb { font-family:var(--body); font-size:14.5px; line-height:1.6; margin:0; color:var(--muted); max-width:38ch; }
 .footer .col-h { font-family:var(--sans); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--faint); margin:0 0 14px; }
 .footer .col-links { display:flex; flex-direction:column; gap:10px; font-family:var(--body); font-size:14.5px; }
@@ -291,7 +308,7 @@ a.contact-row:hover .v { color:var(--accent); }
 .disc { padding:0 clamp(22px,3vw,44px); }
 .disc:first-child { padding-left:0; }
 .disc + .disc { border-left:1px solid var(--line); }
-.disc-num { display:block; font-family:var(--serif); font-weight:500; font-size:clamp(46px,4vw,62px); line-height:1; color:color-mix(in srgb, var(--accent) 55%, transparent); font-feature-settings:'tnum' 1; }
+.disc-num { display:block; font-family:var(--serif); font-weight:500; font-size:clamp(46px,4vw,62px); line-height:1; color:color-mix(in srgb, var(--accent) 72%, transparent); font-feature-settings:'tnum' 1; }
 .disc-label { display:block; font-family:var(--sans); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--faint); margin-top:16px; }
 .disc-stat { display:inline-block; font-family:var(--serif); font-weight:600; font-size:clamp(24px,2.2vw,30px); line-height:1.1; color:var(--ink); margin:14px 0 0; padding-bottom:4px; border-bottom:2px solid var(--accent); }
 .disc-body { font-family:var(--body); font-size:15px; line-height:1.6; color:var(--muted); margin:16px 0 0; }

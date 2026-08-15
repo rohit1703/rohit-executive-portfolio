@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-grid">
         <div>
-          <h3>Let&rsquo;s build something.</h3>
+          <h2>Let&rsquo;s build something.</h2>
           <p className="blurb">
             The rare both — I take products to market, and I build them. Looking for a
             role that needs both.

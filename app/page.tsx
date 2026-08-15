@@ -103,7 +103,7 @@ export default function Home() {
             <div>
               <span className="eyebrow faint">Built &amp; shipped solo</span>
               <p className="ccard-lead">This is the part people don&rsquo;t expect. So I put it first.</p>
-              <h3 className="ccard-title">Currly</h3>
+              <h2 className="ccard-title">Currly</h2>
             </div>
             <span className="live">In production</span>
           </div>
@@ -217,7 +217,7 @@ export default function Home() {
           {WRITING.map(([cat, title]) => (
             <Link className="card-hover wcard" href="/writing" key={title}>
               <span className="cat">{cat}</span>
-              <h4>{title}</h4>
+              <h3>{title}</h3>
             </Link>
           ))}
         </div>
