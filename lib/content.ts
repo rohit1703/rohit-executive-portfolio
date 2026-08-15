@@ -116,7 +116,6 @@ export const COVERFLOW: CoverflowItem[] = [
   { src: '/moments/16-gpen-chennai-talk.jpg', alt: 'GPEN Chennai — meetup with Ford', title: 'GPEN Chennai — with Ford', meta: 'Chennai · 2026', href: LI_ACTIVITY },
   { src: '/moments/15-dynamic-talks-hyd-cohost.jpg', alt: 'Dynamic Talks, Hyderabad — with co-hosts', title: 'Dynamic Talks, Hyderabad', meta: 'With co-hosts · 2026', href: P_INCREDIBLE },
   { src: '/moments/17-gpen-chennai-group.jpg', alt: 'GPEN Chennai — the room', title: 'GPEN Chennai — with Ford', meta: 'The room · 2026', href: LI_ACTIVITY },
-  { src: '/moments/13-dynamic-talks-hyd-group2.jpg', alt: 'Dynamic Talks, Hyderabad — the cohort', title: 'Dynamic Talks, Hyderabad', meta: 'The cohort · 2026', href: P_PACKED },
   { src: '/moments/14-dynamic-talks-hyd-group3.jpg', alt: 'Dynamic Talks, Hyderabad — full house', title: 'Dynamic Talks, Hyderabad', meta: 'Full house · 2026', href: P_INCREDIBLE },
   // 2025
   { src: '/moments/07-dynamic-talks-blr.jpg', alt: 'Rohit hosting Dynamic Talks in Bengaluru', title: 'Dynamic Talks, Bengaluru', meta: 'Bengaluru · 2025', href: P_COCREATOR, pos: 'center 12%' },
