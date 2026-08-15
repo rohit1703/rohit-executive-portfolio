@@ -194,7 +194,7 @@ export default function Home() {
         <div className="events">
           {EVENTS.map((ev) => (
             <a className="ev" href={ev.href} target="_blank" rel="noopener noreferrer" key={ev.title}>
-              <span className="evthumb"><img src={ev.photo} alt="" width={230} height={150} loading="lazy" /></span>
+              <span className="evthumb"><img src={ev.photo} alt="" loading="lazy" /></span>
               <span className="ev-title">{ev.title}</span>
               <span className="evgo">↗</span>
             </a>
