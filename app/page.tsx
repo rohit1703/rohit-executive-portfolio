@@ -2,7 +2,7 @@ import Link from 'next/link';
 import ReferencesRail from '@/components/ReferencesRail';
 import EventsCoverflow from '@/components/EventsCoverflow';
 import { COVERFLOW } from '@/lib/content';
-import { CAL, LINKEDIN_ACTIVITY } from '@/lib/site';
+import { CAL, LINKEDIN_ACTIVITY, RESUME, CURRLY_URL } from '@/lib/site';
 
 const DISCIPLINES: { num: string; label: string; stat: string; body: string }[] = [
   { num: '01', label: 'Partnerships', stat: '$7M · 20x YoY', body: 'I build channels from zero. 54 BFSI partnerships at ClearTax, and two promotions at Plum building the ecosystem.' },
@@ -77,7 +77,22 @@ export default function Home() {
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 28 }}>
             <a className="pill pill-primary" href={CAL} target="_blank" rel="noopener noreferrer">Book a call ↗</a>
+            <a className="pill pill-ghost" href={RESUME} target="_blank" rel="noopener noreferrer">Résumé (PDF) ↓</a>
           </div>
+          <dl className="seeking">
+            <div>
+              <dt>Looking for</dt>
+              <dd>Growth · Marketing · Partnerships</dd>
+            </div>
+            <div>
+              <dt>Based in</dt>
+              <dd>Bengaluru &mdash; open to remote &amp; relocation</dd>
+            </div>
+            <div>
+              <dt>Available</dt>
+              <dd>Immediately</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
@@ -102,7 +117,8 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div style={{ marginTop: 22 }}>
+          <div style={{ marginTop: 22, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+            <a className="pill pill-primary" href={CURRLY_URL} target="_blank" rel="noopener noreferrer">Visit currlyai.com ↗</a>
             <Link className="pill pill-ghost" href="/currly">The full build ▸</Link>
           </div>
         </div>

@@ -7,6 +7,7 @@ export const EMAIL = 'mallavarapu.rohit@gmail.com';
 export const PHONE = '+91 77024 06403';
 export const PHONE_HREF = 'tel:+917702406403';
 export const RESUME = '/Rohit_Mallavarapu_Resume.pdf';
+export const CURRLY_URL = 'https://currlyai.com';
 
 export const NAV_LINKS: [string, string][] = [
   ['/currly', 'Currly'],
