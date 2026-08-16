@@ -33,9 +33,9 @@ const CURRLY_ROWS: { label: string; width: string; val: string }[] = [
 const SHARED_ROWS: { label: string; val: string }[] = [
   { label: 'Bilingual — German + English, end to end', val: 'DE / EN' },
   { label: 'Embedded Bokun checkout', val: 'no redirect' },
-  { label: 'GDPR — analytics gated on consent', val: 'compliant' },
+  { label: 'GDPR — cookie-gated analytics', val: 'compliant' },
   { label: 'Per-tour SEO structured data', val: 'rich results' },
-  { label: 'A CMS the client runs themselves', val: 'self-serve' },
+  { label: 'Webflow they edit; custom code for the rest', val: 'sub-3s loads' },
 ];
 
 const PARTNER_TAGS = [

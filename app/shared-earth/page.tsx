@@ -7,13 +7,13 @@ export const metadata: Metadata = {
     'A bilingual (DE/EN) travel-booking platform for a German eco-tourism operator — designed and shipped solo to a fixed launch date, with embedded Bokun payments, GDPR-compliant analytics, per-tour SEO structured data, and a client-run CMS.',
 };
 
-const TECH = ['Bilingual DE / EN', 'Bokun payments', 'GDPR', 'SEO structured data', 'Client CMS'];
+const TECH = ['Webflow', 'Custom code', 'Bokun (embedded)', 'Bilingual DE / EN', 'GDPR'];
 
 const SPECS: [string, string][] = [
   ['DE · EN', 'Bilingual, end to end'],
-  ['0', 'Redirects — embedded checkout'],
+  ['<3s', 'Page loads'],
+  ['0', 'Redirects — embedded Bokun'],
   ['GDPR', 'Cookie-gated analytics'],
-  ['Self-run', 'A CMS the client owns'],
 ];
 
 const DECISIONS: { n: string; t: string; b: string }[] = [
@@ -21,7 +21,7 @@ const DECISIONS: { n: string; t: string; b: string }[] = [
   { n: '02', t: 'Bilingual from the ground up', b: 'German and English as first-class citizens — not a bolt-on translation but a fully localised booking flow, content, and metadata in both languages.' },
   { n: '03', t: 'GDPR, built in — not patched on', b: 'Analytics gated behind cookie consent: nothing tracks until the visitor agrees. Compliance from the first line, for a European operator and audience.' },
   { n: '04', t: 'Every tour, structured for search', b: 'Per-tour SEO structured data so each experience is individually discoverable and eligible for rich results — the booking engine feeding the growth engine.' },
-  { n: '05', t: 'A site the client runs without me', b: 'A CMS the operator manages themselves — they add tours, edit content, and publish on their own. I built it to be handed over, not depended on.' },
+  { n: '05', t: 'Webflow for them, custom code for the rest', b: "The client runs their content in Webflow themselves — adding tours, editing copy, publishing on their own. Everything Webflow can’t reach — the no-redirect Bokun checkout, cookie-gated analytics, per-tour structured data — is custom code sitting alongside it." },
 ];
 
 export default function SharedEarthPage() {
@@ -36,8 +36,9 @@ export default function SharedEarthPage() {
           eco-tourism operator. Solo, to a hard launch date.
         </p>
         <p className="lead" style={{ marginTop: 14 }}>
-          Bilingual German and English, embedded payments, GDPR by default, and a CMS they run
-          themselves. Real production constraints, a real deadline — and it shipped on time.
+          Webflow for the content they edit themselves, custom code for the parts Webflow
+          can&rsquo;t reach &mdash; embedded payments, bilingual DE/EN, GDPR by default, per-tour SEO.
+          Sub-3-second loads, shipped on time.
         </p>
         <div className="tech-tags">
           {TECH.map((t) => <span className="tech-tag" key={t}>{t}</span>)}
