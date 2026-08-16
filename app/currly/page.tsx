@@ -98,6 +98,9 @@ export default function CurrlyPage() {
             <a className="pill pill-primary" href={CURRLY} target="_blank" rel="noopener noreferrer" style={{ alignSelf: 'flex-start' }}>Visit Currly ↗</a>
           </div>
         </div>
+        <p style={{ fontFamily: 'var(--body)', fontSize: 14, margin: '26px 0 0' }}>
+          <a href="/shared-earth">Also shipped: Shared Earth — a bilingual booking platform I built for a client →</a>
+        </p>
       </section>
     </div>
   );

@@ -30,6 +30,14 @@ const CURRLY_ROWS: { label: string; width: string; val: string }[] = [
   { label: 'A 450+ builder community, fed by programmatic SEO', width: '45%', val: 'the loop runs itself' },
 ];
 
+const SHARED_ROWS: { label: string; val: string }[] = [
+  { label: 'Bilingual — German + English, end to end', val: 'DE / EN' },
+  { label: 'Embedded Bokun checkout', val: 'no redirect' },
+  { label: 'GDPR — analytics gated on consent', val: 'compliant' },
+  { label: 'Per-tour SEO structured data', val: 'rich results' },
+  { label: 'A CMS the client runs themselves', val: 'self-serve' },
+];
+
 const PARTNER_TAGS = [
   'BFSI — banks & NBFCs', 'Payroll & HRMS', 'VCs', 'Accelerators', 'Incubators',
   'Coworking spaces', 'Government & associations', 'Fortune 1000 enterprises',
@@ -106,6 +114,32 @@ export default function Home() {
           <div style={{ marginTop: 22, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <a className="pill pill-primary" href={CURRLY_URL} target="_blank" rel="noopener noreferrer">Visit currlyai.com ↗</a>
             <Link className="pill pill-ghost" href="/currly">The full build ▸</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Shared Earth — the second build. Different proof: a paying client, a deadline. */}
+      <section className="section">
+        <div className="ccard">
+          <div className="ccard-head">
+            <div>
+              <span className="eyebrow faint">Also built &amp; shipped · a paying client</span>
+              <p className="ccard-lead">The build muscle isn&rsquo;t a one-off.</p>
+              <h2 className="ccard-title">Shared Earth</h2>
+            </div>
+            <span className="live">Launched to a hard date</span>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 13 }}>
+            {SHARED_ROWS.map((row) => (
+              <div className="crow" key={row.label}>
+                <span className="crow-chip" />
+                <span className="crow-label">{row.label}</span>
+                <span className="crow-val">{row.val}</span>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: 22 }}>
+            <Link className="pill pill-ghost" href="/shared-earth">The build ▸</Link>
           </div>
         </div>
       </section>
