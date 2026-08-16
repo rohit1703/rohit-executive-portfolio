@@ -98,9 +98,36 @@ export default function CurrlyPage() {
             <a className="pill pill-primary" href={CURRLY} target="_blank" rel="noopener noreferrer" style={{ alignSelf: 'flex-start' }}>Visit Currly ↗</a>
           </div>
         </div>
-        <p style={{ fontFamily: 'var(--body)', fontSize: 14, margin: '26px 0 0' }}>
-          <a href="/shared-earth">Also shipped: Shared Earth — a bilingual booking platform I built for a client →</a>
+      </section>
+
+      {/* Selected builds — Currly isn't the only thing I've shipped. */}
+      <section className="section-top" style={{ paddingBottom: 'clamp(44px,6vw,80px)' }}>
+        <span className="mini-eyebrow" style={{ letterSpacing: '.16em', marginBottom: 8 }}>Selected builds</span>
+        <h2 className="serif" style={{ fontSize: 'clamp(28px,3.2vw,40px)', lineHeight: 1.06, margin: '0 0 12px' }}>
+          Currly isn&rsquo;t the only thing I&rsquo;ve <span className="ital">shipped.</span>
+        </h2>
+        <p className="currly-blurb" style={{ margin: '0 0 28px', maxWidth: '62ch' }}>
+          The build muscle isn&rsquo;t a one-off. Shared Earth is a full booking platform I
+          designed and shipped for a paying client &mdash; solo, to a fixed launch date.
         </p>
+        <div className="ccard">
+          <div className="ccard-head">
+            <div>
+              <span className="eyebrow faint">Bilingual travel booking · a paying client</span>
+              <h3 className="ccard-title">Shared Earth</h3>
+            </div>
+            <span className="live">Launched to a hard date</span>
+          </div>
+          <p style={{ fontFamily: 'var(--body)', fontSize: 15, lineHeight: 1.62, color: 'var(--muted)', margin: '2px 0 0', maxWidth: '70ch' }}>
+            Built for a German eco-tourism operator. Webflow for the content they edit
+            themselves; custom code for the parts Webflow can&rsquo;t reach &mdash; embedded Bokun
+            payments with no redirect, bilingual DE/EN, GDPR-compliant cookie-gated analytics,
+            and per-tour SEO structured data. Sub-3-second loads, launched to a hard date.
+          </p>
+          <div style={{ marginTop: 22 }}>
+            <a className="pill pill-primary" href="/shared-earth">Visit Shared Earth ▸</a>
+          </div>
+        </div>
       </section>
     </div>
   );
