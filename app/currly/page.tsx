@@ -29,7 +29,9 @@ export default function CurrlyPage() {
           <p className="currly-blurb">
             For years I built the go-to-market around other people&rsquo;s products. Currly is
             the first one that&rsquo;s mine — an AI workflow platform I designed and shipped on
-            my own, now running 1,400+ tools and 111+ workflows in production.
+            my own, now running 1,400+ tools and 111+ workflows in production. I owned the
+            positioning too &mdash; repositioning it from an AI tool directory to an AI workflow
+            platform, and rewriting the whole site around an outcome-first thesis.
           </p>
           <p className="currly-blurb" style={{ marginTop: 14 }}>
             I broke plenty on the way here. The five decisions below are the ones that actually

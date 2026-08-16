@@ -35,18 +35,23 @@ const ROLES: Role[] = [
     bullets: [
       '12+ Dynamic Talks across 3 cities → 5,000+ qualified prospects. The best one pulled 664 registrations; 400+ was normal.',
       'Two flagship client events. The one with ISB put me in a room with 200+ Fortune 1000 CXOs.',
-      "Brand awareness 20% → 80%. Glassdoor 3.2 → 3.9. India grew to 48% of the company's global LinkedIn following.",
+      "Brand awareness 20% → 80%. Glassdoor 3.2 → 3.9, AmbitionBox 2.0 → 3.1. India grew to 48% of the company's global LinkedIn following.",
+      '1,200+ talent leads that influenced 20+ direct hires and 300+ more indirectly.',
+      'Owned performance marketing end to end — paid social on LinkedIn and Meta: targeting, creative, budget, and attribution, reallocating spend toward higher-ROI channels.',
+      "Built India's AI-employer positioning — a quarterly Dynamic Talks cadence and an AI Center of Excellence narrative tying local brand to global AI priorities.",
       'Ran full campaign cycles — research, content, decks, video — solo, by handing the team-sized parts to AI.',
+      'Wrote the marketing SOPs adopted across all three India offices, and owned agency relationships and brand governance.',
     ],
   },
   {
     idx: '02 · Jul 2022 – Jul 2024', title: 'AGM, Partnerships', company: 'Plum Benefits (Tiger Global / Sequoia)',
-    summary: 'I came in to build partnerships and community from nothing, and got promoted twice in under two years doing it.',
+    summary: 'I came in to build partnerships and community from nothing, and got promoted twice in under two years — Community Builder → Senior Associate → AGM.',
     stats: [{ n: '$3M+', l: 'Key accounts', accent: true }, { n: '45%', l: 'YoY partner growth' }],
     bullets: [
-      'Built the partner ecosystem from zero — VCs, HRMS platforms, accelerators, coworking networks.',
-      '50+ partners in the first 6 months; 100+ enterprise accounts.',
+      'Built the partner ecosystem from zero — government bodies, associations, VCs, HRMS platforms, accelerators, incubators, and coworking networks.',
+      '50+ partners in the first 6 months; 100+ enterprise accounts. Co-marketing playbooks and enablement assets across 50+ partner organizations.',
       '$3M+ in key accounts. 45% YoY partner growth. 35% lift in engagement.',
+      'Drove community-led growth — CXO roundtables, founder forums, and joint webinars across 100+ enterprise accounts.',
       '8+ experiential events across 7 cities → 150 enterprise SALs. Top 25 Emerging Leaders 2024, Indian Startup Times.',
     ],
   },
@@ -56,8 +61,10 @@ const ROLES: Role[] = [
     stats: [{ n: '54', l: 'Partnerships built', accent: true }, { n: '20x', l: 'YoY growth' }],
     bullets: [
       'Built the BFSI & Payroll channel from scratch — 54 partnerships across banks, NBFCs, and fintechs.',
-      '$7M in revenue, 20x in a year, 150,000 consumers reached.',
+      '$7M in revenue, 20x in a year, 150,000 consumers reached — a category-leading ITR partner in BFSI.',
+      'Shipped integrated BFSI campaigns — 50+ partner microsites, mailers and creative — coordinating Product, Legal, Tax, Social and Ops.',
       'Owned the API, CG, and PWA integrations end to end — where I first started thinking like a builder.',
+      'Hosted webinars with fintech leaders end to end, converting attendance into partner pipeline.',
       'Led a 12-member team and lifted output 40%.',
     ],
   },
@@ -71,7 +78,7 @@ const CAPS: [string, string[]][] = [
   ['Technical & AI', ['Next.js', 'React', 'TypeScript', 'Python', 'Supabase', 'Postgres', 'pgvector', 'LLM pipelines', 'Evals', 'Programmatic SEO', 'Claude Code', 'n8n']],
   ['Marketing', ['Demand generation', 'Integrated campaigns', 'Field & experiential', 'Employer brand', 'Content strategy', 'Product marketing', 'Budget & ROI']],
   ['Partnerships & GTM', ['Partner ecosystems', 'Co-marketing', 'Channel strategy', 'Partner enablement', 'Business development', 'Pipeline ownership', 'CXO stakeholders']],
-  ['Tools & Channels', ['LinkedIn Ads', 'Meta Ads', 'Google Analytics', 'Attribution', 'Webflow', 'Canva', 'Mailchimp', 'Notion', 'HubSpot']],
+  ['Tools & Channels', ['LinkedIn Ads', 'Meta Ads', 'Google Analytics', 'Attribution', 'Webflow', 'Framer', 'Canva', 'Mailchimp', 'Notion', 'HubSpot', 'Salesforce']],
 ];
 
 const CERTS: [string, string][] = [
