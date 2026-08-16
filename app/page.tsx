@@ -79,20 +79,6 @@ export default function Home() {
             <a className="pill pill-primary" href={CAL} target="_blank" rel="noopener noreferrer">Book a call ↗</a>
             <a className="pill pill-ghost" href={RESUME} target="_blank" rel="noopener noreferrer">Résumé (PDF) ↓</a>
           </div>
-          <dl className="seeking">
-            <div>
-              <dt>Looking for</dt>
-              <dd>Growth · Marketing · Partnerships</dd>
-            </div>
-            <div>
-              <dt>Based in</dt>
-              <dd>Bengaluru &mdash; open to remote &amp; relocation</dd>
-            </div>
-            <div>
-              <dt>Available</dt>
-              <dd>Immediately</dd>
-            </div>
-          </dl>
         </div>
       </section>
 
