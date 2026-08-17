@@ -28,11 +28,11 @@ export default function SharedEarthPage() {
   return (
     <div className="container">
       <section className="page-hero" style={{ maxWidth: '64ch' }}>
-        <span className="mini-eyebrow" style={{ letterSpacing: '.16em', marginBottom: 18 }}>A platform I shipped · for a paying client</span>
+        <span className="mini-eyebrow" style={{ letterSpacing: '.16em', marginBottom: 18 }}>A platform I shipped · for a client</span>
         <h1>Shared <span className="ital">Earth.</span></h1>
         <p className="lead">
           Currly is my own product. Shared Earth is the other kind of proof — a complete
-          travel-booking platform I designed and shipped for a paying client: a German
+          travel-booking platform I designed and shipped for a client — a German
           eco-tourism operator. Solo, to a hard launch date.
         </p>
         <p className="lead" style={{ marginTop: 14 }}>
@@ -46,6 +46,12 @@ export default function SharedEarthPage() {
       </section>
 
       <section className="section">
+        <figure className="currly-shot">
+          <img src="/shared-earth/hero.png" width={2000} height={1111} alt="Shared Earth — Culture you feel, with every sense" />
+        </figure>
+      </section>
+
+      <section className="section">
         <div className="band no-mark">
           {SPECS.map(([n, l]) => (
             <div className="band-item" key={l}>
@@ -53,6 +59,20 @@ export default function SharedEarthPage() {
               <p className="band-label">{l}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <span className="mini-eyebrow" style={{ letterSpacing: '.16em', marginBottom: 18 }}>Inside the product</span>
+        <div className="gallery">
+          <figure className="shot">
+            <img src="/shared-earth/booking.png" width={2000} height={1111} alt="Shared Earth — Departures 2026/27, embedded Bokun booking" loading="lazy" />
+            <figcaption>Departures &amp; embedded booking</figcaption>
+          </figure>
+          <figure className="shot">
+            <img src="/shared-earth/journey.png" width={2000} height={1111} alt="Shared Earth — what your days actually hold" loading="lazy" />
+            <figcaption>On the journey</figcaption>
+          </figure>
         </div>
       </section>
 

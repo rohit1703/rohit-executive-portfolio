@@ -145,6 +145,14 @@ html[data-theme="dark"] .theme-moon { display:none; }
 .crow-bar > span { position:absolute; top:0; bottom:0; left:0; background:var(--accent); border-radius:3px; }
 .crow-val { font-family:var(--sans); font-size:13px; color:var(--accent); white-space:nowrap; }
 
+/* Shared Earth footnote — a P.S. inside the Currly card, not a rival card. */
+.se-note { margin-top:24px; padding-top:20px; border-top:1px solid var(--card-line); }
+.se-note-head { display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; }
+.se-lead { display:inline-flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
+.se-kicker { font-family:var(--sans); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--faint); }
+.se-name { font-family:var(--serif); font-style:italic; font-weight:500; font-size:22px; color:var(--ink); }
+.se-build { font-family:var(--sans); font-size:13px; color:var(--accent); white-space:nowrap; }
+
 /* arc timeline ----------------------------------------------- */
 .section-head { display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:12px; margin-bottom:22px; }
 .arc-wrap { position:relative; display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
