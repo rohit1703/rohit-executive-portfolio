@@ -1,22 +1,31 @@
 // Shared content — references (Home rail), events list, and the full photo gallery.
 export interface Reference {
   name: string; title: string; company: string;
-  pre: string; hl: string; post: string;
+  pre?: string; hl?: string; post?: string;
+  parts?: { t: string; hl?: boolean }[];
 }
 
 export const REFERENCES: Reference[] = [
   { name: 'Cary Savas', title: 'Brand & Demand Leader', company: 'Grid Dynamics',
     pre: 'I managed Rohit for two years at Grid Dynamics. He earns trust by saying what he means and doing what he says — ',
-    hl: 'an effective marketer, a trusted colleague', post: ', and an exceptional human being.' },
-  { name: 'Saurabh Arora', title: 'Co-Founder & CTO', company: 'Plum Benefits',
-    pre: 'Rohit approaches work like a sport, always a team player. ',
-    hl: 'A natural community builder', post: ', he took on everything from partnerships to experiential marketing.' },
+    hl: 'an effective marketer, a trusted colleague, and an exceptional human being', post: '.' },
+  { name: 'Saurabh Arora', title: 'Co-Founder & CTO', company: 'Plum Benefits', parts: [
+    { t: 'Rohit approaches ' },
+    { t: 'work like a sport', hl: true },
+    { t: ', always a team player. ' },
+    { t: 'A natural community builder', hl: true },
+    { t: ', he took on everything from partnerships to experiential marketing.' },
+  ] },
   { name: 'Abhishek Poddar', title: 'Co-Founder & CEO', company: 'Plum Benefits',
     pre: 'Rohit was the driving force behind many of our key initiatives at Plum — ',
     hl: 'innovative ideas and exceptional execution', post: ', on everything he took on.' },
-  { name: 'Petrisor Guta', title: 'Senior Comms & Social Strategist', company: 'Grid Dynamics',
-    pre: 'A memorable colleague and a wonderful professional — always on point, always innovating his way of working and ',
-    hl: 'delivering super fast and accurate', post: '. Any employer would be lucky to have him.' },
+  { name: 'Petrisor Guta', title: 'Senior Comms & Social Strategist', company: 'Grid Dynamics', parts: [
+    { t: 'A memorable colleague and a wonderful professional — ' },
+    { t: 'always on point, always innovating', hl: true },
+    { t: ' his way of working and ' },
+    { t: 'delivering super fast and accurate', hl: true },
+    { t: '. Any employer would be lucky to have him.' },
+  ] },
   { name: 'Adwitiya Singh', title: 'Head, BFSI & Payroll', company: 'Clear',
     pre: 'Rohit was the ',
     hl: 'load balance between internal customers and external stakeholders',
@@ -24,18 +33,32 @@ export const REFERENCES: Reference[] = [
   { name: 'Shriya Shah', title: 'Performance Lead', company: 'Plum Benefits',
     pre: "Rohit's ", hl: 'energy and grit is unmatched',
     post: '. He ideates, executes, and hits his goals — reliable on every initiative.' },
-  { name: 'Prerit Bajaj', title: 'Associate Director, ABM', company: 'Plum Benefits',
-    pre: 'Rohit ', hl: 'went above and beyond',
-    post: ', leading multiple high-impact campaigns. His focus and consistency drove the results.' },
-  { name: 'Tanushree Upadhyay', title: 'Account Management', company: 'Clear',
-    pre: 'Rohit handled ', hl: 'the toughest client effortlessly',
-    post: " — a skill that usually takes years. He led by example and kept the team's morale up." },
-  { name: 'Akshay Bhatt', title: 'Strategic Alliances & Growth', company: 'Clear',
-    pre: 'Rohit closes hard problems with the best solution. He’s ',
-    hl: 'an asset to any company', post: ' he works for.' },
-  { name: 'Abhishek Srivastava', title: 'Partnerships', company: 'Clear',
-    pre: "One of the most dedicated people I've worked with — ",
-    hl: 'the all-rounder of the team', post: ', across every vertical. I’d work with him again in a heartbeat.' },
+  { name: 'Prerit Bajaj', title: 'Associate Director, ABM', company: 'Plum Benefits', parts: [
+    { t: 'Rohit ' },
+    { t: 'went above and beyond', hl: true },
+    { t: ', leading multiple high-impact campaigns. His ' },
+    { t: 'focus and consistency', hl: true },
+    { t: ' drove the results.' },
+  ] },
+  { name: 'Tanushree Upadhyay', title: 'Account Management', company: 'Clear', parts: [
+    { t: 'Rohit handled ' },
+    { t: 'the toughest client effortlessly', hl: true },
+    { t: ' — a skill that usually takes years. He ' },
+    { t: 'led by example', hl: true },
+    { t: " and kept the team's morale up." },
+  ] },
+  { name: 'Akshay Bhatt', title: 'Strategic Alliances & Growth', company: 'Clear', parts: [
+    { t: 'Rohit closes ' },
+    { t: 'hard problems with the best solution', hl: true },
+    { t: '. He’s an asset to any company he works for.' },
+  ] },
+  { name: 'Abhishek Srivastava', title: 'Partnerships', company: 'Clear', parts: [
+    { t: 'One of the ' },
+    { t: 'most dedicated people', hl: true },
+    { t: " I've worked with — " },
+    { t: 'the all-rounder of the team', hl: true },
+    { t: ', across every vertical. I’d work with him again in a heartbeat.' },
+  ] },
 ];
 
 // LinkedIn post links, verified per production notes (LinkedIn routes on the

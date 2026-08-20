@@ -3,6 +3,23 @@
 import { useState } from 'react';
 import { REFERENCES } from '@/lib/content';
 
+// Render a quote's segments, wrapping highlighted phrases in .hl. Falls back to
+// the single-highlight pre/hl/post shape for references not split into parts.
+function renderQuote(r: { pre?: string; hl?: string; post?: string; parts?: { t: string; hl?: boolean }[] }) {
+  if (r.parts) {
+    return r.parts.map((p, i) =>
+      p.hl ? <span className="hl" key={i}>{p.t}</span> : <span key={i}>{p.t}</span>,
+    );
+  }
+  return (
+    <>
+      {r.pre}
+      <span className="hl">{r.hl}</span>
+      {r.post}
+    </>
+  );
+}
+
 /**
  * Desktop: a featured quote + a rail of names; hovering/clicking a name swaps
  * the featured quote. Mobile (≤900): an accordion — tapping a name reveals its
@@ -16,11 +33,7 @@ export default function ReferencesRail() {
   return (
     <div className="refs">
       <div className="refs-featured">
-        <blockquote className="feat-q">
-          {r.pre}
-          <span className="hl">{r.hl}</span>
-          {r.post}
-        </blockquote>
+        <blockquote className="feat-q">{renderQuote(r)}</blockquote>
         <p className="feat-c">
           <strong>{r.name}</strong> — {r.title}, {r.company}
         </p>
@@ -39,11 +52,7 @@ export default function ReferencesRail() {
               <span className="rn">{ref.name}</span>
               <span className="rt">{ref.title} · {ref.company}</span>
             </button>
-            <blockquote className="railquote" data-open={i === active ? '1' : undefined}>
-              {ref.pre}
-              <span className="hl">{ref.hl}</span>
-              {ref.post}
-            </blockquote>
+            <blockquote className="railquote" data-open={i === active ? '1' : undefined}>{renderQuote(ref)}</blockquote>
           </div>
         ))}
       </div>
