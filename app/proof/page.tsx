@@ -10,6 +10,7 @@ const BAND: [string, string][] = [
 ];
 
 const QUOTES: { q: string; name: string; cap: string }[] = [
+  { q: "I managed Rohit for two years at Grid Dynamics, across client, talent, and brand marketing. He earns trust and respect by saying what he means and doing what he says — you knew where you stood, you knew he would follow through, and you knew he cared about getting the work right. He is an effective marketer, a trusted colleague, and an exceptional human being.", name: 'Cary Savas', cap: 'Brand & Demand Leader, Grid Dynamics' },
   { q: 'Rohit approaches work like a sport, always playing as a team player. A natural community builder, he has taken on various roles at Plum, from building partnerships to experiential marketing.', name: 'Saurabh Arora', cap: 'Co-Founder & CTO, Plum Benefits' },
   { q: 'Rohit is the go-to person and the load balance between internal customers and external stakeholders. Managing him was easy when he was hitting his goals, and rewarding when he pushed the whole team toward newer possibilities and use cases.', name: 'Adwitiya Singh', cap: 'Head, BFSI & Payroll, Clear' },
   { q: "I had the pleasure of working with Rohit at Plum, and he's one of the most high-energy people I've worked with. He was the driving force behind many key initiatives, bringing innovative ideas and exceptional execution to the table.", name: 'Abhishek Poddar', cap: 'Co-Founder & CEO, Plum Benefits' },

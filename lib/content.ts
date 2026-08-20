@@ -5,6 +5,9 @@ export interface Reference {
 }
 
 export const REFERENCES: Reference[] = [
+  { name: 'Cary Savas', title: 'Brand & Demand Leader', company: 'Grid Dynamics',
+    pre: 'I managed Rohit for two years at Grid Dynamics. He earns trust by saying what he means and doing what he says — ',
+    hl: 'an effective marketer, a trusted colleague', post: ', and an exceptional human being.' },
   { name: 'Saurabh Arora', title: 'Co-Founder & CTO', company: 'Plum Benefits',
     pre: 'Rohit approaches work like a sport, always a team player. ',
     hl: 'A natural community builder', post: ', he took on everything from partnerships to experiential marketing.' },
