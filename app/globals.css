@@ -254,6 +254,7 @@ html[data-theme="dark"] .theme-moon { display:none; }
 .proof-refs blockquote { font-family:var(--serif); font-weight:500; font-size:21px; line-height:1.32; margin:0; }
 .proof-refs figcaption { font-family:var(--body); font-size:13.5px; margin:16px 0 0; color:var(--muted); }
 .proof-refs figcaption strong { font-weight:600; color:var(--ink); }
+.proof-refs .hl { color:var(--accent); font-style:italic; }
 
 /* writing */
 .feat-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(18px,3vw,28px); }
