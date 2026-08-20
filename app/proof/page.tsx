@@ -34,7 +34,7 @@ export default function ProofPage() {
       <section className="section-top">
         <span className="mini-eyebrow" style={{ letterSpacing: '.16em', marginBottom: 8 }}>References</span>
         <h2 className="serif" style={{ fontSize: 'clamp(28px,3.2vw,40px)', lineHeight: 1.06, margin: '0 0 30px' }}>
-          What they <span className="ital">say.</span>
+          In their <span className="ital">words.</span>
         </h2>
         <div className="proof-refs">
           {REFERENCES.map((r) => (

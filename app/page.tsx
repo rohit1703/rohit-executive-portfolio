@@ -189,7 +189,7 @@ export default function Home() {
           <div>
             <span className="eyebrow faint">References</span>
             <h2 className="serif" style={{ fontSize: 'clamp(30px,3.4vw,44px)', lineHeight: 1.04, margin: '10px 0 0' }}>
-              What they <span className="ital">say.</span>
+              In their <span className="ital">words.</span>
             </h2>
           </div>
           <Link className="pill pill-ghost" href="/proof">All references &amp; events →</Link>
