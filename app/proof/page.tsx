@@ -1,34 +1,14 @@
 import type { Metadata } from 'next';
+import { REFERENCES } from '@/lib/content';
+import { highlightQuote } from '@/lib/highlight';
 
 export const metadata: Metadata = { title: 'Proof — Rohit Mallavarapu' };
-
-// Wrap each highlighted phrase in a quote with .hl (accent italic).
-function highlightQuote(q: string, hls?: string[]) {
-  if (!hls || !hls.length) return q;
-  const re = new RegExp('(' + hls.map((h) => h.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')', 'g');
-  return q.split(re).map((seg, i) =>
-    hls.includes(seg) ? <span className="hl" key={i}>{seg}</span> : <span key={i}>{seg}</span>,
-  );
-}
 
 const BAND: [string, string][] = [
   ['54', 'Partnerships, from zero'],
   ['$7M', 'Channel revenue · 20x'],
   ['$3M+', 'Key accounts at Plum'],
   ['150K', 'Consumers reached'],
-];
-
-const QUOTES: { q: string; name: string; cap: string; hls?: string[] }[] = [
-  { q: "I managed Rohit for two years at Grid Dynamics, across client, talent, and brand marketing. He earns trust and respect by saying what he means and doing what he says — you knew where you stood, you knew he would follow through, and you knew he cared about getting the work right. He is an effective marketer, a trusted colleague, and an exceptional human being.", name: 'Cary Savas', cap: 'Brand & Demand Leader, Grid Dynamics', hls: ['an effective marketer, a trusted colleague, and an exceptional human being'] },
-  { q: 'Rohit approaches work like a sport, always playing as a team player. A natural community builder, he has taken on various roles at Plum, from building partnerships to experiential marketing.', name: 'Saurabh Arora', cap: 'Co-Founder & CTO, Plum Benefits', hls: ['work like a sport', 'A natural community builder'] },
-  { q: "I had the pleasure of working with Rohit at Plum, and he's one of the most high-energy people I've worked with. He was the driving force behind many key initiatives, bringing innovative ideas and exceptional execution to the table.", name: 'Abhishek Poddar', cap: 'Co-Founder & CEO, Plum Benefits', hls: ['innovative ideas and exceptional execution'] },
-  { q: 'I have had an immense honour to work alongside Rohit, although we are on opposite sides of the planet. He is a memorable colleague and a wonderful professional — always on point, always innovating his way of working and delivering super fast and accurate. Any employer would be lucky to have him in their team.', name: 'Petrisor Guta', cap: 'Senior Comms & Social Strategist, Grid Dynamics', hls: ['always on point, always innovating', 'delivering super fast and accurate'] },
-  { q: 'Rohit is the go-to person and the load balance between internal customers and external stakeholders. Managing him was easy when he was hitting his goals, and rewarding when he pushed the whole team toward newer possibilities and use cases.', name: 'Adwitiya Singh', cap: 'Head, BFSI & Payroll, Clear', hls: ['load balance between internal customers and external stakeholders'] },
-  { q: "Rohit's energy and grit is unmatched. He ideates, executes, and achieves his goals. He picked up new initiatives, aligned internal teams, managed external stakeholders, and made all of them a success.", name: 'Shriya Shah', cap: 'Performance Lead, Plum Benefits', hls: ['energy and grit is unmatched'] },
-  { q: 'Rohit consistently went above and beyond, leading multiple high-impact campaigns with real success. His ability to stay upbeat and focused is rare. I wish him all the best.', name: 'Prerit Bajaj', cap: 'Associate Director, ABM, Plum Benefits', hls: ['went above and beyond'] },
-  { q: "During my internship I was struck by how effortlessly Rohit handled even the toughest client — a skill that usually takes years. He was always helpful, led by example, and kept the team's morale up.", name: 'Tanushree Upadhyay', cap: 'Account Management, Clear', hls: ['the toughest client', 'led by example'] },
-  { q: "Rohit was an integral part of the team, with real zeal for challenging tasks and closing them with the best solution. His dedication is tremendous. He's an asset to any company he works for.", name: 'Akshay Bhatt', cap: 'Strategic Alliances & Growth, Clear', hls: ['closing them with the best solution'] },
-  { q: "One of the most hardworking, dedicated people I've worked with — basically the all-rounder of the team, across every vertical. I'd love the chance to work with him again.", name: 'Abhishek Srivastava', cap: 'Partnerships, Clear', hls: ['hardworking, dedicated people', 'the all-rounder of the team'] },
 ];
 
 export default function ProofPage() {
@@ -57,10 +37,10 @@ export default function ProofPage() {
           What they <span className="ital">say.</span>
         </h2>
         <div className="proof-refs">
-          {QUOTES.map((r) => (
+          {REFERENCES.map((r) => (
             <figure key={r.name}>
               <blockquote>&ldquo;{highlightQuote(r.q, r.hls)}&rdquo;</blockquote>
-              <figcaption><strong>{r.name}</strong> — {r.cap}</figcaption>
+              <figcaption><strong>{r.name}</strong> — {r.title}, {r.company}</figcaption>
             </figure>
           ))}
         </div>
